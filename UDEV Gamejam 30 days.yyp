@@ -22,7 +22,7 @@
     {"id":{"name":"spr_block","path":"sprites/spr_block/spr_block.yy",},"order":1,},
     {"id":{"name":"o_entity_enemy_spider","path":"objects/o_entity_enemy_spider/o_entity_enemy_spider.yy",},"order":0,},
     {"id":{"name":"spr_bot_spider","path":"sprites/spr_bot_spider/spr_bot_spider.yy",},"order":2,},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+    {"id":{"name":"r_test","path":"rooms/r_test/r_test.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},
@@ -38,7 +38,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"r_test","path":"rooms/r_test/r_test.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},
