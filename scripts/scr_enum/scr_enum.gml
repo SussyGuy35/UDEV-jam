@@ -30,6 +30,8 @@ function enum_entity_state(){
 	enum ENTITY_STATE {
 		IDLE,
 		MOVING,
-		LANDING
+		LANDING,
+		ATTACKING,
+		DEAD
 	}
 }
