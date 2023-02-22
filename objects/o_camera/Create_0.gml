@@ -13,11 +13,11 @@ view_x = -1;
 view_y = -1;
 
 //window_scale là định dạng kích thước khung hình theo cấp số nhân;
-globalvar window_scale;
-window_scale = 4;
+//globalvar window_scale;
+//window_scale = 2;
 
 //đặt kích thước cửa sổ
-window_set_size(view_width * window_scale,view_height * window_scale);
+//window_set_size(view_width * window_scale,view_height * window_scale);
+//surface_resize(application_surface,view_width * window_scale,view_height * window_scale);
+//window_center()
 
-
-surface_resize(application_surface,view_width * window_scale,view_height * window_scale);
