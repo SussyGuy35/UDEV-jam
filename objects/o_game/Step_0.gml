@@ -6,6 +6,9 @@ global.global_tick_timer--;
 
 //nhấp chuột trái tạo lính
 if(mouse_check_button_pressed(mb_left)) {
+	if(keyboard_check(vk_lshift)) {
+		instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_spider);	
+	} else 
 	instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_player_soldier);	
 }
 

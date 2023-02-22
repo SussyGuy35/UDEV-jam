@@ -1,8 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_grid",
-  "spriteId": null,
+  "name": "o_gfx_bullet_hit",
+  "spriteId": {
+    "name": "spr_bullet_hit",
+    "path": "sprites/spr_bullet_hit/spr_bullet_hit.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -22,12 +25,13 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "system",
-    "path": "folders/Objects/system.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
 }

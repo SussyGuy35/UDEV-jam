@@ -14,4 +14,7 @@
 global.global_tick_interval = 4;
 global.global_tick_timer = 0;
 
+globalvar debuging;
+debuging = 1;
+
 grid_obj = instance_nearest(x,y,o_grid);

@@ -22,3 +22,5 @@ hp = 1; //máu của đối tượng. Nếu <= 0 thì đối tượng sẽ chế
 state = ENTITY_STATE.IDLE; //trạng thái hoạt cảnh của thực thể.
 							//để biết thêm chi tiết hãy xem script tại:
 							//Scripts/scr_enum
+							
+dead_despawn_timer = 24;
