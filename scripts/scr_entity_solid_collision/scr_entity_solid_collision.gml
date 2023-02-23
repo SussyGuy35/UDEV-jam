@@ -9,11 +9,7 @@ function scr_entity_solid_collision(){
 	         if (collision_time<=collision_timeout){
 				 x -= sign(hsp);
 		         
-				 if(sign(hsp) < 0) {
-		            dir = 1;
-		         } else {
-		            dir = -1;
-		         }
+				 dir*=-1
 				 
 			 }
 			 else {
