@@ -1,3 +1,3 @@
 /// @description Debug: Hot reload key
-game_restart()
+if (debuging) game_restart()
 
