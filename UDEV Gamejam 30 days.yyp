@@ -3,11 +3,13 @@
   "resourceVersion": "1.6",
   "name": "UDEV Gamejam 30 days",
   "resources": [
+    {"id":{"name":"scr_soldier_shooting","path":"scripts/scr_soldier_shooting/scr_soldier_shooting.yy",},"order":1,},
     {"id":{"name":"o_game","path":"objects/o_game/o_game.yy",},"order":1,},
     {"id":{"name":"o_entity_env_block","path":"objects/o_entity_env_block/o_entity_env_block.yy",},"order":1,},
     {"id":{"name":"o_entity_player","path":"objects/o_entity_player/o_entity_player.yy",},"order":0,},
     {"id":{"name":"o_gfx_bullet_hit","path":"objects/o_gfx_bullet_hit/o_gfx_bullet_hit.yy",},"order":13,},
     {"id":{"name":"o_camera","path":"objects/o_camera/o_camera.yy",},"order":0,},
+    {"id":{"name":"scr_soldier_attacking","path":"scripts/scr_soldier_attacking/scr_soldier_attacking.yy",},"order":2,},
     {"id":{"name":"o_entity_enemy","path":"objects/o_entity_enemy/o_entity_enemy.yy",},"order":1,},
     {"id":{"name":"spr_bullet_hit","path":"sprites/spr_bullet_hit/spr_bullet_hit.yy",},"order":4,},
     {"id":{"name":"o_entity_env_void","path":"objects/o_entity_env_void/o_entity_env_void.yy",},"order":2,},
