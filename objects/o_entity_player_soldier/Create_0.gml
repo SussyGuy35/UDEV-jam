@@ -1,7 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-
 
 // Inherit the parent event
 event_inherited();
@@ -22,3 +18,7 @@ muzzle_flashing = false;
 //visible enemies data
 spotted_enemies = ds_list_create();
 target_enemy = noone;
+
+// Collision timeout
+collision_timeout = 2
+collision_time = 0
