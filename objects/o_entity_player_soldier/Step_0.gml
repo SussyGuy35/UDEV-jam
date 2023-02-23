@@ -109,9 +109,9 @@ if(tick_timer <= 0) {
 		case ENTITY_STATE.CONSTRUCTING:
 			image_speed = 0;
 			image_index = 19;
-			if(x > target_contruction) {
+			if(x > target_contruction.x) {
 				image_xscale = -1;
-			} else if (x < target_contruction) {
+			} else if (x < target_contruction.x) {
 				image_xscale = 1;
 			}
 			
