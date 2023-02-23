@@ -24,3 +24,7 @@ state = ENTITY_STATE.IDLE; //trạng thái hoạt cảnh của thực thể.
 							//Scripts/scr_enum
 							
 dead_despawn_timer = 24;
+
+// Collision timeout
+collision_timeout = 2
+collision_time = 0

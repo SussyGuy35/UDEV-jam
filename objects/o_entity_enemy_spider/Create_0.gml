@@ -16,7 +16,7 @@ hit_chance = 1;
 damage = 5;
 range = 16;
 movespeed = 1;
-attack_movespeed = 1;
+attack_movespeed = 2;
 
 //killer id
 killed_by = noone;

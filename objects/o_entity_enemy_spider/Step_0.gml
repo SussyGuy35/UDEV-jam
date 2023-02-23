@@ -94,31 +94,8 @@ if(tick_timer <= 0) {
     vsp++;
 }
 
-//xử lý va chạm
-// Horizontal
-if (place_meeting(x+hsp, y, o_entity_env_solid)) {
-      while(place_meeting(x+sign(hsp),y, o_entity_env_solid))
-      {
-         x -= sign(hsp);
-         if(sign(hsp) < 0) {
-            dir = 1;
-         } else {
-            dir = -1;
-         }
-      }
-}
+scr_entity_solid_collision();
 
-// Vertical
-if (place_meeting(x, y+vsp, o_entity_env_solid)){
-    while(place_meeting(x,y+sign(vsp), o_entity_env_solid))
-    {
-        y -= sign(vsp);
-        
-        on_ground = true;
-    }
-} else {
-    state = ENTITY_STATE.IDLE;
-}
 
 x += hsp;
 y += vsp;
