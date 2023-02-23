@@ -31,7 +31,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "graphic effects",
+    "path": "folders/Objects/graphic effects.yy",
   },
 }

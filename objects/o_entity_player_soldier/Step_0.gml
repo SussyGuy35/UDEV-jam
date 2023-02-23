@@ -8,30 +8,61 @@ if(tick_timer <= 0) {
     //reset tick timer
     tick_timer = tick_interval;
 	
-	//scan for enemies
-	ds_list_clear(spotted_enemies); //clear spotted list
-	target_enemy = noone; //reset target enemy
-	collision_circle_list(x,y,range,o_entity_enemy,false,true,spotted_enemies,true);
+	if(state != ENTITY_STATE.DEAD) {
+		//scan for building
+		ds_list_clear(spotted_contruction); //clear spotted list
+		if(instance_exists(target_contruction)) {
+			target_contruction.contructor = noone; 
+			target_contruction = noone; //reset target contruction side
+		}
 	
-	//check line of sight
-	var size = ds_list_size(spotted_enemies);
+		collision_circle_list(x,y-2,range_contruction,o_entity_env_contruction_side,false,true,spotted_contruction,true);
 	
-	for(var i = 0; i < size; i++) {
-		//get enemy id
-		var enemy = ds_list_find_value(spotted_enemies,i);
+		//scan for enemies
+		ds_list_clear(spotted_enemies); //clear spotted list
+		target_enemy = noone; //reset target enemy
+		collision_circle_list(x,y,range,o_entity_enemy,false,true,spotted_enemies,true);
+	
+		//check line of sight
+		var size = ds_list_size(spotted_enemies);
+	
+		for(var i = 0; i < size; i++) {
+			//get enemy id
+			var enemy = ds_list_find_value(spotted_enemies,i);
 		
-		//check if enemy is blocked (y should be -1 to avoid aiming below feet
-		var blocked = collision_line(x,y - 1,enemy.x,enemy.y - 1,o_entity_env_solid,false,true);
+			//check if enemy is blocked (y should be -1 to avoid aiming below feet
+			var blocked = collision_line(x,y - 1,enemy.x,enemy.y - 1,o_entity_env_solid,false,true);
 		
-		//if not blocked, that enemy is the target, end the loop
-		if(!blocked and enemy.hp > 0) {
-			target_enemy = enemy;
-			i = size;
+			//if not blocked, that enemy is the target, end the loop
+			if(!blocked and enemy.hp > 0) {
+				target_enemy = enemy;
+				i = size;
+			}
 		}
 	}
 	
 	if(on_ground) {
-        state = ENTITY_STATE.MOVING;
+		//check for contruction clearance
+		var size = ds_list_size(spotted_contruction);
+	
+		for(var i = 0; i < size; i++) {
+			//get contruction side id
+			var con_side = ds_list_find_value(spotted_contruction,i);
+			
+			//check if contruction side is occupied
+			//if not, occupy the contruction side and work on it, end the loop
+			if(!con_side.contructor) {
+				con_side.contructor = self;
+				target_contruction = con_side;
+				i = size;
+			}
+		}
+		
+		if(instance_exists(target_contruction)) {
+			state = ENTITY_STATE.CONSTRUCTING;
+		} else {
+			state = ENTITY_STATE.MOVING;
+		}
     }
 	
 	if(target_enemy) {
@@ -42,6 +73,8 @@ if(tick_timer <= 0) {
     
 	if(hp <= 0) {
 		state = ENTITY_STATE.DEAD;
+		if(instance_exists(target_contruction)) //release contruction occupation
+			target_contruction.contructor = noone; 
 	}
 	
     //thực hiện hành vi dựa vào trạng thái
@@ -70,6 +103,17 @@ if(tick_timer <= 0) {
 			break;
 		case ENTITY_STATE.ATTACKING:
 			scr_soldier_attacking();
+			
+			break;
+			
+		case ENTITY_STATE.CONSTRUCTING:
+			image_speed = 0;
+			image_index = 19;
+			if(x > target_contruction) {
+				image_xscale = -1;
+			} else if (x < target_contruction) {
+				image_xscale = 1;
+			}
 			
 			break;
         default:    

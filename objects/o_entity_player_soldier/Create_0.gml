@@ -18,3 +18,9 @@ muzzle_flashing = false;
 //visible enemies data
 spotted_enemies = ds_list_create();
 target_enemy = noone;
+
+//contruction data
+range_contruction = 8;
+spotted_contruction = ds_list_create();
+target_contruction = noone;
+speed_contruction = 1;

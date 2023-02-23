@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_entity_env_void",
   "spriteId": {
-    "name": "spr_block",
-    "path": "sprites/spr_block/spr_block.yy",
+    "name": "scr_env_placeholder",
+    "path": "sprites/scr_env_placeholder/scr_env_placeholder.yy",
   },
   "solid": false,
   "visible": true,

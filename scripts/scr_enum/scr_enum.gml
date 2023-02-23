@@ -32,6 +32,17 @@ function enum_entity_state(){
 		MOVING,
 		LANDING,
 		ATTACKING,
-		DEAD
+		DEAD,
+		CONSTRUCTING
+	}
+}
+
+function enum_structure_state() {
+	enum STRUCT_STATE {
+		FINISHED,
+		BLUEPRINT,
+		UNFINISHED,
+		NEAR_FINISHED
+		
 	}
 }

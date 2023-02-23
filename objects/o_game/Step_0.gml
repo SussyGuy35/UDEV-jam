@@ -14,12 +14,21 @@ if(mouse_check_button_pressed(mb_left)) {
 
 //nhấp chuột phải tạo khối bê tông
 if(mouse_check_button_pressed(mb_right)) {
-	if(instance_exists(grid_obj)) {
-		var col_grid = collision_point(mouse_x,mouse_y,o_entity_env_void,false,true)
-		if(col_grid) {
-			instance_create_layer(col_grid.x,col_grid.y,"Instances",o_entity_env_block);
+	if(keyboard_check(vk_lshift)) {
+		var col_grid = collision_point(mouse_x,mouse_y,o_entity_env_void,false,true);
+		if (col_grid) {
+			with(instance_create_layer(col_grid.x,col_grid.y,"Instances",o_entity_env_contruction_side)) {
+			contructing = o_entity_env_block;
+			}
 			instance_destroy(col_grid);
 		}
+	} else {
+		if(instance_exists(grid_obj)) {
+			var col_grid = collision_point(mouse_x,mouse_y,o_entity_env_void,false,true);
+			if(col_grid) {
+				instance_create_layer(col_grid.x,col_grid.y,"Instances",o_entity_env_block);
+				instance_destroy(col_grid);
+			}
+		}
 	}
-	
 }

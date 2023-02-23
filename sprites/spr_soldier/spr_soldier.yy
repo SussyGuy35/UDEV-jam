@@ -47,6 +47,7 @@
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"06a6e120-e00b-4792-96bc-e92cf87f2f15",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"03b5ec9a-34ba-41dd-b627-78d5d3be6bb1",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"55fefa61-adc1-49ad-a572-597d70ac10d7",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"953f9e24-e535-42d9-af62-55f335a684ca",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -58,7 +59,7 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 19.0,
+    "length": 20.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
@@ -82,6 +83,7 @@
             {"id":"1f04946a-8b26-4a36-a71e-57bc0cd91f4d","Key":16.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"06a6e120-e00b-4792-96bc-e92cf87f2f15","path":"sprites/spr_soldier/spr_soldier.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b9c8abec-93e1-4afd-aedb-0c18170431e9","Key":17.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"03b5ec9a-34ba-41dd-b627-78d5d3be6bb1","path":"sprites/spr_soldier/spr_soldier.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"110cedf6-0060-4ff2-a871-fdb7dd2e21e3","Key":18.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"55fefa61-adc1-49ad-a572-597d70ac10d7","path":"sprites/spr_soldier/spr_soldier.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e0ac8a4b-0c7d-44c1-9eb4-54c17e5e74bb","Key":19.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"953f9e24-e535-42d9-af62-55f335a684ca","path":"sprites/spr_soldier/spr_soldier.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
