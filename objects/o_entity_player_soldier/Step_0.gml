@@ -58,7 +58,7 @@ if(tick_timer <= 0) {
 	//ladder response
 	scr_soldier_ladder_response();
 	
-	if(on_ground) {
+	if(on_ground or state == ENTITY_STATE.LADDER) {
 		//check for contruction clearance
 		var size = ds_list_size(spotted_contruction);
 	
@@ -136,7 +136,7 @@ if(tick_timer <= 0) {
 			if(image_index == 20) image_index = 21; else image_index = 20;
 
 			if(image_xscale = 1) image_xscale = -1; else image_xscale = 1;
-			if(instruction_direction == INSTRUCTION_DIRECTION.UPWARD) vsp = -2;
+			if(instruction_direction == INSTRUCTION_DIRECTION.UPWARD) vsp--;
 			
 			break;
         default:    

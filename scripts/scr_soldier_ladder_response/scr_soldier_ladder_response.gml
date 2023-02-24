@@ -25,10 +25,13 @@ function scr_soldier_ladder_response(){
 	//ladder response
 	if (on_ground and ins_dir > 0 and on_ladder and ladder_below) {
 		state = ENTITY_STATE.LADDER;
+		vsp--;
 	} else if (!on_ground and ins_dir > 0 and on_ladder and ladder_below) {
 		state = ENTITY_STATE.LADDER;
+		vsp--;
 	} else if (on_ground and ins_dir > 0 and on_ladder and !ladder_below) {
 		state = ENTITY_STATE.LADDER;
+		vsp--;
 	} else if (!on_ground and ins_dir > 0 and !on_ladder and ladder_below) {
 		//special condition
 		//treat ladder below as ground
@@ -36,6 +39,7 @@ function scr_soldier_ladder_response(){
 		vsp--;
 	} else if (!on_ground and ins_dir > 0 and on_ladder and !ladder_below) {
 		state = ENTITY_STATE.LADDER;
+		vsp--;
 	} else if (!on_ground and ins_dir < 0 and on_ladder and ladder_below) {
 		state = ENTITY_STATE.LADDER;
 	} else if (on_ground and ins_dir < 0 and !on_ladder and ladder_below) {
