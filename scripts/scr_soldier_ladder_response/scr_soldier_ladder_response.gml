@@ -40,7 +40,7 @@ function scr_soldier_ladder_response(){
 		state = ENTITY_STATE.LADDER;
 	} else if (on_ground and ins_dir < 0 and !on_ladder and ladder_below) {
 		state = ENTITY_STATE.LADDER;
-	} else if (on_ground and ins_dir < 0 and on_ladder and !ladder_below) {
+	} else if (!on_ground and ins_dir < 0 and !on_ladder and ladder_below) {
 		state = ENTITY_STATE.LADDER;
 	} else return noone;
 }
