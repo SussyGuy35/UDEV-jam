@@ -16,10 +16,13 @@ if(tick_timer <= 0) {
 		
 		//scan for sign
 		spotted_sign = noone;
-		spotted_sign = collision_point(x,y-1,o_entity_env_sign_direction,false,true);
-		if(!spotted_sign) spotted_sign = collision_point(x,y-5,o_entity_env_sign_direction,false,true);
+		//spotted_sign = collision_point(x,y-1,o_entity_env_sign_direction,false,true);
+		//if(!spotted_sign) spotted_sign = collision_point(x,y-5,o_entity_env_sign_direction,false,true);
+		spotted_sign = collision_rectangle(bbox_left,bbox_top+4,bbox_right,bbox_bottom,o_entity_env_sign_direction,false,true)
 		if(spotted_sign) {
 			if(spotted_sign.switch_on) instruction_direction = spotted_sign.instruction_direction;
+			if(instruction_direction == INSTRUCTION_DIRECTION.RIGHTWARD) {dir = 1; instruction_direction = INSTRUCTION_DIRECTION.NONE}
+			else if(instruction_direction == INSTRUCTION_DIRECTION.LEFTWARD) {dir = -1; instruction_direction = INSTRUCTION_DIRECTION.NONE}
 		}
 		
 		//scan for building
