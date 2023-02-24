@@ -13,7 +13,7 @@ if(mouse_check_button_pressed(mb_left)) {
 }
 
 //nhấp chuột phải tạo khối bê tông
-if(mouse_check_button_pressed(mb_right)) {
+if(mouse_check_button(mb_right)) {
 	if(keyboard_check(vk_lshift)) {
 		var col_grid = collision_point(mouse_x,mouse_y,o_entity_env_void,false,true);
 		if (col_grid) {
