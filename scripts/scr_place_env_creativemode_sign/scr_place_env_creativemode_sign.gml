@@ -1,0 +1,26 @@
+// Script assets have changed for v2.3.0 see
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+function scr_place_env_creativemode_sign(building, instruction_dir){
+	if(keyboard_check(vk_lshift)) {
+		var col_grid = collision_point(mouse_x,mouse_y,o_entity_env_void,false,true);
+		if (col_grid) {
+			with(instance_create_layer(col_grid.x,col_grid.y,"Structures",o_entity_env_contruction_side)) {
+			contructing = building;
+			instruction_direction = instruction_dir;
+			switch_on = true;
+			}
+			instance_destroy(col_grid);
+		}
+	} else {
+		if(instance_exists(grid_obj)) {
+			var col_grid = collision_point(mouse_x,mouse_y,o_entity_env_void,false,true);
+			if(col_grid) {
+				with (instance_create_layer(col_grid.x,col_grid.y,"Structures",building)) {
+					instruction_direction = instruction_dir;
+					switch_on = true;
+				}
+				instance_destroy(col_grid);
+			}
+		}
+	}
+}

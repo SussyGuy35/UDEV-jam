@@ -4,6 +4,7 @@ global.global_tick_timer--;
 
 //phần debug: nơi chứa các code tạm để test game. hãy xóa hoặc vô hiệu hóa chúng nếu không cần nữa
 
+/*
 //nhấp chuột trái tạo lính
 if(mouse_check_button_pressed(mb_left)) {
 	if(keyboard_check(vk_lshift)) {

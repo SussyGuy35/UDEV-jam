@@ -9,6 +9,20 @@ if(tick_timer <= 0) {
     tick_timer = tick_interval;
 	
 	if(state != ENTITY_STATE.DEAD) {
+		//scan for ladder
+		on_ladder = collision_point(x,y-1,o_entity_env_ladder,false,true);
+		if(!on_ladder) on_ladder = collision_point(x,y-5,o_entity_env_ladder,false,true);
+		ladder_below = collision_point(x,y,o_entity_env_ladder,false,true);
+		
+		//scan for sign
+		spotted_sign = noone;
+		spotted_sign = collision_point(x,y-1,o_entity_env_sign_direction,false,true);
+		if(!spotted_sign) spotted_sign = collision_point(x,y-5,o_entity_env_sign_direction,false,true);
+		if(spotted_sign) {
+			if(spotted_sign.switch_on) instruction_direction = spotted_sign.instruction_direction;
+		}
+		show_debug_message(string(instruction_direction))
+		
 		//scan for building
 		ds_list_clear(spotted_contruction); //clear spotted list
 		if(instance_exists(target_contruction)) {
@@ -41,6 +55,9 @@ if(tick_timer <= 0) {
 		}
 	}
 	
+	//ladder response
+	scr_soldier_ladder_response();
+	
 	if(on_ground) {
 		//check for contruction clearance
 		var size = ds_list_size(spotted_contruction);
@@ -61,9 +78,11 @@ if(tick_timer <= 0) {
 		if(instance_exists(target_contruction)) {
 			state = ENTITY_STATE.CONSTRUCTING;
 		} else {
-			state = ENTITY_STATE.MOVING;
+			if(state != ENTITY_STATE.LADDER)
+				state = ENTITY_STATE.MOVING;
 		}
     }
+	
 	
 	if(target_enemy) {
 		state = ENTITY_STATE.ATTACKING;
@@ -110,6 +129,14 @@ if(tick_timer <= 0) {
 			image_speed = 0;
 			image_index = 19;
 			image_xscale = sign(target_contruction.x - x)
+			
+			break;
+		case ENTITY_STATE.LADDER:
+			x = x - x mod 4 + 2;
+			if(image_index == 20) image_index = 21; else image_index = 20;
+
+			if(image_xscale = 1) image_xscale = -1; else image_xscale = 1;
+			if(instruction_direction == INSTRUCTION_DIRECTION.UPWARD) vsp = -2;
 			
 			break;
         default:    

@@ -24,3 +24,13 @@ range_contruction = 8;
 spotted_contruction = ds_list_create();
 target_contruction = noone;
 speed_contruction = 1;
+
+//ladder id
+on_ladder = noone;
+ladder_below = noone;
+
+//sign instruction
+instruction_direction = INSTRUCTION_DIRECTION.DOWNWARD;
+instuction_report_interval = 60;
+instuction_report_timer = 0;
+spotted_sign = noone;

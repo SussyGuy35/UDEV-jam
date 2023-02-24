@@ -12,7 +12,7 @@ if(tick_timer <= 0) {
 		hp += contructor.speed_contruction;
 	
 		if(hp >= contructing.hp) {
-			contructing = instance_create_layer(x,y,"Instances",contructing);
+			contructing = instance_create_layer(x,y,"Structures",contructing);
 			var col_grid = collision_point(mouse_x,mouse_y,o_entity_env_void,false,true);
 		
 			with (instance_nearest(x,y,o_grid)) {
@@ -34,6 +34,4 @@ if(tick_timer <= 0) {
 		
 		instance_create_layer(sx,sy,"Bullets",o_gfx_spark_drop);
 	}
-	
-	
 }

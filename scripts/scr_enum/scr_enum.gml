@@ -33,7 +33,8 @@ function enum_entity_state(){
 		LANDING,
 		ATTACKING,
 		DEAD,
-		CONSTRUCTING
+		CONSTRUCTING,
+		LADDER
 	}
 }
 
@@ -44,5 +45,15 @@ function enum_structure_state() {
 		UNFINISHED,
 		NEAR_FINISHED
 		
+	}
+}
+
+function enum_instruction_direction() {
+	enum INSTRUCTION_DIRECTION {
+		NONE,
+		UPWARD,
+		DOWNWARD,
+		LEFTWARD,
+		RIGHTWARD
 	}
 }
