@@ -21,7 +21,6 @@ if(tick_timer <= 0) {
 		if(spotted_sign) {
 			if(spotted_sign.switch_on) instruction_direction = spotted_sign.instruction_direction;
 		}
-		show_debug_message(string(instruction_direction))
 		
 		//scan for building
 		ds_list_clear(spotted_contruction); //clear spotted list

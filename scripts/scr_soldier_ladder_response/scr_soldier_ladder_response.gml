@@ -3,10 +3,10 @@
 	purpose:
 		check what to do if there appear to be ladder on or below soldier.
 		response depend of 4 conditions:
-			is the soldier on ground
-			is the soldier instructed to go up or down
-			is there a ladder on soldier
-			is there a ladder below soldier
+			is the soldier on ground?
+			is the soldier instructed to go up or down?
+			is there a ladder on soldier?
+			is there a ladder below soldier?
 		Therefore there are 16 possible situations, 
 			some of them can be ignored
 */
