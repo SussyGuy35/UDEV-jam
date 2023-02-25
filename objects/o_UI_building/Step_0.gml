@@ -29,7 +29,7 @@ if(mouse_check_button_pressed(mb_right)) {
 		
 			break;
 		case 7:
-			
+			scr_place_env_creativemode_decon();
 			
 			break;
 		case 8:

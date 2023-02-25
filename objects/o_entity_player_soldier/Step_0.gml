@@ -25,15 +25,18 @@ if(tick_timer <= 0) {
 			else if(instruction_direction == INSTRUCTION_DIRECTION.LEFTWARD) {dir = -1; instruction_direction = INSTRUCTION_DIRECTION.NONE}
 		}
 		
-		//scan for building
+		//clear contruction data
 		ds_list_clear(spotted_contruction); //clear spotted list
 		if(instance_exists(target_contruction)) {
 			target_contruction.contructor = noone; 
 			target_contruction = noone; //reset target contruction side
 		}
-	
+		
+		//scan for contruction side
 		collision_circle_list(x,y-2,range_contruction,o_entity_env_contruction_side,false,true,spotted_contruction,true);
-	
+		//scan for decontruction side
+		collision_circle_list(x,y-2,range_contruction,o_entity_env_decontruction_side,false,true,spotted_contruction,true);
+		
 		//scan for enemies
 		ds_list_clear(spotted_enemies); //clear spotted list
 		target_enemy = noone; //reset target enemy
