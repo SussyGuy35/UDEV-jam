@@ -9,12 +9,7 @@ if(tick_timer <= 0) {
     tick_timer = tick_interval;
 	
 	//determine entity state
-	if(on_ground) {
-        state = ENTITY_STATE.MOVING;
-    } else {
-		phase_timer = phase_moving;
-		phase_index = 0;
-	}
+    state = ENTITY_STATE.MOVING;
 	
 	if(hp <= 0) state = ENTITY_STATE.DEAD;
 	
@@ -102,15 +97,29 @@ if(tick_timer <= 0) {
             break;	
 	}
 	
-	on_ground = false;
-    vsp++;
-	
-	scr_entity_solid_collision();
-
+	if (place_meeting(x+hsp, y, o_entity_env_solid)) {
+	      while(place_meeting(x+sign(hsp),y, o_entity_env_solid))
+	      {
+	         if (collision_time<=collision_timeout){
+				 x -= sign(hsp);
+		         
+				 dir*=-1
+				 
+			 }
+			 else {
+				break
+			 }
+			 collision_time ++
+	      }
+		  collision_time = 0
+		  // dir *= -1
+	}
 
 	x += hsp;
 	y += vsp;
 	image_xscale = dir;
+	
+	if(x >= room_width - sprite_width or x <= sprite_width) dir = -dir;
 
 	hsp = 0;
 	vsp = 0;
