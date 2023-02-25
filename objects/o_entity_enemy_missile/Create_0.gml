@@ -8,7 +8,7 @@
 // Inherit the parent event
 event_inherited();
 
-hp = 5;
+hp = 20;
 
 damage = 101;
 blast_radius = 4;
@@ -23,6 +23,8 @@ trail_timer = trail_interval;
 image_angle = 90;
 
 target = noone;
+
+decay = 600;
 
 //bullet hit area
 hit_area_left	= bbox_left;

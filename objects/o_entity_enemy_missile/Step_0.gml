@@ -8,7 +8,8 @@ if(tick_timer <= 0) {
     //reset tick timer
     tick_timer = tick_interval;
 	
-	if(hp <= 0) instance_destroy();
+	decay--;
+	if(hp <= 0 or decay <= 0) instance_destroy();
 	
 	if(instance_exists(target)) {
 		var dir = point_direction(x,y,target.x,target.y);

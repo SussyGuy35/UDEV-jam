@@ -63,6 +63,20 @@ if(tick_timer <= 0) {
 							var rand_target = irandom_range(0,list_size -1);
 							target = ds_list_find_value(target_list,rand_target);
 						}
+					} else {
+						for (var i = 0; i < instance_number(o_entity_player); ++i;)
+						{
+							ds_list_add(target_list,instance_find(o_entity_player,i));
+						}
+						
+						//get target list size
+						var list_size = ds_list_size(target_list);
+							
+						if(list_size > 0) { //if list size not empty
+							//get a random target on the list
+							var rand_target = irandom_range(0,list_size -1);
+							target = ds_list_find_value(target_list,rand_target);
+						}
 					}
 				} else {
 					phase_timer--;
@@ -119,7 +133,7 @@ if(tick_timer <= 0) {
 	y += vsp;
 	image_xscale = dir;
 	
-	if(x >= room_width - sprite_width or x <= sprite_width) dir = -dir;
+	if(x >= room_width - sprite_width or x <= 0) dir = -dir;
 
 	hsp = 0;
 	vsp = 0;
