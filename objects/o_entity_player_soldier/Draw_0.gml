@@ -7,6 +7,7 @@ if(muzzle_flashing) {
 
 //debug show attack range
 if(debuging != 0) {
+	draw_set_color(c_white);
 	draw_circle(x,y,range,true);
 
 }

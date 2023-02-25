@@ -1,3 +1,6 @@
+// Inherit the parent event
+event_inherited();
+
 //cập nhật tick khi tick timer == 0
 if(global.global_tick_timer == 0) {
     tick_timer--;    
@@ -11,7 +14,7 @@ if(tick_timer <= 0) {
 	if(instance_exists(contructor)) {
 		hp += contructor.speed_contruction;
 	
-		if(hp >= contructing.hp) {
+		if(hp >= max_hp) {
 			contructing = instance_create_layer(x,y,"Structures",contructing);
 			var col_grid = collision_point(mouse_x,mouse_y,o_entity_env_void,false,true);
 		

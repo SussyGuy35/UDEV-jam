@@ -9,8 +9,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "o_entity",
-    "path": "objects/o_entity/o_entity.yy",
+    "name": "o_entity_env",
+    "path": "objects/o_entity_env/o_entity_env.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

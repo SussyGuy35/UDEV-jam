@@ -92,20 +92,21 @@ if(tick_timer <= 0) {
     //áp dụng trọng lực
     on_ground = false;
     vsp++;
+	
+	scr_entity_solid_collision();
+
+
+	x += hsp;
+	y += vsp;
+	image_xscale = dir;
+
+	hsp = 0;
+	vsp = 0;
+
+	//update hit area
+	hit_area_left	= bbox_left - 1;
+	hit_area_right	= bbox_right + 1;
+	hit_area_top	= bbox_top + 1;
+	hit_area_bottom = bbox_bottom - 2;
 }
 
-scr_entity_solid_collision();
-
-
-x += hsp;
-y += vsp;
-image_xscale = dir;
-
-hsp = 0;
-vsp = 0;
-
-//update hit area
-hit_area_left	= bbox_left - 1;
-hit_area_right	= bbox_right + 1;
-hit_area_top	= bbox_top + 1;
-hit_area_bottom = bbox_bottom - 2;

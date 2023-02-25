@@ -1,3 +1,6 @@
+// Inherit the parent event
+event_inherited();
+
 //cập nhật tick khi tick timer == 0
 if(global.global_tick_timer == 0) {
     tick_timer--;    
