@@ -133,7 +133,12 @@ if(tick_timer <= 0) {
 		case ENTITY_STATE.CONSTRUCTING:
 			image_speed = 0;
 			image_index = 19;
-			image_xscale = sign(target_contruction.x - x)
+			if (x > target_contruction.x + 2) {
+				dir = -1;
+			} else if (x < target_contruction.x + 2) {
+				dir = 1;
+			}
+			//image_xscale = sign(x - target_contruction.x + 2)
 			
 			break;
 		case ENTITY_STATE.LADDER:

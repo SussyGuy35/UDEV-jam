@@ -9,7 +9,7 @@ function scr_entity_solid_collision(){
 	         if (collision_time<=collision_timeout){
 				 x -= sign(hsp);
 		         
-				 dir*=-1
+				 if(state != ENTITY_STATE.CONSTRUCTING) dir*=-1;
 				 
 			 }
 			 else {
