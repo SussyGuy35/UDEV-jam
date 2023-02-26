@@ -4,6 +4,12 @@ if(mouse_check_button_pressed(mb_middle) and debuging) {
 }
 
 if(global.global_tick_timer > 0) {
+	path_request_timeout--;
+	if(path_request_timeout <= 0) {
+		path_request_timeout = path_request_interval * global.global_tick_timer;
+		ds_list_clear(global.path_request_obj_id);
+		ds_list_clear(global.path_request_obj_id);
+	}
 	//update grid forbiden cells
 	mp_grid_clear_all(global.path_grid);
 	

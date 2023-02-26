@@ -28,6 +28,7 @@
     {"id":{"name":"spr_button_frame","path":"sprites/spr_button_frame/spr_button_frame.yy",},"order":0,},
     {"id":{"name":"o_gfx_spark_drop","path":"objects/o_gfx_spark_drop/o_gfx_spark_drop.yy",},"order":1,},
     {"id":{"name":"spr_missile","path":"sprites/spr_missile/spr_missile.yy",},"order":3,},
+    {"id":{"name":"o_entity_env_obstacle","path":"objects/o_entity_env_obstacle/o_entity_env_obstacle.yy",},"order":9,},
     {"id":{"name":"scr_entity_solid_collision","path":"scripts/scr_entity_solid_collision/scr_entity_solid_collision.yy",},"order":3,},
     {"id":{"name":"o_entity_env_sign_direction","path":"objects/o_entity_env_sign_direction/o_entity_env_sign_direction.yy",},"order":6,},
     {"id":{"name":"scr_enum","path":"scripts/scr_enum/scr_enum.yy",},"order":0,},

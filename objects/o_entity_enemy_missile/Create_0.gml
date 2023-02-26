@@ -8,7 +8,7 @@
 // Inherit the parent event
 event_inherited();
 
-hp = 20;
+hp = 5;
 
 damage = 101;
 blast_radius = 4;

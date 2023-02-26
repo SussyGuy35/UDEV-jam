@@ -21,3 +21,5 @@ path_start_y = 0;
 //path request
 global.path_request_obj_id = ds_list_create();
 global.path_request_granted = ds_list_create();
+path_request_interval = 600;
+path_request_timeout = path_request_interval * global.global_tick_interval;
