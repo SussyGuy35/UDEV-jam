@@ -35,15 +35,20 @@ if(tick_timer <= 0) {
 	if(path_following) {
 		state = ENTITY_STATE.PATH;
 		if(path_position == 1) {
-			//path_end();
 			path_following = false;
 		}
 	} else {
 		//switching between flying and walking
 		if(deploy_timer >= deploy_interval) {
+			//setting state
 			state = ENTITY_STATE.FLYING;
+			
+			//flying time countdown
 			flying_timer--;
+			
+			//if out of flying time
 			if(flying_timer <= 0) {
+				//deploy walking mode
 				walking_timer = walking_interval;
 				deploy_timer--;
 				state = ENTITY_STATE.DEPLOY;
@@ -57,8 +62,12 @@ if(tick_timer <= 0) {
 			}
 		} else if (deploy_timer <= 0) {
 			if(on_ground) {
+				//countdown walking time
 				walking_timer--;
+				
+				//if out of walking time
 				if(walking_timer <= 0) {
+					//deploy flying mode
 					flying_timer = flying_interval;
 					deploy_timer++;
 					state = ENTITY_STATE.DEPLOY;
@@ -72,14 +81,20 @@ if(tick_timer <= 0) {
 	//attack if enemy spotted
 	if(target_enemy) {
 		state = ENTITY_STATE.ATTACKING;
-		path_following = false;
+		
+		//switch to walking mode once done attacking
 		deploy_timer = 0;
 		walking_timer = walking_interval;
+		
+		//end path following
+		path_following = false;
 		path_end();
 	} 
 	
 	if(hp <= 0) {
 		state = ENTITY_STATE.DEAD;
+		
+		//end path following
 		path_end();
 		
 		//withdraw path finding request if exists
@@ -103,14 +118,14 @@ if(tick_timer <= 0) {
 			
 			break;
 		case ENTITY_STATE.DEPLOY:
-			if(undeploy) {
+			if(undeploy) { //flying -> walking
 				deploy_timer--
 				image_index = 2 + floor(deploy_timer/2);
 				
 				if(deploy_timer <= 0) {
 					undeploy = false;
 				}
-			} else {
+			} else { //walking - > flying
 				deploy_timer++;
 				image_index = 2 + floor(deploy_timer/2);
 				
@@ -124,6 +139,8 @@ if(tick_timer <= 0) {
 			
 		case ENTITY_STATE.PATH:
 			if(image_index == 13) image_index = 14; else image_index = 13;
+			
+			//facing to the moving direction
 			if(previous_x < x) {
 				dir = 1;
 			} else if(previous_x > x) {
@@ -233,17 +250,23 @@ if(tick_timer <= 0) {
 	//find path when path finding request granted
 	var request_index = ds_list_find_index(global.path_request_obj_id,self);
 	
+	//if there exist this object's path finding request
 	if(request_index != -1) {
+		//check if request is granted
 		var granted = ds_list_find_value(global.path_request_granted,request_index);
 		
 		if(granted) {
+			//sign out the request
 			ds_list_delete(global.path_request_obj_id,request_index);
 			ds_list_delete(global.path_request_granted,request_index);
 			
+			//find path to the target enemy
 			if(instance_exists(target_enemy))
 				mp_grid_path(global.path_grid,path,x,y,target_enemy.x,target_enemy.y,true);
-				path_start(path,movespeed / global.global_tick_interval,path_action_stop,true);
-				path_following = true;
+			
+			//start following the path
+			path_start(path,movespeed / global.global_tick_interval,path_action_stop,true);
+			path_following = true;
 		}
 	}
 }

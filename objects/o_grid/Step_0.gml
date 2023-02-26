@@ -1,4 +1,4 @@
-if(mouse_check_button_pressed(mb_middle)) {
+if(mouse_check_button_pressed(mb_middle) and debuging) {
 	path_start_x = mouse_x;
 	path_start_y = mouse_y;
 }

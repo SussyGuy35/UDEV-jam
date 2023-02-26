@@ -37,7 +37,6 @@ function enum_entity_state(){
 		LADDER,
 		PATH,
 		DEPLOY,
-		UNDEPLOY,
 		FLYING
 	}
 }
