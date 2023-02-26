@@ -4,7 +4,6 @@ event_inherited();
 
 hp = 20;
 tick_interval = 1;
-on_ground = false; //xác định xem thực thể đang đứng trên một mặt phẳng
 dir = 1;
 
 //combat statistic
@@ -20,6 +19,18 @@ killed_by = noone;
 //visible enemies data
 spotted_enemies = ds_list_create();
 target_enemy = noone;
+
+//fly/ground mode
+on_ground = false; //xác định xem thực thể đang đứng trên một mặt phẳng
+on_ground_interval = 60;
+on_ground_timer = on_ground_interval;
+flying = false;
+deploy_interval = 22;
+deploy_timer = deploy_interval;
+
+//path finding
+path = path_add();
+path_following = false;
 
 //bullet hit area
 hit_area_left	= bbox_left - 1;

@@ -37,7 +37,7 @@ if(mouse_check_button_pressed(mb_right)) {
 			
 			break;
 		case 9:
-			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_spider);
+			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_spider_smart);
 			break;
 		case 10:
 			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_launcher);

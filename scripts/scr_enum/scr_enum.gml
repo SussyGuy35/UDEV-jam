@@ -34,7 +34,11 @@ function enum_entity_state(){
 		ATTACKING,
 		DEAD,
 		CONSTRUCTING,
-		LADDER
+		LADDER,
+		PATH,
+		DEPLOY,
+		UNDEPLOY,
+		FLYING
 	}
 }
 

@@ -14,6 +14,7 @@
     {"id":{"name":"scr_place_env_creativemode_sign","path":"scripts/scr_place_env_creativemode_sign/scr_place_env_creativemode_sign.yy",},"order":6,},
     {"id":{"name":"o_camera","path":"objects/o_camera/o_camera.yy",},"order":0,},
     {"id":{"name":"scr_place_env_creativemode_decon","path":"scripts/scr_place_env_creativemode_decon/scr_place_env_creativemode_decon.yy",},"order":7,},
+    {"id":{"name":"o_entity_enemy_spider_smart","path":"objects/o_entity_enemy_spider_smart/o_entity_enemy_spider_smart.yy",},"order":4,},
     {"id":{"name":"scr_soldier_attacking","path":"scripts/scr_soldier_attacking/scr_soldier_attacking.yy",},"order":2,},
     {"id":{"name":"o_entity_enemy","path":"objects/o_entity_enemy/o_entity_enemy.yy",},"order":1,},
     {"id":{"name":"spr_bullet_hit","path":"sprites/spr_bullet_hit/spr_bullet_hit.yy",},"order":0,},
