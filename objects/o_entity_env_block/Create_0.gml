@@ -1,6 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
+hp = 100;
 image_speed = 0;
 
 tileset = spr_tileset_test
