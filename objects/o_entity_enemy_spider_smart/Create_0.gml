@@ -21,16 +21,16 @@ spotted_enemies = ds_list_create();
 target_enemy = noone;
 
 //phases
-on_ground = false; //xác định xem thực thể đang đứng trên một mặt phẳng
+on_ground = true; //xác định xem thực thể đang đứng trên một mặt phẳng
 walking_interval = 60;
-walking_timer = walking_interval;
+walking_timer = 0;
 
 deploy_interval = 22;
 deploy_timer = 0;
 undeploy = false;
 
 flying_interval = 32;
-flying_timer = 0;
+flying_timer = flying_interval;
 
 
 //path finding

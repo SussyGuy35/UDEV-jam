@@ -46,6 +46,9 @@ if(mouse_check_button_pressed(mb_right)) {
 		case 11:
 			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_launcher);
 			break;
+		case 12:
+			instance_create_layer(mouse_x,mouse_y,"Buildings",o_entity_enemy_building_gate);
+			break;
 		default:
 			
 			break;

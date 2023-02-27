@@ -8,6 +8,7 @@
 // Inherit the parent event
 event_inherited();
 
+image_speed = 0;
 //bullet hit area
 hit_area_left	= bbox_left;
 hit_area_right	= bbox_right;
