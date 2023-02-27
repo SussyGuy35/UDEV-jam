@@ -190,10 +190,9 @@ if(tick_timer <= 0) {
 			image_index = 24;
 			if(instance_exists(target_enemy)) {
 				var attack_dir = point_direction(x,y - 2,target_enemy.x,target_enemy.y - 2);
+				vsp += lengthdir_y(attack_movespeed,attack_dir);
+				hsp += lengthdir_x(attack_movespeed,attack_dir);
 			}
-			
-			vsp += lengthdir_y(attack_movespeed,attack_dir);
-			hsp += lengthdir_x(attack_movespeed,attack_dir);
 			
 			if(sign(hsp) < 0) {
 				dir = -1;

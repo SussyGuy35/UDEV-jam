@@ -29,17 +29,21 @@ if(mouse_check_button_pressed(mb_right)) {
 		
 			break;
 		case 7:
-			scr_place_env_creativemode_decon();
+			scr_place_env_creativemode(o_entity_env_obstacle_fence);
 			
 			break;
 		case 8:
-			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_player_soldier);
+			scr_place_env_creativemode_decon();
 			
 			break;
 		case 9:
-			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_spider_smart);
+			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_player_soldier);
+			
 			break;
 		case 10:
+			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_spider_smart);
+			break;
+		case 11:
 			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_launcher);
 			break;
 		default:

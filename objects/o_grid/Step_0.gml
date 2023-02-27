@@ -18,6 +18,12 @@ if(global.global_tick_timer > 0) {
 		var cell = instance_find(o_entity_env_solid,i);
 		mp_grid_add_rectangle(global.path_grid,cell.bbox_left + 1,cell.bbox_top + 1,cell.bbox_right,cell.bbox_bottom);
 	}
+	
+	var obstacle_n = instance_number(o_entity_env_obstacle);
+	for (i = 0; i < obstacle_n; i++) {
+		var cell = instance_find(o_entity_env_obstacle,i);
+		mp_grid_add_rectangle(global.path_grid,cell.bbox_left + 1,cell.bbox_top + 1,cell.bbox_right,cell.bbox_bottom);
+	}
 }
 
 //clean up path request

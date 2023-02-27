@@ -32,6 +32,11 @@ if(tick_timer <= 0) {
 			instance_destroy();
 		}
 		
+		var collide = collision_point(x,y,o_entity_env_obstacle,false,true);
+		if(collide) {
+			instance_destroy();
+		}
+		
 		collide = collision_point(x,y,o_entity_player,false,true);
 		
 		if(collide) {

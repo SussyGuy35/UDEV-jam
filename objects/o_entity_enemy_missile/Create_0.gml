@@ -10,7 +10,7 @@ event_inherited();
 
 hp = 5;
 
-damage = 101;
+damage = 21;
 blast_radius = 4;
 
 turning_interval_warmup = 30;

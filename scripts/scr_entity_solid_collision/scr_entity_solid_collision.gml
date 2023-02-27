@@ -3,8 +3,8 @@
 function scr_entity_solid_collision(){
 	//xử lý va chạm
 	// Horizontal
-	if (place_meeting(x+hsp, y, o_entity_env_solid)) {
-	      while(place_meeting(x+sign(hsp),y, o_entity_env_solid))
+	if (place_meeting(x+hsp, y, o_entity_env_solid) or place_meeting(x+hsp, y, o_entity_env_obstacle)) {
+	      while(place_meeting(x+sign(hsp),y, o_entity_env_solid) or place_meeting(x+hsp, y, o_entity_env_obstacle))
 	      {
 	         if (collision_time<=collision_timeout){
 				 x -= sign(hsp);
@@ -22,8 +22,8 @@ function scr_entity_solid_collision(){
 	}	
 
 	// Vertical
-	if (place_meeting(x, y+vsp, o_entity_env_solid)){
-	    while(place_meeting(x,y+sign(vsp), o_entity_env_solid))
+	if (place_meeting(x, y+vsp, o_entity_env_solid) or place_meeting(x, y+vsp, o_entity_env_obstacle)){
+	    while(place_meeting(x,y+sign(vsp), o_entity_env_solid) or place_meeting(x, y+vsp, o_entity_env_obstacle))
 	    {
 			if (collision_time<=collision_timeout){
 				y -= sign(vsp);

@@ -54,6 +54,10 @@ if(tick_timer <= 0) {
 						{
 							ds_list_add(target_list,instance_find(o_entity_env_block,i));
 						}
+						for (var i = 0; i < instance_number(o_entity_env_obstacle); ++i;)
+						{
+							ds_list_add(target_list,instance_find(o_entity_env_obstacle,i));
+						}
 						
 						//get target list size
 						var list_size = ds_list_size(target_list);
