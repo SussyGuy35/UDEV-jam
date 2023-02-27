@@ -62,7 +62,7 @@ if(tick_timer <= 0) {
 }
 
 //bullet hit area
-hit_area_left	= bbox_left - 2;
-hit_area_right	= bbox_right - 3;
-hit_area_top	= bbox_top - 2;
-hit_area_bottom = bbox_bottom - 3;
+hit_area_left	= bbox_left - 1;
+hit_area_right	= bbox_right - 2;
+hit_area_top	= bbox_top - 1;
+hit_area_bottom = bbox_bottom - 2;

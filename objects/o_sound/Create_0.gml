@@ -16,3 +16,6 @@ playsound_contruction = false;
 
 globalvar playsound_soldier_die;
 playsound_soldier_die = false;
+
+globalvar playsound_explosion0;
+playsound_explosion0 = false;

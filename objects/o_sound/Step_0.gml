@@ -22,3 +22,8 @@ if(playsound_soldier_die and !mute) {
 	playsound_soldier_die = false;
 	audio_play_sound(sfx_wilhelm,0,0);
 }
+
+if(playsound_explosion0 and !mute) {
+	playsound_explosion0 = false;
+	audio_play_sound(sfx_explosion0,0,0);
+}
