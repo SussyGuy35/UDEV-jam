@@ -8,6 +8,8 @@ if(tick_timer <= 0) {
     //reset tick timer
     tick_timer = tick_interval;
 	
+	health_bar_display_timer--;
+	
 	image_index++;
 	if(image_index >= image_number) image_index = 0;
 	

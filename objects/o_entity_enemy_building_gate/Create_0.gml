@@ -9,6 +9,13 @@
 event_inherited();
 
 hp = 1000;
+hp_max = hp;
+hp_prev = hp;
+health_bar_x1 = bbox_left;
+health_bar_x2 = bbox_right -1;
+health_bar_y = bbox_top + 2;
+health_bar_display_interval = 30;
+health_bar_display_timer = 0;
 
 //spawn data
 spawn_interval = 300;
