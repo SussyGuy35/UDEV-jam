@@ -115,8 +115,8 @@ if(tick_timer <= 0) {
             break;	
 	}
 	
-	if (place_meeting(x+hsp, y, o_entity_env_solid)) {
-	      while(place_meeting(x+sign(hsp),y, o_entity_env_solid))
+	if (place_meeting(x+hsp, y, o_entity_env_solid) or place_meeting(x+sign(hsp),y, o_entity_env_obstacle)) {
+	      while(place_meeting(x+sign(hsp),y, o_entity_env_solid) or place_meeting(x+sign(hsp),y, o_entity_env_obstacle))
 	      {
 	         if (collision_time<=collision_timeout){
 				 x -= sign(hsp);
