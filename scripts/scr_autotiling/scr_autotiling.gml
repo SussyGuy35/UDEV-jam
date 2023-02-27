@@ -16,7 +16,7 @@ function autotile_get_tile(obj,tile_width){
 					if (_upleft){
 						if (_upright){
 							if (_downleft){
-								if (_downright) return 23
+								if (_downright) return choose(7,23,31)
 								if (!_downright) return 32
 							}
 							if (!_downleft){
