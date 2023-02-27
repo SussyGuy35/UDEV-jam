@@ -12,6 +12,7 @@ if(tick_timer <= 0) {
 	
 	//progressing contruction
 	if(instance_exists(contructor)) {
+		playsound_contruction = true;
 		hp += contructor.speed_contruction;
 	
 		if(hp >= max_hp) {

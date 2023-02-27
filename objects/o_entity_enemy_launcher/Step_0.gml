@@ -101,6 +101,7 @@ if(tick_timer <= 0) {
 					with(instance_create_layer(x-2*dir,y-3,"Bullets",o_entity_enemy_missile)) {
 						target = other.target;
 					}
+					playsound_missile_launch = true;
 					target = noone;
 				}
 			}
@@ -108,6 +109,7 @@ if(tick_timer <= 0) {
             break;
 		case ENTITY_STATE.DEAD:
 			instance_create_layer(x,y,"Bullets",o_gfx_explosion);
+			playsound_missile_explode = true;
 			instance_destroy();
 			
 			break;

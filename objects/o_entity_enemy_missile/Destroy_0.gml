@@ -19,3 +19,5 @@ for (var i = 0; i < ds_list_size(target_list); i++) {
 		hp -= other.damage;
 	}
 }
+
+playsound_missile_explode = true;

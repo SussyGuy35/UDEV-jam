@@ -122,7 +122,10 @@ if(tick_timer <= 0) {
 			} else if (image_index = 18) {
 				dead_despawn_timer--;
 				if(dead_despawn_timer <= 0) instance_destroy();
-			} else image_index = 14;
+			} else {
+				playsound_soldier_die = true;
+				image_index = 14;
+			}
 			
 			break;
 		case ENTITY_STATE.ATTACKING:

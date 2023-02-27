@@ -192,6 +192,11 @@ if(tick_timer <= 0) {
 				var attack_dir = point_direction(x,y - 2,target_enemy.x,target_enemy.y - 2);
 				vsp += lengthdir_y(attack_movespeed,attack_dir);
 				hsp += lengthdir_x(attack_movespeed,attack_dir);
+				var distance = point_distance(x,y - 2,target_enemy.x,target_enemy.y - 2);
+				if(distance <= attack_movespeed) {
+				target_enemy.hp -= damage;
+				if(target_enemy.hp <= 0) target_enemy = noone;
+			}
 			}
 			
 			if(sign(hsp) < 0) {
@@ -200,12 +205,6 @@ if(tick_timer <= 0) {
 				dir = 1;
 			}
 			
-			var distance = point_distance(x,y - 2,target_enemy.x,target_enemy.y - 2);
-			
-			if(distance <= attack_movespeed) {
-				target_enemy.hp -= damage;
-				if(target_enemy.hp <= 0) target_enemy = noone;
-			}
 			vsp--;
 			
 			break;
@@ -215,8 +214,13 @@ if(tick_timer <= 0) {
 				image_index++;
 			} else if (image_index == 23) {
 				dead_despawn_timer--;
-				if(dead_despawn_timer <= 0) instance_destroy();
-			} else image_index = 19;
+				if(dead_despawn_timer <= 0) {
+					instance_destroy();
+				}
+			} else {
+				playsound_missile_explode = true;
+				image_index = 19;
+			}
 			vsp++;
 			
         default:    
