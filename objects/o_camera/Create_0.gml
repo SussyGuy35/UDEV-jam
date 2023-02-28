@@ -5,6 +5,9 @@
 */
 
 //độ phân giải gốc
+globalvar view_width;
+globalvar view_height;
+
 view_width = 320;
 view_height = 240;
 
