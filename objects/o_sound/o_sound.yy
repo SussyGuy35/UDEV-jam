@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_sound",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_button_mute",
+    "path": "sprites/spr_button_mute/spr_button_mute.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

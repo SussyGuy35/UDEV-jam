@@ -2,6 +2,7 @@ globalvar mute;
 mute = false;
 mute_button_x = view_width - 12;
 mute_button_y = view_height - 12;
+image_speed = 0;
 
 //sound switch
 globalvar sound_gunshot_play;
@@ -21,3 +22,9 @@ playsound_soldier_die = false;
 
 globalvar playsound_explosion0;
 playsound_explosion0 = false;
+
+globalvar playsound_button_pressed;
+playsound_button_pressed = false;
+
+globalvar playsound_button_hover;
+playsound_button_hover = false;

@@ -27,3 +27,13 @@ if(playsound_explosion0 and !mute) {
 	playsound_explosion0 = false;
 	audio_play_sound(sfx_explosion0,0,0);
 }
+
+if(playsound_button_hover and !mute) {
+	playsound_button_hover = false;
+	audio_play_sound(sfx_button_hover,0,0);
+}
+
+if(playsound_button_pressed and !mute) {
+	playsound_button_pressed = false;
+	audio_play_sound(sfx_button_pressed,0,0);
+}

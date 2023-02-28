@@ -8,3 +8,6 @@ button_size = 8;
 button_selected = 6;
 
 grid_obj = instance_nearest(x,y,o_grid);
+
+mouse_hovering = false;
+mouse_hovering_prev = false;
