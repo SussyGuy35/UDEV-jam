@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_entity_env_bedrock",
   "spriteId": {
-    "name": "spr_block",
-    "path": "sprites/spr_block/spr_block.yy",
+    "name": "spr_tileset_bedrock",
+    "path": "sprites/spr_tileset_bedrock/spr_tileset_bedrock.yy",
   },
   "solid": false,
   "visible": true,

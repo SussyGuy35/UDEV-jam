@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_entity_env_block",
   "spriteId": {
-    "name": "spr_block",
-    "path": "sprites/spr_block/spr_block.yy",
+    "name": "spr_tileset_test",
+    "path": "sprites/spr_tileset_test/spr_tileset_test.yy",
   },
   "solid": false,
   "visible": true,

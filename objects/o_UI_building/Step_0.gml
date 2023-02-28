@@ -1,4 +1,4 @@
-if(mouse_check_button_pressed(mb_right)) {
+if(mouse_check_button_pressed(mb_right) and mouse_y < room_height - grid_obj.grid_size * 4) {
 	switch (button_selected) {
 		case 0:
 			scr_place_env_creativemode_sign(o_entity_env_sign_direction,INSTRUCTION_DIRECTION.UPWARD);
@@ -41,12 +41,15 @@ if(mouse_check_button_pressed(mb_right)) {
 			
 			break;
 		case 10:
-			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_spider_smart);
+			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_player_building_tent);
 			break;
 		case 11:
-			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_launcher);
+			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_spider_smart);
 			break;
 		case 12:
+			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_launcher);
+			break;
+		case 13:
 			instance_create_layer(mouse_x,mouse_y,"Buildings",o_entity_enemy_building_gate);
 			break;
 		default:

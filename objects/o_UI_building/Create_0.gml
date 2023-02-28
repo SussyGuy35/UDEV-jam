@@ -1,5 +1,5 @@
-button_origin_x = 4;
-button_origin_y = 226;
+button_origin_x = x + 4;
+button_origin_y = y + 4;
 
 button_spacing_x = 6;
 

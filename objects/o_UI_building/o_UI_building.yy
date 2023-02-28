@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_UI_building",
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_UI_template_build_menu",
+    "path": "sprites/spr_UI_template_build_menu/spr_UI_template_build_menu.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

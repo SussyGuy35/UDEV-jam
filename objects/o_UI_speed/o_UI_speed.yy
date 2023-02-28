@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_UI_speed",
   "spriteId": {
-    "name": "spr_UItemplate_speed",
-    "path": "sprites/spr_UItemplate_speed/spr_UItemplate_speed.yy",
+    "name": "spr_UI_template_speed",
+    "path": "sprites/spr_UI_template_speed/spr_UI_template_speed.yy",
   },
   "solid": false,
   "visible": true,

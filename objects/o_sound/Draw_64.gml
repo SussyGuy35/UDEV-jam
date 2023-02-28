@@ -8,6 +8,18 @@ if(mx >= x and mx <= x + 8
 	and my >= y and my <= y + 8) {
 	if(mouse_check_button_pressed(mb_left)) {
 		playsound_button_pressed = true;
-		if(mute) mute = false; else mute = true;
+		if(mute) {
+			mute = false;
+			
+			sound_gunshot_play = false;
+			playsound_missile_explode = false;
+			playsound_missile_launch = false;
+			playsound_contruction = false;
+			playsound_soldier_die = false;
+			playsound_explosion0 = false;
+			playsound_explosion1 = false;
+			playsound_button_pressed = false;
+			playsound_button_hover = false;
+		} else mute = true;
 	}
 }

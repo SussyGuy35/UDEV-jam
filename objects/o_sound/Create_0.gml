@@ -23,6 +23,9 @@ playsound_soldier_die = false;
 globalvar playsound_explosion0;
 playsound_explosion0 = false;
 
+globalvar playsound_explosion1;
+playsound_explosion1 = false;
+
 globalvar playsound_button_pressed;
 playsound_button_pressed = false;
 

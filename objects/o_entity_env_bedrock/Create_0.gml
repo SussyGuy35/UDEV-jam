@@ -4,7 +4,7 @@ event_inherited();
 hp = 100;
 image_speed = 0;
 
-tileset = spr_tileset_test
+tileset = spr_tileset_bedrock
 sprite_index = tileset
 
 image_index = autotile_get_tile(object_index,4)

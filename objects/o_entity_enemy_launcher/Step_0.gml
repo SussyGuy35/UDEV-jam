@@ -21,7 +21,7 @@ if(tick_timer <= 0) {
             break;
             
         case ENTITY_STATE.MOVING:
-			if(phase_index == 0) { //walking phase
+			if(phase_index == 0) { //flying phase
 				if(image_index == 0) image_index = 1; else image_index = 0;
 				phase_timer--;
 				if(phase_timer <= 0) {

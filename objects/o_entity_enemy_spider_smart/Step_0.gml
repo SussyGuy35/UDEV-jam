@@ -114,6 +114,7 @@ if(tick_timer <= 0) {
             
         case ENTITY_STATE.MOVING:
 			if(image_index == 0) image_index = 1; else image_index = 0;
+			if(x >= room_width or x <= 0) dir = -dir;
 		    hsp = dir*movespeed;
 			
 			break;

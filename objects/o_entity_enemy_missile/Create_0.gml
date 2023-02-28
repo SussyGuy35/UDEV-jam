@@ -12,9 +12,10 @@ hp = 5;
 
 damage = 21;
 blast_radius = 4;
+movespeed = 2;
 
-turning_interval_warmup = 30;
-turning_interval = 10;
+turning_interval_warmup = 15;
+turning_interval = 6;
 turning_timer = turning_interval_warmup;
 
 trail_interval = 2;
@@ -24,7 +25,7 @@ image_angle = 90;
 
 target = noone;
 
-decay = 600;
+decay = 300;
 
 //bullet hit area
 hit_area_left	= bbox_left;
