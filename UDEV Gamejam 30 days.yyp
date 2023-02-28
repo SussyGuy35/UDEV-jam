@@ -127,10 +127,10 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"effects","folderPath":"folders/Sprites/effects.yy","order":2,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"entities","folderPath":"folders/Sprites/entities.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"structures","folderPath":"folders/Sprites/structures.yy","order":1,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"tilesets","folderPath":"folders/Sprites/structures/tilesets.yy","order":9,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/Sprites/UI.yy","order":3,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Tile Sets","folderPath":"folders/Tile Sets.yy","order":2,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy","order":8,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"tilesets","folderPath":"folders/Sprites/structures/tilesets.yy","order":9,},
   ],
   "AudioGroups": [
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
