@@ -21,9 +21,11 @@ if(tick_timer <= 0) {
 		spotted_sign = collision_rectangle(bbox_left,bbox_top+4,bbox_right,bbox_bottom,o_entity_env_sign_direction,false,true)
 		if (!spotted_sign) spotted_sign = collision_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom-3,o_entity_env_sign_direction,false,true)
 		if(spotted_sign) {
-			if(spotted_sign.switch_on) instruction_direction = spotted_sign.instruction_direction;
-			if(instruction_direction == INSTRUCTION_DIRECTION.RIGHTWARD) {dir = 1; instruction_direction = INSTRUCTION_DIRECTION.NONE}
-			else if(instruction_direction == INSTRUCTION_DIRECTION.LEFTWARD) {dir = -1; instruction_direction = INSTRUCTION_DIRECTION.NONE}
+			if(spotted_sign.switch_on){ 
+				if(spotted_sign.instruction_direction == INSTRUCTION_DIRECTION.RIGHTWARD) dir = 1
+				else if(spotted_sign.instruction_direction == INSTRUCTION_DIRECTION.LEFTWARD) dir = -1
+				else instruction_direction = spotted_sign.instruction_direction;
+			}
 		}
 		
 		//clear contruction data
