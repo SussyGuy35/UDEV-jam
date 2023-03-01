@@ -15,4 +15,8 @@ max_damage_spots = 8;
 damage_spot_x = ds_list_create();
 damage_spot_y = ds_list_create();
 
+must_grounded = false;
+
 state_structure = STRUCT_STATE.FINISHED;
+
+supporting_building = false;

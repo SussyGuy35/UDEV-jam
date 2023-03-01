@@ -17,6 +17,8 @@ health_bar_y = bbox_top + 2;
 health_bar_display_interval = 30;
 health_bar_display_timer = 0;
 
+must_grounded = false;
+
 //spawn data
 spawn_interval = 300;
 spawn_timer = spawn_interval;
@@ -30,8 +32,8 @@ image_speed = 0;
 var grid = instance_nearest(x,y,o_grid);
 
 if(instance_exists(grid)) {
-	x -= x mod grid.grid_size;
-	y -= y mod grid.grid_size;
+	x -= x mod grid_size;
+	y -= y mod grid_size;
 }
 
 //death

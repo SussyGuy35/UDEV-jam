@@ -9,7 +9,7 @@
 event_inherited();
 
 hp = 0;
-max_hp = 100;
+hp_max = 100;
 
 state_structure = STRUCT_STATE.UNFINISHED;
 

@@ -11,3 +11,5 @@ grid_obj = instance_nearest(x,y,o_grid);
 
 mouse_hovering = false;
 mouse_hovering_prev = false;
+
+building_side = noone;

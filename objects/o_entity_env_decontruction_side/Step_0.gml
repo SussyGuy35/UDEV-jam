@@ -15,14 +15,14 @@ if(tick_timer <= 0) {
 		playsound_contruction = true;
 		hp += contructor.speed_contruction;
 	
-		if(hp >= max_hp) {
+		if(hp >= hp_max) {
 			decontructing = collision_point(x,y,o_entity_env,false,true);
 			
 			if(decontructing) {
 				var grid = instance_nearest(x,y,o_grid);
-				var w = x / grid.grid_size;
-				var h = y / grid.grid_size;
-				grid.grid[w][h] = instance_create_layer(w*grid.grid_size,h*grid.grid_size,"Structures",o_entity_env_void);
+				var w = x / grid_size;
+				var h = y / grid_size;
+				grid.grid[w][h] = instance_create_layer(w*grid_size,h*grid_size,"Structures",o_entity_env_void);
 				instance_destroy(decontructing);
 			}
 			

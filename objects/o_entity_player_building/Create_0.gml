@@ -7,3 +7,5 @@
 
 // Inherit the parent event
 event_inherited();
+
+must_grounded = false;

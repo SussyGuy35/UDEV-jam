@@ -15,7 +15,7 @@ if(tick_timer <= 0) {
 		playsound_contruction = true;
 		hp += contructor.speed_contruction;
 	
-		if(hp >= max_hp) {
+		if(hp >= hp_max) {
 			contructing = instance_create_layer(x,y,"Structures",contructing);
 			var col_grid = collision_point(mouse_x,mouse_y,o_entity_env_void,false,true);
 		

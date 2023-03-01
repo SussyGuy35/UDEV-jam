@@ -20,6 +20,22 @@ for(var i = 0; i < sprite_get_number(spr_button_icon); i++) {
 		if(mouse_check_button_pressed(mb_left)) {
 			button_selected = i;
 			playsound_button_pressed = true;
+			
+			//create contruction side with select contruction side
+			if(i == 10) {
+				if(!building_side) {
+					building_side = instance_create_layer(mouse_x,mouse_y,"Bullets",o_entity_env_construction_side_building);
+					building_side.side_to_build = o_entity_player_building_tent;
+					building_side.side_update = true;
+				} else {
+					if(instance_exists(building_side)) {
+						if(building_side.side_to_build != o_entity_player_building_tent) {
+							building_side.side_to_build = o_entity_player_building_tent;
+							building_side.side_update = true;
+						}
+					}
+				}
+			}
 		}
 	} else {
 		if (button_selected == i) col = c_yellow;

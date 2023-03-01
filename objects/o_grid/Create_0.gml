@@ -1,4 +1,5 @@
 //structure grid
+globalvar grid_size;
 grid_size = 4;
 grid_w = room_width / grid_size;
 grid_h = room_height / grid_size - 4;

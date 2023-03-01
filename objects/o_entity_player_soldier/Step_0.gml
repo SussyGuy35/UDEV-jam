@@ -39,6 +39,8 @@ if(tick_timer <= 0) {
 		collision_circle_list(x,y-2,range_contruction,o_entity_env_contruction_side,false,true,spotted_contruction,true);
 		//scan for decontruction side
 		collision_circle_list(x,y-2,range_contruction,o_entity_env_decontruction_side,false,true,spotted_contruction,true);
+		//scan for building contruct side
+		collision_circle_list(x,y-2,range_contruction,o_entity_env_construction_side_building,false,true,spotted_contruction,true);
 		
 		//scan for enemies
 		ds_list_clear(spotted_enemies); //clear spotted list

@@ -36,7 +36,7 @@ if(tick_timer <= 0) {
 				}
 			}
 		
-			instance_create_layer(x, y + 4,"Instances",o_entity_player_soldier);
+			instance_create_layer(x, y,"Instances",o_entity_player_soldier);
 		}
 	} else instance_destroy();
 }
