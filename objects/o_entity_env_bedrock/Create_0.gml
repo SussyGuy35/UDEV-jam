@@ -2,6 +2,7 @@
 event_inherited();
 
 hp = 100;
+hp_max = hp;
 image_speed = 0;
 
 tileset = spr_tileset_bedrock

@@ -41,7 +41,7 @@ if(mouse_check_button_pressed(mb_right) and mouse_y < room_height - grid_size * 
 			
 			break;
 		case 10:
-			building_side = noone;
+			if(building_side.side_placed) building_side = noone;
 			break;
 		case 11:
 			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_spider_smart);

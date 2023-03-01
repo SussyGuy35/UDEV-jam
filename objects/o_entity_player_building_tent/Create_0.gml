@@ -8,7 +8,7 @@
 // Inherit the parent event
 event_inherited();
 
-hp = 1000;
+hp = 100;
 hp_max = hp;
 hp_prev = hp;
 health_bar_x1 = bbox_left;
