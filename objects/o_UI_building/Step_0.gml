@@ -41,16 +41,18 @@ if(mouse_check_button_pressed(mb_right) and mouse_y < room_height - grid_size * 
 			
 			break;
 		case 10:
-			if(building_side.side_placed) building_side = noone;
+			
 			break;
 		case 11:
-			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_spider_smart);
+			
 			break;
 		case 12:
-			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_launcher);
+			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_spider_smart);
 			break;
 		case 13:
-			instance_create_layer(mouse_x,mouse_y,"Buildings",o_entity_enemy_building_gate);
+			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_launcher);
+			break;
+		case 14:
 			
 			break;
 		default:
@@ -59,7 +61,7 @@ if(mouse_check_button_pressed(mb_right) and mouse_y < room_height - grid_size * 
 	}
 }
 
-if(button_selected != 10) {
-	instance_destroy(building_side);
+if(button_selected != 10 and button_selected != 11 and button_selected != 14) {
+	if(instance_exists(building_side)) instance_destroy(building_side);
 	building_side = noone;
 }

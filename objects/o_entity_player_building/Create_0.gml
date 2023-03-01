@@ -8,4 +8,6 @@
 // Inherit the parent event
 event_inherited();
 
-must_grounded = false;
+hp = 100;
+hp_max = hp;
+must_grounded = true;

@@ -1,14 +1,5 @@
 if(side_update and side_to_build) {
-	side_update = false;
-	
-	hp_max = side_to_build.hp_max;
-	side_to_build_sprite = side_to_build.sprite_index;
-	side_w = side_to_build.sprite_width;
-	side_h = side_to_build.sprite_height;
-	side_xoffset = side_to_build.sprite_xoffset;
-	side_yoffset = side_to_build.sprite_yoffset;
-	side_must_be_grounded = side_to_build.must_grounded;
-	must_grounded = side_to_build.must_grounded;
+	scr_construction_side_building_update(side_to_build);
 }
 
 //cập nhật tick khi tick timer == 0
@@ -24,12 +15,6 @@ if(tick_timer <= 0) {
 	if(instance_exists(contructor)) {
 		playsound_contruction = true;
 		hp += contructor.speed_contruction;
-	
-		if(hp >= hp_max) {
-			contructing = instance_create_layer(x,y,"Buildings",side_to_build);
-
-			instance_destroy();
-		}
 		
 		//update spark image index
 		spark_image_index++;
@@ -39,6 +24,12 @@ if(tick_timer <= 0) {
 		var sy = irandom_range(bbox_top,bbox_bottom);
 		
 		instance_create_layer(sx,sy,"Bullets",o_gfx_bullet_hit);
+	}
+	
+	if(hp >= hp_max and side_placed) {
+		contructing = instance_create_layer(x,y,"Buildings",side_to_build);
+
+		instance_destroy();
 	}
 	
 	if(hp <= 0) instance_destroy();

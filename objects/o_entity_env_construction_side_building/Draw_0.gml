@@ -48,7 +48,7 @@ if(!side_placed) {
 				is_grounded = false;
 			}
 		}
-	}
+	} 
 } else {
 	image_alpha = 0.5 / hp_max * hp + 0.25
 	//draw bbox
@@ -68,9 +68,14 @@ if(mouse_check_button_pressed(mb_right) and !side_placed) {
 	//place building side if all condition passed
 	if(can_be_placed) {
 		side_placed = true;
+		var build_UI = instance_nearest(x,y,o_UI_building);
+		if(instance_exists(build_UI)) {
+			//if(build_UI.building_side == self) 
+			build_UI.building_side = noone;
+		}
 		sprite_index = side_to_build_sprite;
 		x = x1 + side_xoffset;
-		y = y1 + side_yoffset + 1;
+		y = y1 + side_yoffset;
 	}
 }
 

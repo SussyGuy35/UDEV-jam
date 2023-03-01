@@ -23,18 +23,11 @@ for(var i = 0; i < sprite_get_number(spr_button_icon); i++) {
 			
 			//create contruction side with select contruction side
 			if(i == 10) {
-				if(!building_side) {
-					building_side = instance_create_layer(mouse_x,mouse_y,"Bullets",o_entity_env_construction_side_building);
-					building_side.side_to_build = o_entity_player_building_tent;
-					building_side.side_update = true;
-				} else {
-					if(instance_exists(building_side)) {
-						if(building_side.side_to_build != o_entity_player_building_tent) {
-							building_side.side_to_build = o_entity_player_building_tent;
-							building_side.side_update = true;
-						}
-					}
-				}
+				scr_UI_building_switch_toBuild(o_entity_player_building_tent);
+			} else if (i == 11) {
+				scr_UI_building_switch_toBuild(o_entity_player_building_turret_flak);
+			} else if (i == 14) {
+				scr_UI_building_switch_toBuild(o_entity_enemy_building_gate);	
 			}
 		}
 	} else {
