@@ -8,6 +8,9 @@ if(tick_timer <= 0) {
     //reset tick timer
     tick_timer = tick_interval;
 	
+	//resume path finding;
+	path_speed = 1;
+	
 	//scan for enemies
 	ds_list_clear(spotted_enemies); //clear spotted list
 	target_enemy = noone; //reset target enemy
@@ -251,6 +254,9 @@ if(tick_timer <= 0) {
 	hit_area_top	= bbox_top + 1;
 	hit_area_bottom = bbox_bottom - 2;
 } else {
+	//pause path finding
+	path_speed = 0;
+	
 	//find path when path finding request granted
 	var request_index = ds_list_find_index(global.path_request_obj_id,self);
 	
