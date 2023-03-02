@@ -55,6 +55,11 @@ if(mouse_check_button_pressed(mb_right) and mouse_y < room_height - grid_size * 
 		case 14:
 			
 			break;
+		case 15:
+			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_beacon_meteor);
+			break
+		case 16:
+			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_meteor);
 		default:
 			
 			break;

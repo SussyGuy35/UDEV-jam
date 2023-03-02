@@ -1,5 +1,5 @@
  //-1 global_tick_timer mỗi frame (khung hình)
-global.global_tick_timer--;
+
 
 
 //phần debug: nơi chứa các code tạm để test game. hãy xóa hoặc vô hiệu hóa chúng nếu không cần nữa
