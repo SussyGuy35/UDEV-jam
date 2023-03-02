@@ -46,6 +46,7 @@ else {
 			playsound_explosion0 = true;
 			explosion_played = true;
 		}
+		draw_set_color(c_white);
 		draw_set_alpha(flash_timer/flash_interval);
 		draw_rectangle(0,0,room_width,room_height,false)
 		image_alpha = 0;
