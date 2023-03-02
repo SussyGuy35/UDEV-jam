@@ -1,5 +1,15 @@
 draw_self();
 
+//draw_muzzle_flash
+if(image_index >= 10 and image_index <= 19) {
+	draw_sprite(spr_flak_turret_muzzle_flash,image_index - 10,x,y);
+}
+
+//draw hit area
+if(instance_exists(target_enemy) and debuging) {
+	draw_circle(target_enemy.x,target_enemy.y,deviation,true);
+}
+
 //show health bar if hp changed
 if(hp != hp_prev) {
 	hp_prev = hp;

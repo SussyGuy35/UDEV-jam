@@ -20,6 +20,8 @@ if(mx >= x and mx <= x + 8
 			playsound_explosion1 = false;
 			playsound_button_pressed = false;
 			playsound_button_hover = false;
+			playsound_gun0 = false;
+			playsound_flak = false;
 		} else mute = true;
 	}
 }

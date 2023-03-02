@@ -30,6 +30,10 @@ clear_area_size = 8;
 
 image_speed = 0;
 
+//enemy data
+spotted_enemies = ds_list_create();
+target_enemy = noone;
+
 //flak turret data
 flak_dir = 0;
 soldier_occupied = false;
@@ -37,4 +41,5 @@ soldier_health = 0;
 max_range = 600;
 min_range = 10;
 angle_deviation = 10;
+deviation = 0;
 state = ENTITY_STATE.IDLE;

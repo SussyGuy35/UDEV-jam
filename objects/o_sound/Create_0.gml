@@ -31,3 +31,9 @@ playsound_button_pressed = false;
 
 globalvar playsound_button_hover;
 playsound_button_hover = false;
+
+globalvar playsound_gun0;
+playsound_gun0 = false;
+
+globalvar playsound_flak;
+playsound_flak = false;

@@ -1,20 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_entity_player_building_turret_flak0",
+  "name": "o_flak_explosion",
   "spriteId": {
-    "name": "spr_flak_turret",
-    "path": "sprites/spr_flak_turret/spr_flak_turret.yy",
+    "name": "spr_flak_explosion",
+    "path": "sprites/spr_flak_explosion/spr_flak_explosion.yy",
   },
   "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "o_entity_player",
-    "path": "objects/o_entity_player/o_entity_player.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -28,12 +25,13 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "player",
-    "path": "folders/Objects/player.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
 }

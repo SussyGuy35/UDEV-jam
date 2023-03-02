@@ -42,3 +42,13 @@ if(playsound_button_pressed and !mute) {
 	playsound_button_pressed = false;
 	audio_play_sound(sfx_button_pressed,0,0);
 }
+
+if(playsound_gun0 and !mute) {
+	playsound_gun0 = false;
+	audio_play_sound(sfx_gun0,0,0);
+}
+
+if(playsound_flak and !mute) {
+	playsound_flak = false;
+	audio_play_sound(sfx_flak,0,0);
+}
