@@ -26,7 +26,9 @@ for(var i = 0; i < sprite_get_number(spr_button_icon); i++) {
 				scr_UI_building_switch_toBuild(o_entity_player_building_tent);
 			} else if (i == 11) {
 				scr_UI_building_switch_toBuild(o_entity_player_building_turret_flak);
-			} else if (i == 14) {
+			} else if (i == 12) {
+				scr_UI_building_switch_toBuild(o_entity_player_building_conyard);
+			} else if (i == 15) {
 				scr_UI_building_switch_toBuild(o_entity_enemy_building_gate);	
 			}
 		}
