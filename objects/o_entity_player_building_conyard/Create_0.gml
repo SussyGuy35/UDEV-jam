@@ -16,7 +16,7 @@ state = ENTITY_STATE.IDLE;
 
 //contruction data
 construction_range = 120;
-speed_contruction = 1;
+speed_contruction = 100;
 construction_interval = 25;
 construction_timer = construction_interval;
 construction_target = noone;

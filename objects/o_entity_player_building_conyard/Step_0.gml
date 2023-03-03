@@ -64,6 +64,8 @@ if(tick_timer <= 0) {
 					if(instance_exists(construction_target)) {
 						construction_target.contructor = self;
 					}
+				} else if(instance_exists(construction_target)) {
+					construction_target.contructor = noone;
 				}
 			break;
 		case ENTITY_STATE.IDLE:
