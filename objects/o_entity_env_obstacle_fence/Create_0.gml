@@ -9,8 +9,8 @@ image_speed = 0;
 tileset = spr_tileset_fence
 sprite_index = tileset
 
-image_index = autotile_get_tile(object_index,4)
-
 nearby_tile = ds_list_create();
+autotile_w_other_solid = true;
+autotile_w_other_obstacle = true;
 
 event_user(0)
