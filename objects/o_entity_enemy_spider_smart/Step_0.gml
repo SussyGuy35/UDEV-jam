@@ -39,6 +39,8 @@ if(tick_timer <= 0) {
 		state = ENTITY_STATE.PATH;
 		if(path_position == 1) {
 			path_following = false;
+			path_end();
+			path_clear_points(path);
 		}
 	} else {
 		//switching between flying and walking
@@ -92,6 +94,7 @@ if(tick_timer <= 0) {
 		//end path following
 		path_following = false;
 		path_end();
+		path_clear_points(path);
 	} 
 	
 	if(hp <= 0) {
@@ -238,9 +241,15 @@ if(tick_timer <= 0) {
 	if(!path_following) {
 		vsp++;
 		scr_entity_solid_collision();
+	} else {
+		if(x == previous_x and y == previous_y) {
+			path_following = false;
+			path_end();
+		}
 	}
 
 	previous_x = x;
+	previous_y = y
 	x += hsp;
 	y += vsp;
 	image_xscale = dir;

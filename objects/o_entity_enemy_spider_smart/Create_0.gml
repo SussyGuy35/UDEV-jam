@@ -37,6 +37,7 @@ flying_timer = flying_interval;
 path = path_add();
 path_following = false;
 previous_x = x;
+previous_y = y;
 
 //bullet hit area
 hit_area_left	= bbox_left - 1;

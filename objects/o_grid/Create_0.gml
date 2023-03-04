@@ -1,3 +1,8 @@
+//map generator variable
+mapgen_min_impassable = 6;
+mapgen_max_underground = 15;
+mapgen_max_mountain = 45;
+
 //structure grid
 globalvar grid_size;
 grid_size = 4;
@@ -5,15 +10,7 @@ grid_w = room_width / grid_size;
 grid_h = room_height / grid_size - 4;
 grid = array_create(grid_w,array_create(grid_h));
 
-for(var w = 0; w < grid_w; w++) {
-	for(var h = 0; h < grid_h; h++) {
-		if(h < grid_h - 1) {
-			grid[w][h] = instance_create_layer(w*grid_size,h*grid_size,"Structures",o_entity_env_void);
-		} else {
-			grid[w][h] = instance_create_layer(w*grid_size,h*grid_size,"Structures",o_entity_env_bedrock);
-		}
-	}
-}
+dsgrid = ds_grid_create(grid_w,grid_h);
 
 //path finding
 path_offset_x = 1;
@@ -28,3 +25,7 @@ global.path_request_obj_id = ds_list_create();
 global.path_request_granted = ds_list_create();
 path_request_interval = 600;
 path_request_timeout = path_request_interval * global.global_tick_interval;
+
+//generate map
+scr_grid_map_generator(0);
+

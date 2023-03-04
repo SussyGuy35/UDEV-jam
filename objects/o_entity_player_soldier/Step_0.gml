@@ -78,7 +78,7 @@ if(tick_timer <= 0) {
 			
 			//check if contruction side is occupied
 			//if not, occupy the contruction side and work on it, end the loop
-			if(!con_side.contructor) {
+			if(!instance_exists(con_side.contructor)) {
 				con_side.contructor = self;
 				target_contruction = con_side;
 				i = size;

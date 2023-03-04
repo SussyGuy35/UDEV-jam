@@ -21,4 +21,4 @@ if(health_bar_display_timer > 0) {
 }
 
 //draw construction range
-draw_circle(x,y,construction_range,true);
+if(debuging) draw_circle(x,y,construction_range,true);
