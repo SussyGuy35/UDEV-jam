@@ -1,8 +1,3 @@
-//map generator variable
-mapgen_min_impassable = 6;
-mapgen_max_underground = 15;
-mapgen_max_mountain = 45;
-
 //structure grid
 globalvar grid_size;
 grid_size = 4;

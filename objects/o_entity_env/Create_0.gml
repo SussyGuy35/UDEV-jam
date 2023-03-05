@@ -20,3 +20,6 @@ must_grounded = false;
 state_structure = STRUCT_STATE.FINISHED;
 
 supporting_building = false;
+
+grid_x = -1;
+grid_y = -1;
