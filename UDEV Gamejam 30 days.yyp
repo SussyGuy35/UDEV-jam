@@ -73,7 +73,7 @@
     {"id":{"name":"spr_tileset_stone1","path":"sprites/spr_tileset_stone1/spr_tileset_stone1.yy",},"order":5,},
     {"id":{"name":"scr_env_placeholder","path":"sprites/scr_env_placeholder/scr_env_placeholder.yy",},"order":0,},
     {"id":{"name":"spr_soldier","path":"sprites/spr_soldier/spr_soldier.yy",},"order":2,},
-    {"id":{"name":"sfx_construction","path":"sounds/sfx_construction/sfx_construction.yy",},"order":9,},
+    {"id":{"name":"sfx_construction","path":"sounds/sfx_construction/sfx_construction.yy",},"order":10,},
     {"id":{"name":"o_entity_env_stone0","path":"objects/o_entity_env_stone0/o_entity_env_stone0.yy",},"order":5,},
     {"id":{"name":"scr_place_env_creativemode_building","path":"scripts/scr_place_env_creativemode_building/scr_place_env_creativemode_building.yy",},"order":10,},
     {"id":{"name":"sfx_snare","path":"sounds/sfx_snare/sfx_snare.yy",},"order":2,},
