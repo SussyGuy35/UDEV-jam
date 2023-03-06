@@ -52,8 +52,38 @@ function scr_grid_map_generator(seed){
 		}
 	}
 	
-	
-	//generate flat dirt for surface
+	//generating mountain and hills
+	var _y = irandom_range(mapgen_max_underground,mapgen_max_mountain-1);
+	for(var _x = 0; _x < grid_w; _x++) {
+		//generating surface
+		var new_block;
+		var block = collision_point(_x*grid_size,(grid_h - _y) * grid_size,o_entity_env,false,true);
+			if(instance_exists(block)) {
+				new_block = instance_create_layer(_x*grid_size,(grid_h - _y)*grid_size,"Structures",o_entity_env_grass0);
+				with (new_block) {
+					grid_x = block.grid_x;
+					grid_y = block.grid_y;	
+				}
+				ds_grid_add(dsgrid,_x,_y,new_block);
+			}
+		//fill up with dirt	
+		for(var i = mapgen_max_underground; i < _y; i++) {
+			block = collision_point(_x*grid_size,(grid_h - i) * grid_size,o_entity_env,false,true);
+			if(instance_exists(block)) {
+				new_block = instance_create_layer(_x*grid_size,(grid_h - i)*grid_size,"Structures",o_entity_env_grass0);
+				with (new_block) {
+					grid_x = block.grid_x;
+					grid_y = block.grid_y;	
+				}
+				ds_grid_add(dsgrid,_x,i,new_block);
+			}
+		}
+		//updating surface attitude
+		var rand = irandom_range(mapgen_max_underground,mapgen_max_mountain-1);
+		if(_y < rand) _y++; else if (_y > rand) _y--;
+	}
+	/*
+	//generate flat dirt for surface (old)
 	for(var w = 0; w < grid_w; w++) {
 		for(var h = 0; h < grid_h; h++) {
 			if(grid_h - h >= mapgen_max_underground and grid_h - h < mapgen_max_mountain) {
@@ -72,7 +102,7 @@ function scr_grid_map_generator(seed){
 			}
 		}
 	}
-	
+	*/
 	//generate stone0 blobs
 	for (var i = 0; i < mapgen_blob_count_stone0; i++) {
 		var random_y = grid_size * irandom_range(grid_h - mapgen_min_stone0, grid_h - mapgen_max_stone0);
@@ -100,4 +130,5 @@ function scr_grid_map_generator(seed){
 			}
 		}
 	}
+	
 }
