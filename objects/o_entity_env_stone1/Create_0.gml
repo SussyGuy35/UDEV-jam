@@ -10,6 +10,9 @@ sprite_index = tileset
 
 image_index = autotile_get_tile(object_index,4)
 
+//autotile_w_other_solid = false;
+//autotile_w_other_obstacle = false;
+
 nearby_tile = ds_list_create()
 
 event_user(0)

@@ -7,8 +7,9 @@ image_speed = 0;
 
 tileset = spr_tileset_grass0
 sprite_index = tileset
-autotile_w_other_solid = true;
-autotile_w_other_obstacle = false;
+//autotile_w_other_solid = false;
+//autotile_w_other_obstacle = false;
+object_to_autotile_w = o_entity_env_solid
 
 nearby_tile = ds_list_create()
 
