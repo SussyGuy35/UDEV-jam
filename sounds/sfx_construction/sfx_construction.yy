@@ -17,7 +17,7 @@
   "soundFile": "sfx_construction.wav",
   "duration": 0.132426,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
 }
