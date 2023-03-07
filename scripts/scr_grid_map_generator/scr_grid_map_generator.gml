@@ -10,8 +10,13 @@ function scr_grid_map_generator(seed){
 	mapgen_blob_radius_stone0 = 5;
 	mapgen_blob_density_stone0 = 60;
 	mapgen_blob_count_stone0 = 20;
+	mapgen_max_cavern = 30
 	
 	random_set_seed(seed);
+	//Perlin Noise variables
+	Y_start = random(1000);
+	X = random(1000);
+	inc = 0.2; //transition prequency
 	
 	//generate bedrock and void
 	for(var w = 0; w < grid_w; w++) {
@@ -64,6 +69,7 @@ function scr_grid_map_generator(seed){
 					grid_x = block.grid_x;
 					grid_y = block.grid_y;	
 				}
+				instance_destroy(block);
 				ds_grid_add(dsgrid,_x,_y,new_block);
 			}
 		//fill up with dirt	
@@ -75,6 +81,7 @@ function scr_grid_map_generator(seed){
 					grid_x = block.grid_x;
 					grid_y = block.grid_y;	
 				}
+				instance_destroy(block);
 				ds_grid_add(dsgrid,_x,i,new_block);
 			}
 		}
@@ -102,7 +109,7 @@ function scr_grid_map_generator(seed){
 			}
 		}
 	}
-	*/
+	
 	//generate stone0 blobs
 	for (var i = 0; i < mapgen_blob_count_stone0; i++) {
 		var random_y = grid_size * irandom_range(grid_h - mapgen_min_stone0, grid_h - mapgen_max_stone0);
@@ -130,5 +137,56 @@ function scr_grid_map_generator(seed){
 			}
 		}
 	}
+	*/
+	//generate stones
+	for (var w = 0; w < grid_w; w++) {
+		var Y = Y_start;
+		for (var h = grid_h - mapgen_max_stone0; h < grid_h - mapgen_min_stone0; h++) {
+			
+			var _val = perlin_noise(X, Y);
+			var _col_val = map_value(_val, -1, 1, 0,255);
+			
+			if (_col_val < 100) {
+				var block = collision_point(w*grid_size,h*grid_size,o_entity_env,false,true);
+				if(instance_exists(block)) {
+					var new_block = instance_create_layer(block.x,block.y,"Structures",o_entity_env_stone0);
+					with (new_block) {
+						grid_x = block.grid_x;
+						grid_y = block.grid_y;	
+					}
+					instance_destroy(block);
+					ds_grid_add(dsgrid,new_block.grid_x,new_block.grid_y,new_block);
+				}
+			}
+		
+			Y += inc;
+		}
+		X += inc;
+	}
 	
+	//generating caves
+	for (var w = 0; w < grid_w; w++) {
+		var Y = Y_start;
+		for (var h = grid_h - mapgen_max_cavern; h < grid_h - 2; h++) {
+			
+			var _val = perlin_noise(X, Y);
+			var _col_val = map_value(_val, -1, 1, 0,255);
+			
+			if (_col_val < 100) {
+				var block = collision_point(w*grid_size,h*grid_size,o_entity_env,false,true);
+				if(instance_exists(block)) {
+					var new_block = instance_create_layer(block.x,block.y,"Structures",o_entity_env_void);
+					with (new_block) {
+						grid_x = block.grid_x;
+						grid_y = block.grid_y;	
+					}
+					instance_destroy(block);
+					ds_grid_add(dsgrid,new_block.grid_x,new_block.grid_y,new_block);
+				}
+			}
+		
+			Y += inc;
+		}
+		X += inc;
+	}
 }

@@ -67,6 +67,7 @@
     {"id":{"name":"scr_entity_solid_collision","path":"scripts/scr_entity_solid_collision/scr_entity_solid_collision.yy",},"order":3,},
     {"id":{"name":"spr_flak_turret","path":"sprites/spr_flak_turret/spr_flak_turret.yy",},"order":1,},
     {"id":{"name":"o_entity_env_sign_direction","path":"objects/o_entity_env_sign_direction/o_entity_env_sign_direction.yy",},"order":1,},
+    {"id":{"name":"scr_perlin_noise","path":"scripts/scr_perlin_noise/scr_perlin_noise.yy",},"order":14,},
     {"id":{"name":"spr_building_tent","path":"sprites/spr_building_tent/spr_building_tent.yy",},"order":0,},
     {"id":{"name":"scr_enum","path":"scripts/scr_enum/scr_enum.yy",},"order":0,},
     {"id":{"name":"o_entity_enemy_building_gate","path":"objects/o_entity_enemy_building_gate/o_entity_enemy_building_gate.yy",},"order":6,},
