@@ -7,8 +7,11 @@ image_speed = 0;
 //autotile variables
 tileset = spr_tileset_test
 sprite_index = tileset
+/*
 autotile_w_other_solid = false;
 autotile_w_other_obstacle = false;
+*/
+object_to_autotile_w = noone
 autotile_update = true;
 
 nearby_tile = ds_list_create()
