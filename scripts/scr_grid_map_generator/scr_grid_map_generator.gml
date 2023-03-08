@@ -11,6 +11,7 @@ function scr_grid_map_generator(seed){
 	mapgen_blob_density_stone0 = 60;
 	mapgen_blob_count_stone0 = 20;
 	mapgen_max_cavern = 30
+	mapgen_tree_desity = 0.2;
 	
 	random_set_seed(seed);
 	//Perlin Noise variables
@@ -71,6 +72,31 @@ function scr_grid_map_generator(seed){
 				}
 				instance_destroy(block);
 				ds_grid_add(dsgrid,_x,_y,new_block);
+				
+				if(instance_exists(new_block) and random_range(0,1) < mapgen_tree_desity) {
+					var impassable = collision_rectangle(new_block.x,
+														new_block.y - 16,
+														new_block.x + 3,
+														new_block.y ,
+														o_entity_env_impassable,false,true);
+					var prop = collision_rectangle(new_block.x - 2,
+													new_block.y - 16,
+													new_block.x + 6,
+													new_block.y ,
+													o_entity_env_prop,false,true);
+										
+					if(!instance_exists(prop) and !instance_exists(impassable)) {
+						var roll = irandom_range(0,1);
+						if(roll == 0) {
+							tree = instance_create_layer(new_block.x + 2, new_block.y, "Bullets", o_entity_env_prop_tree_pine);
+						} else if (roll == 1) {
+							tree = instance_create_layer(new_block.x + 2, new_block.y, "Bullets", o_entity_env_prop_tree_oak);
+						}
+						with (tree) {
+							grow_stage = irandom_range(0,grow_stage_max);
+						}
+					}
+				}
 			}
 		//fill up with dirt	
 		for(var i = mapgen_max_underground; i < _y; i++) {

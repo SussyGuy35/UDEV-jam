@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_entity_env_grass1",
+  "name": "o_entity_env_prop_tree_oak",
   "spriteId": {
-    "name": "spr_tileset_grass1",
-    "path": "sprites/spr_tileset_grass1/spr_tileset_grass1.yy",
+    "name": "spr_tree_oak",
+    "path": "sprites/spr_tree_oak/spr_tree_oak.yy",
   },
   "solid": false,
   "visible": true,
@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "o_entity_env_soil",
-    "path": "objects/o_entity_env_soil/o_entity_env_soil.yy",
+    "name": "o_entity_env_prop",
+    "path": "objects/o_entity_env_prop/o_entity_env_prop.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -29,12 +29,12 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "solids",
-    "path": "folders/Objects/environment/solids.yy",
+    "name": "trees",
+    "path": "folders/Objects/environment/props/trees.yy",
   },
 }

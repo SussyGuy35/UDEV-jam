@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "o_entity_env_solid",
-    "path": "objects/o_entity_env_solid/o_entity_env_solid.yy",
+    "name": "o_entity_env_soil",
+    "path": "objects/o_entity_env_soil/o_entity_env_soil.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
