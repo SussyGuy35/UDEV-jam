@@ -7,9 +7,9 @@ function scr_grid_map_generator(seed){
 	mapgen_max_mountain = 45;
 	mapgen_min_stone0 = mapgen_min_impassable;
 	mapgen_max_stone0 = 30
-	mapgen_blob_radius_stone0 = 5;
-	mapgen_blob_density_stone0 = 60;
-	mapgen_blob_count_stone0 = 20;
+	//mapgen_blob_radius_stone0 = 5;
+	//mapgen_blob_density_stone0 = 60;
+	//mapgen_blob_count_stone0 = 20;
 	mapgen_max_cavern = 30
 	mapgen_tree_desity = 0.2;
 	

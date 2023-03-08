@@ -13,7 +13,7 @@ event_inherited();
 grow_stage = 0;
 grow_stage_max = 4;
 grow_chance = 0.2;
-grow_interval = 300;
+grow_interval = 150;
 grow_timer = grow_interval;
 grow_clearance_left		= bbox_left + sprite_width;
 grow_clearance_right	= bbox_right + sprite_width;

@@ -34,7 +34,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "trees",
-    "path": "folders/Objects/environment/props/trees.yy",
+    "name": "plants",
+    "path": "folders/Objects/environment/props/plants.yy",
   },
 }

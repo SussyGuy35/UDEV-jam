@@ -63,8 +63,13 @@ if(mouse_check_button_pressed(mb_right) and mouse_y < room_height - grid_size * 
 			break
 		case 17:
 			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_meteor);
+			break;
 		case 18:
 			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_env_prop_tree_pine);
+			break;
+		case 19:
+			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_env_prop_vine);
+			break;
 		default:
 			
 			break;
