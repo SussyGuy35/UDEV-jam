@@ -24,4 +24,7 @@ if(mx >= x and mx <= x + 8
 			playsound_flak = false;
 		} else mute = true;
 	}
+
+	//scr_language_draw_UI_text_box(ds_map_find_value(global.language_map,"STR_MUTE"));
+	//scr_language_draw_UI_text_box("!\u22#$%&'[]*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 }

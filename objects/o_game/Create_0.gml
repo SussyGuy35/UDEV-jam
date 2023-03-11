@@ -18,3 +18,13 @@ globalvar debuging;
 debuging = 1;
 
 grid_obj = instance_nearest(x,y,o_grid);
+
+//set up language
+scr_language_char();
+scr_language_load_default();
+global.Font = font_add_sprite_ext(spr_font1, char, true, 0);
+global.textbox_color_border = c_white;
+global.textbox_color_background = c_black;
+global.textbox_color_text_default = c_white;
+global.textbox_color_text_title = c_orange;
+global.textbox_color_text_des = c_white;

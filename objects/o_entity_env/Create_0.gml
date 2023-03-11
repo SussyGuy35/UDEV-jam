@@ -11,7 +11,7 @@ event_inherited();
 hp = 100;
 hp_max = hp;
 
-max_damage_spots = 8;
+max_damage_spots = 4;
 damage_spot_x = ds_list_create();
 damage_spot_y = ds_list_create();
 
