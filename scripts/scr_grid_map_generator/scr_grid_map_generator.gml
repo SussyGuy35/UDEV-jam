@@ -65,7 +65,7 @@ function scr_grid_map_generator(seed){
 		var new_block;
 		var block = collision_point(_x*grid_size,(grid_h - _y) * grid_size,o_entity_env,false,true);
 			if(instance_exists(block)) {
-				new_block = instance_create_layer(_x*grid_size,(grid_h - _y)*grid_size,"Structures",o_entity_env_grass0);
+				new_block = instance_create_layer(_x*grid_size,(grid_h - _y)*grid_size,"Structures",o_entity_env_grass2);
 				with (new_block) {
 					grid_x = block.grid_x;
 					grid_y = block.grid_y;	
@@ -102,7 +102,7 @@ function scr_grid_map_generator(seed){
 		for(var i = mapgen_max_underground; i < _y; i++) {
 			block = collision_point(_x*grid_size,(grid_h - i) * grid_size,o_entity_env,false,true);
 			if(instance_exists(block)) {
-				new_block = instance_create_layer(_x*grid_size,(grid_h - i)*grid_size,"Structures",o_entity_env_grass0);
+				new_block = instance_create_layer(_x*grid_size,(grid_h - i)*grid_size,"Structures",o_entity_env_grass2);
 				with (new_block) {
 					grid_x = block.grid_x;
 					grid_y = block.grid_y;	
