@@ -1,0 +1,26 @@
+draw_self();
+if(hatch_opening > -1) draw_sprite(sprite_index,8 + hatch_opening,x,y)
+
+//show health bar if hp changed
+if(hp != hp_prev) {
+	hp_prev = hp;
+	
+	health_bar_display_timer = health_bar_display_interval;
+}
+
+//display health bar is show health bar on
+if(health_bar_display_timer > 0) {
+	health_bar_x1 = bbox_left - 1;
+	health_bar_x2 = bbox_right -1;
+	health_bar_y = bbox_top - 2;
+	var percentage = 1 / hp_max * hp;
+	draw_set_color(c_green);
+	var x2 = (health_bar_x2 - health_bar_x1) * percentage;
+	draw_line(health_bar_x1,health_bar_y,health_bar_x1 + x2,health_bar_y);
+	draw_set_color(c_red);
+	draw_line(health_bar_x1 + x2,health_bar_y,health_bar_x2,health_bar_y);
+}
+
+//reset draw color and alpha
+draw_set_alpha(1);
+draw_set_color(c_white);

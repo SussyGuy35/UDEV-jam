@@ -8,9 +8,19 @@ if(playsound_missile_explode and !mute) {
 	audio_play_sound(sfx_missile_explode,0,0);
 }
 
+if(playsound_missile_explode2 and !mute) {
+	playsound_missile_explode2 = false;
+	audio_play_sound(sfx_missile_explode2,0,0);
+}
+
 if(playsound_missile_launch and !mute) {
 	playsound_missile_launch = false;
 	audio_play_sound(sfx_missile_launch,0,0);
+}
+
+if(playsound_missile_launch2 and !mute) {
+	playsound_missile_launch2 = false;
+	audio_play_sound(sfx_missile_launch2,0,0);
 }
 
 if(playsound_contruction and !mute) {
@@ -51,4 +61,9 @@ if(playsound_gun0 and !mute) {
 if(playsound_flak and !mute) {
 	playsound_flak = false;
 	audio_play_sound(sfx_flak,0,0);
+}
+
+if(playsound_ship_weapon0 and !mute) {
+	playsound_ship_weapon0 = false;
+	audio_play_sound(sfx_ship_weapon0,0,0);
 }

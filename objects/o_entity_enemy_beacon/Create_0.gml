@@ -18,12 +18,6 @@ health_bar_display_interval = 30;
 health_bar_display_timer = 0;
 image_speed = 0;
 
-//meteor spawning
-meteor_spawn_interval = 30;
-meteor_spawn_timer = 150;
-meteor_spawn_interval_deviation = 15;
-meteor_spawn_y = -10;
-
 //flak deflecting
 flak_deflecting_range = 32;
 flak_deflecting_chance = 0.5;

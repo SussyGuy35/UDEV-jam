@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_entity_enemy_beacon_meteor",
+  "name": "o_entity_enemy_missile2",
   "spriteId": {
-    "name": "spr_beacon",
-    "path": "sprites/spr_beacon/spr_beacon.yy",
+    "name": "spr_energy_explosion",
+    "path": "sprites/spr_energy_explosion/spr_energy_explosion.yy",
   },
   "solid": false,
   "visible": true,
@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "o_entity_enemy",
-    "path": "objects/o_entity_enemy/o_entity_enemy.yy",
+    "name": "o_entity",
+    "path": "objects/o_entity/o_entity.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -29,6 +29,7 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
   ],

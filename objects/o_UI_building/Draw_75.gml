@@ -122,10 +122,12 @@ if(mouse_hovering) {
 			//instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_meteor);
 			break;
 		case 18:
-			//instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_env_prop_tree_pine);
+			scr_language_draw_UI_text_box_description(
+				ds_map_find_value(global.language_map,"STR_DESTROYER"),
+				ds_map_find_value(global.language_map,"STR_DESTROYER_DESC"));
 			break;
 		case 19:
-			//instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_env_prop_vine);
+			
 			break;
 		default:
 			

@@ -11,8 +11,14 @@ sound_gunshot_play = false;
 globalvar playsound_missile_explode;
 playsound_missile_explode = false;
 
+globalvar playsound_missile_explode2;
+playsound_missile_explode2 = false;
+
 globalvar playsound_missile_launch;
 playsound_missile_launch = false;
+
+globalvar playsound_missile_launch2;
+playsound_missile_launch2 = false;
 
 globalvar playsound_contruction;
 playsound_contruction = false;
@@ -37,3 +43,6 @@ playsound_gun0 = false;
 
 globalvar playsound_flak;
 playsound_flak = false;
+
+globalvar playsound_ship_weapon0;
+playsound_ship_weapon0 = false;

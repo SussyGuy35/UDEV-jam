@@ -13,7 +13,9 @@ if(mx >= x and mx <= x + 8
 			
 			sound_gunshot_play = false;
 			playsound_missile_explode = false;
+			playsound_missile_explode2 = false;
 			playsound_missile_launch = false;
+			playsound_missile_launch2 = false;
 			playsound_contruction = false;
 			playsound_soldier_die = false;
 			playsound_explosion0 = false;
@@ -22,6 +24,7 @@ if(mx >= x and mx <= x + 8
 			playsound_button_hover = false;
 			playsound_gun0 = false;
 			playsound_flak = false;
+			playsound_ship_weapon0 = false;
 		} else mute = true;
 	}
 
