@@ -17,6 +17,9 @@ if(tick_timer <= 0) {
 	
 		if(hp >= hp_max) {
 			contructing = instance_create_layer(x,y,"Structures",contructing);
+			with (contructing) {
+				instruction_direction = other.instruction_direction;
+			}
 			var col_grid = collision_point(mouse_x,mouse_y,o_entity_env_void,false,true);
 		
 			with (instance_nearest(x,y,o_grid)) {
