@@ -1,5 +1,5 @@
 draw_self();
-if(hatch_opening > -1) draw_sprite(sprite_index,8 + hatch_opening,x,y)
+if(hatch_opening > -1 and hp > 0) draw_sprite(sprite_index,8 + hatch_opening,x,y)
 
 //show health bar if hp changed
 if(hp != hp_prev) {
@@ -24,3 +24,5 @@ if(health_bar_display_timer > 0) {
 //reset draw color and alpha
 draw_set_alpha(1);
 draw_set_color(c_white);
+
+scr_death_animation_bigexplosion_draw();

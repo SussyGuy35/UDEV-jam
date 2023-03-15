@@ -12,9 +12,7 @@ if(tick_timer <= 0) {
 	if(image_index >= 7) image_index = 0;
 	
 	if(hp <= 0) {
-		instance_create_layer(x,y,"Bullets",o_gfx_explosion);
-		playsound_missile_explode = true;
-		instance_destroy();
+		scr_death_animation_bigexplosion_step()
 	} else {
 		hatch_cooldown_timer--;
 		if(hatch_cooldown_timer <= 0) {

@@ -10,7 +10,7 @@ damage = 1;
 hit_chance = 0.05;
 blast_radius = 8;
 
-var beacon = instance_nearest(x,y,o_entity_enemy_beacon_meteor);
+var beacon = instance_nearest(x,y,o_entity_enemy_beacon);
 if(instance_exists(beacon)) {
 	for (var i = 0; i < beacon.flak_deflecting_range; i++) {
 		var dice_hit = random_range(0,1);

@@ -43,3 +43,5 @@ subwp_fire_timer = 0;
 
 target_list = ds_list_create();
 
+scr_death_animation_bigexplosion_create()
+

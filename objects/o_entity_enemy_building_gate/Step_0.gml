@@ -39,25 +39,7 @@ if(tick_timer <= 0) {
 			instance_create_layer(x, y + 4,"Instances",o_entity_enemy_spider_smart);
 		}
 	} else {
-		for(var i = 0; i < particle_per_frame; i++) {
-			var rx = irandom_range(bbox_left - 12,bbox_right +11);
-		var ry = irandom_range(bbox_top -12,bbox_bottom+11);
-			ds_list_add(particle_x,rx);
-			ds_list_add(particle_y,ry);
-		}
-		
-		for (var i = 0; i < ds_list_size(particle_x); i++) {
-			var nx = ds_list_find_value(particle_x,i);
-			var ny = ds_list_find_value(particle_y,i);
-			
-			var dir = point_direction(nx,ny,x - 1, y - 1);
-			
-			nx += lengthdir_x(particle_speed,dir);
-			ny += lengthdir_y(particle_speed,dir);
-			
-			ds_list_replace(particle_x,i,nx);
-			ds_list_replace(particle_y,i,ny);
-		}
+		scr_death_animation_bigexplosion_step();
 	}
 }
 
