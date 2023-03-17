@@ -239,7 +239,7 @@
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"lang_eng.txt","CopyToMask":3035426170322551022,"filePath":"datafiles/languages",},
-    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"configuration.ini","CopyToMask":-1,"filePath":"datafiles",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"configuration.ini","CopyToMask":3035426170322551022,"filePath":"datafiles",},
   ],
   "MetaData": {
     "IDEVersion": "2022.0.0.19",

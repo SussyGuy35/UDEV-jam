@@ -14,5 +14,5 @@ view_y = -1;
 //đặt kích thước cửa sổ
 window_set_size(view_width * window_scale,view_height * window_scale);
 //surface_resize(application_surface,view_width * window_scale,view_height * window_scale);
-window_set_position(0,0);
+window_center();
 
