@@ -1,3 +1,7 @@
+if(button_hovering_prev != button_hovering and button_hovering != -1) {
+	button_hovering_prev = button_hovering;
+	playsound_button_hover = true;
+}
 button_hovering = -1;
 
 if(button_exit_x2 > room_width) {
@@ -104,18 +108,22 @@ if (mouse_check_button_released(mb_left)) {
 		case 0:
 			button_slideout = true;
 			alarm_set(0,60);
+			playsound_button_pressed = true;
 			break;
 		case 1:
 			button_slideout = true;
 			alarm_set(1,60);
+			playsound_button_pressed = true;
 			break;
 		case 2:
 			button_slideout = true;
 			alarm_set(2,60);
+			playsound_button_pressed = true;
 			break;
 		case 3:
 			button_slideout = true;
 			alarm_set(3,60);
+			playsound_button_pressed = true;
 			break;
 		default:
 			break;
