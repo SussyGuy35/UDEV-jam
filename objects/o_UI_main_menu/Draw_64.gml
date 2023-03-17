@@ -107,22 +107,23 @@ if (mouse_check_button_released(mb_left)) {
 	switch (button_pressed) {
 		case 0:
 			button_slideout = true;
-			alarm_set(0,60);
+			alarm_set(0,30);
 			playsound_button_pressed = true;
 			break;
 		case 1:
 			button_slideout = true;
-			alarm_set(1,60);
+			instance_create_layer(x,y,"Instances",o_UI_setting);
+			alarm_set(1,30);
 			playsound_button_pressed = true;
 			break;
 		case 2:
 			button_slideout = true;
-			alarm_set(2,60);
+			alarm_set(2,30);
 			playsound_button_pressed = true;
 			break;
 		case 3:
 			button_slideout = true;
-			alarm_set(3,60);
+			alarm_set(3,30);
 			playsound_button_pressed = true;
 			break;
 		default:

@@ -14,9 +14,31 @@
 global.global_tick_interval = 4;
 global.global_tick_timer = 0;
 
+//load configurations
+ini_open("configuration.ini");
 globalvar debuging;
-debuging = 1;
+debuging = ini_read_real("gameplay","debugging",1);
 
+globalvar view_width;
+globalvar view_height;
+view_width = ini_read_real("graphics","view_w",512);
+view_height = ini_read_real("graphics","view_h",288);
+globalvar window_scale;
+window_scale = ini_read_real("graphics","window_scale",2);
+globalvar fullscreen;
+fullscreen = ini_read_real("graphics","fullscreen",0);
+window_set_fullscreen(fullscreen);
+
+
+
+globalvar mute;
+mute = ini_read_real("sounds","mute",0);
+globalvar volume;
+volume = ini_read_real("sounds","volume",1);
+globalvar volume_sound;
+volume_sound = ini_read_real("sounds","sound",1);
+
+//grid
 grid_obj = instance_nearest(x,y,o_grid);
 
 //set up language

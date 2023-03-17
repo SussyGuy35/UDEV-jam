@@ -10,6 +10,7 @@ if(mx >= x and mx <= x + 8
 		playsound_button_pressed = true;
 		if(mute) {
 			mute = false;
+			scr_config_update("sounds","mute",0);
 			
 			sound_gunshot_play = false;
 			playsound_missile_explode = false;
@@ -25,7 +26,10 @@ if(mx >= x and mx <= x + 8
 			playsound_gun0 = false;
 			playsound_flak = false;
 			playsound_ship_weapon0 = false;
-		} else mute = true;
+		} else {
+			mute = true;
+			scr_config_update("sounds","mute",1);
+		}
 	}
 
 	//scr_language_draw_UI_text_box(ds_map_find_value(global.language_map,"STR_MUTE"));

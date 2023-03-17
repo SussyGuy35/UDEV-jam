@@ -91,6 +91,7 @@
     {"id":{"name":"scr_entity_solid_collision","path":"scripts/scr_entity_solid_collision/scr_entity_solid_collision.yy",},"order":1,},
     {"id":{"name":"spr_flak_turret","path":"sprites/spr_flak_turret/spr_flak_turret.yy",},"order":1,},
     {"id":{"name":"o_entity_env_sign_direction","path":"objects/o_entity_env_sign_direction/o_entity_env_sign_direction.yy",},"order":1,},
+    {"id":{"name":"scr_config_update","path":"scripts/scr_config_update/scr_config_update.yy",},"order":12,},
     {"id":{"name":"scr_perlin_noise","path":"scripts/scr_perlin_noise/scr_perlin_noise.yy",},"order":1,},
     {"id":{"name":"spr_building_tent","path":"sprites/spr_building_tent/spr_building_tent.yy",},"order":0,},
     {"id":{"name":"scr_enum","path":"scripts/scr_enum/scr_enum.yy",},"order":0,},
@@ -150,6 +151,7 @@
     {"id":{"name":"sfx_missile_explode","path":"sounds/sfx_missile_explode/sfx_missile_explode.yy",},"order":0,},
     {"id":{"name":"o_entity_env_soil","path":"objects/o_entity_env_soil/o_entity_env_soil.yy",},"order":8,},
     {"id":{"name":"spr_contruction_spark","path":"sprites/spr_contruction_spark/spr_contruction_spark.yy",},"order":1,},
+    {"id":{"name":"spr_UI_switch_button","path":"sprites/spr_UI_switch_button/spr_UI_switch_button.yy",},"order":11,},
     {"id":{"name":"scr_autotiling","path":"scripts/scr_autotiling/scr_autotiling.yy",},"order":0,},
     {"id":{"name":"spr_bot_spider","path":"sprites/spr_bot_spider/spr_bot_spider.yy",},"order":2,},
     {"id":{"name":"TileSet1","path":"tilesets/TileSet1/TileSet1.yy",},"order":0,},
@@ -237,6 +239,7 @@
   ],
   "IncludedFiles": [
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"lang_eng.txt","CopyToMask":3035426170322551022,"filePath":"datafiles/languages",},
+    {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"configuration.ini","CopyToMask":-1,"filePath":"datafiles",},
   ],
   "MetaData": {
     "IDEVersion": "2022.0.0.19",

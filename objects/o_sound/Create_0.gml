@@ -1,12 +1,4 @@
-globalvar mute;
-mute = false;
-mute_button_x = view_width - 12;
-mute_button_y = view_height - 12;
 image_speed = 0;
-globalvar volume;
-volume = 1;
-globalvar volume_sound;
-volume_sound = 1;
 
 //sound switch
 globalvar sound_gunshot_play;
