@@ -32,6 +32,8 @@ undeploy = false;
 flying_interval = 32;
 flying_timer = flying_interval;
 
+//teleport
+teleport_chance = 0.9;
 
 //path finding
 path = path_add();

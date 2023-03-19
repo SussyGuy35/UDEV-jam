@@ -35,8 +35,9 @@ if(tick_timer <= 0) {
 					obj.hp = -1;
 				}
 			}
-		
-			instance_create_layer(x, y,"Instances",o_entity_player_soldier);
+			
+			if(instance_number(o_entity_player_soldier) < soldier_pop)
+				instance_create_layer(x, y,"Instances",o_entity_player_soldier);
 		}
 	} else instance_destroy();
 }

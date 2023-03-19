@@ -27,6 +27,7 @@ if(mx >= x and mx <= x + 8
 			playsound_gun0 = false;
 			playsound_flak = false;
 			playsound_ship_weapon0 = false;
+			playsound_teleport = false;
 			
 			if(audio_exists(music)) audio_resume_sound(music);
 		} else {

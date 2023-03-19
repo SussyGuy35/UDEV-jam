@@ -193,7 +193,7 @@ function scr_grid_map_generator(seed){
 	//generating caves
 	for (var w = 0; w < grid_w; w++) {
 		var Y = Y_start;
-		for (var h = grid_h - mapgen_max_cavern; h < grid_h - 2; h++) {
+		for (var h = grid_h - mapgen_max_cavern; h < grid_h - 6; h++) {
 			
 			var _val = perlin_noise(X, Y);
 			var _col_val = map_value(_val, -1, 1, 0,255);
@@ -215,4 +215,10 @@ function scr_grid_map_generator(seed){
 		}
 		X += inc;
 	}
+	
+	//spawn 1 gate and 2 beacons
+	var gate_w = sprite_get_width(spr_gate)
+	instance_create_layer(room_width/2, gate_w , "Instances", o_entity_enemy_building_gate);
+	instance_create_layer(room_width/2 - gate_w *1.5, gate_w * 2, "Instances", o_entity_enemy_beacon);
+	instance_create_layer(room_width/2 + gate_w *1.5, gate_w * 2, "Instances", o_entity_enemy_beacon);
 }

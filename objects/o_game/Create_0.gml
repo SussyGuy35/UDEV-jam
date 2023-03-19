@@ -38,6 +38,15 @@ volume_sound = ini_read_real("sounds","sound",1);
 globalvar volume_music;
 volume_music = ini_read_real("sounds","music",1);
 
+//population control
+globalvar soldier_pop;
+soldier_pop = ini_read_real("gameplay","soldier_pop",50);
+globalvar soldier_count;
+soldier_count = 0;
+globalvar enemy_pop;
+enemy_pop = ini_read_real("gameplay","enemy_pop",100);
+globalvar recall_allow;
+recall_allow = false;
 //grid
 grid_obj = instance_nearest(x,y,o_grid);
 

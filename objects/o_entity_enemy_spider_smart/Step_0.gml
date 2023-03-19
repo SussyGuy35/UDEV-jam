@@ -9,7 +9,7 @@ if(tick_timer <= 0) {
     tick_timer = tick_interval;
 	
 	//resume path finding;
-	path_speed = 1;
+	path_speed = attack_movespeed * 2 * path_position + 1;
 	
 	//scan for enemies
 	ds_list_clear(spotted_enemies); //clear spotted list
@@ -53,6 +53,23 @@ if(tick_timer <= 0) {
 			
 			//if out of flying time
 			if(flying_timer <= 0) {
+				//teleport if success
+				var roll = random_range(0,1);
+				if(roll <= teleport_chance) {
+					var rx = irandom_range(0,room_width);
+					var ry = irandom_range(0,room_height - 20);
+					if(!collision_point(rx,ry,o_entity_env_impassable,false,true)) {
+						with(instance_create_layer(x,y,"Instances",o_teleport)) {
+							des_x = rx;
+							des_y = ry;
+							obj = other.object_index;
+							obj_hp = other.hp;
+						}
+						playsound_ship_weapon0 = true;
+						instance_destroy();
+					}
+				}
+				
 				//deploy walking mode
 				walking_timer = walking_interval;
 				deploy_timer--;

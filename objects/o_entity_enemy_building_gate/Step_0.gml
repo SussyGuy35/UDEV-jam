@@ -15,9 +15,11 @@ if(tick_timer <= 0) {
 	
 	if(hp > 0) {
 		spawn_timer--;
-		if(spawn_timer <= 0) {
-			spawn_timer = spawn_interval;
-		
+		var enemies = instance_number(o_entity_enemy) 
+			- instance_number(o_entity_enemy_missile) 
+			- instance_number(o_entity_enemy_meteor);
+		if(spawn_timer <= 0 and enemies < enemy_pop) {
+			/*
 			var x1 = bbox_left + clear_area_x;
 			var x2 = x1 + clear_area_size - 2;
 			var y1 = bbox_top + clear_area_y;
@@ -35,8 +37,25 @@ if(tick_timer <= 0) {
 					obj.hp = -1;
 				}
 			}
-		
-			instance_create_layer(x, y + 4,"Instances",o_entity_enemy_spider_smart);
+			*/
+			var rx = irandom_range(0,room_width);
+			var ry = irandom_range(0,100);
+			instance_create_layer(rx,ry,"Instances",spawn_next);
+			
+			var dice = irandom_range(0,spawn_weight_total);
+			var weight = 0;
+			for(var i = 0; i < array_length(spawn_weight); i++) {
+				weight += spawn_weight[i];
+				if(dice <= weight) {
+					spawn_next = spawn_list[i];
+					spawn_timer = spawn_interval[i];
+					show_debug_message("dice = " + string(dice));
+					show_debug_message("Summmon next: " + object_get_name(spawn_list[i]));
+					i = array_length(spawn_weight);
+				}
+			}
+			
+			
 		}
 	} else {
 		scr_death_animation_bigexplosion_step();

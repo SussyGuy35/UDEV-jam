@@ -8,15 +8,21 @@
 // Inherit the parent event
 event_inherited();
 
-hp = 5;
+hp = 15;
 
 damage = 21;
 blast_radius = 4;
-movespeed = 2;
+movespeed = 8;
 
 turning_interval_warmup = 15;
-turning_interval = 6;
+turning_interval = 2;
 turning_timer = turning_interval_warmup;
+
+trail_interval = 1;
+trail_timer = trail_interval;
+trail_x = ds_list_create();
+trail_y = ds_list_create();
+trail_number = 10;
 
 trail_interval = 2;
 trail_timer = trail_interval;

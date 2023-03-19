@@ -4,7 +4,7 @@ function scr_language_char(){
 	globalvar char;
 	char = "!";
 	char += "#$%&'[]*+,-.";
-	char += "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_";
+	char += "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_|:";
 	/*
 	
 	char += "#$%&'[]*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ\_abcdefghijk"

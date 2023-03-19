@@ -53,6 +53,19 @@ if(tick_timer <= 0) {
 		instance_create_layer(x,y,"Bullets",o_gfx_bullet_hit);
 	}
 	
+	trail_timer--;
+	if(trail_timer <= 0) {
+		ds_list_add(trail_x,x);
+		ds_list_add(trail_y,y);
+		trail_timer = trail_interval;
+	}
+	
+	var size = ds_list_size(trail_x);
+	if(size > trail_number) {
+		ds_list_delete(trail_x,0);
+		ds_list_delete(trail_y,0);
+	}
+	
 	x += lengthdir_x(movespeed,image_angle);
 	y += lengthdir_y(movespeed,image_angle);
 	

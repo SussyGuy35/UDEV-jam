@@ -8,7 +8,7 @@
 // Inherit the parent event
 event_inherited();
 
-hp = 1000;
+hp = 10000;
 hp_max = hp;
 hp_prev = hp;
 health_bar_x1 = bbox_left;
@@ -20,8 +20,16 @@ health_bar_display_timer = 0;
 must_grounded = false;
 
 //spawn data
-spawn_interval = 300;
-spawn_timer = spawn_interval;
+spawn_interval = [30,15,300,1000,300];
+spawn_timer = 0;
+spawn_list = [o_entity_enemy_spider_smart,
+				o_entity_enemy_launcher,
+				o_entity_enemy_beacon,
+				o_entity_enemy_building_gate,
+				o_entity_enemy_ship_meteor];
+spawn_weight = [100,100,5,1,10];
+spawn_weight_total = 216;
+spawn_next = o_entity_enemy_spider_smart;
 
 //clear area that destroy block for spawn
 clear_area_x = 8;

@@ -1,4 +1,4 @@
-
+soldier_count++;
 // Inherit the parent event
 event_inherited();
 
@@ -34,3 +34,6 @@ instruction_direction = INSTRUCTION_DIRECTION.DOWNWARD;
 instuction_report_interval = 60;
 instuction_report_timer = 0;
 spotted_sign = noone;
+
+//recall
+recalling = false;
