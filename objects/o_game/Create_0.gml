@@ -29,14 +29,14 @@ globalvar fullscreen;
 fullscreen = ini_read_real("graphics","fullscreen",0);
 window_set_fullscreen(fullscreen);
 
-
-
 globalvar mute;
 mute = ini_read_real("sounds","mute",0);
 globalvar volume;
 volume = ini_read_real("sounds","volume",1);
 globalvar volume_sound;
 volume_sound = ini_read_real("sounds","sound",1);
+globalvar volume_music;
+volume_music = ini_read_real("sounds","music",1);
 
 //grid
 grid_obj = instance_nearest(x,y,o_grid);

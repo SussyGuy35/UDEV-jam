@@ -1,6 +1,6 @@
-for(var i = 0; i < ds_list_size(damage_spot_x); i++) {
-	var sx = ds_list_find_value(damage_spot_x,i);
-	var sy = ds_list_find_value(damage_spot_y,i);
-		
-	instance_create_layer(sx,sy,"Bullets",o_gfx_spark_drop);
+for(var i = 0; i < max_damage_spots; i++) {
+	var rx = irandom_range(bbox_left,bbox_right - 1);
+	var ry = irandom_range(bbox_top,bbox_bottom - 1);
+	
+	instance_create_layer(rx,ry,"Bullets",o_gfx_spark_drop);
 }

@@ -4,7 +4,7 @@ if(global.global_tick_timer == 0) {
 }
 
 //cập nhật object khi tick_timer <= 0
-if(tick_timer <= 0) {
+if(tick_timer == 0) {
 	image_index++;
 	if(image_index = image_number - 1) instance_destroy();
 	

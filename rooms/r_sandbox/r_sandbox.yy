@@ -20,7 +20,6 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_1F97794E","properties":[],"isDnd":false,"objectId":{"name":"o_grid","path":"objects/o_grid/o_grid.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":-24.0,"y":4.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3DF8C454","properties":[],"isDnd":false,"objectId":{"name":"o_UI_building","path":"objects/o_UI_building/o_UI_building.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":272.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_59A4AE56","properties":[],"isDnd":false,"objectId":{"name":"o_sound","path":"objects/o_sound/o_sound.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":504.0,"y":280.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5B4615CB","properties":[],"isDnd":false,"objectId":{"name":"o_UI_speed","path":"objects/o_UI_speed/o_UI_speed.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":436.0,"y":280.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_31960875","properties":[],"isDnd":false,"objectId":{"name":"o_UI_show_range","path":"objects/o_UI_show_range/o_UI_show_range.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":492.0,"y":280.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_76C165A8","properties":[],"isDnd":false,"objectId":{"name":"o_gaia","path":"objects/o_gaia/o_gaia.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":-24.0,"y":28.0,},
@@ -41,7 +40,6 @@
   "instanceCreationOrder": [
     {"name":"inst_1F97794E","path":"rooms/r_sandbox/r_sandbox.yy",},
     {"name":"inst_3DF8C454","path":"rooms/r_sandbox/r_sandbox.yy",},
-    {"name":"inst_59A4AE56","path":"rooms/r_sandbox/r_sandbox.yy",},
     {"name":"inst_5B4615CB","path":"rooms/r_sandbox/r_sandbox.yy",},
     {"name":"inst_1A6586FB","path":"rooms/r_sandbox/r_sandbox.yy",},
     {"name":"inst_16EE5BB8","path":"rooms/r_sandbox/r_sandbox.yy",},

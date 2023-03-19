@@ -42,3 +42,7 @@ playsound_flak = false;
 
 globalvar playsound_ship_weapon0;
 playsound_ship_weapon0 = false;
+
+//music
+globalvar music;
+music = noone;

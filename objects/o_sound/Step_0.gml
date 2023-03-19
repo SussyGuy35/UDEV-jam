@@ -67,3 +67,8 @@ if(playsound_ship_weapon0 and !mute) {
 	playsound_ship_weapon0 = false;
 	audio_play_sound(sfx_ship_weapon0,0,0,volume * volume_sound,0,4/global.global_tick_interval);
 }
+
+//music
+if(music == noone and !mute) {
+	music = audio_play_sound(music_doctor_dreamchip,0,true,volume * volume_music)
+}

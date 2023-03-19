@@ -1,5 +1,5 @@
 draw_self();
-
+/*
 if(sprite_index != -1) { //if object have sprite
 	var damage_spot_count = 0;
 	for(var i = hp; i < hp_max; i += hp_max / max_damage_spots) {
@@ -23,3 +23,4 @@ if(sprite_index != -1) { //if object have sprite
 		draw_sprite_ext(spr_bullet_hit,0,sx,sy,1,1,0,c_black,0.5);
 	}
 }
+*/
