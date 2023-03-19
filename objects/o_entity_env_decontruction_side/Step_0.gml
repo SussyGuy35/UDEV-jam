@@ -1,5 +1,5 @@
 // Inherit the parent event
-event_inherited();
+//event_inherited();
 
 //cập nhật tick khi tick timer == 0
 if(global.global_tick_timer == 0) {
@@ -19,6 +19,7 @@ if(tick_timer <= 0) {
 			decontructing = collision_point(x,y,o_entity_env,false,true);
 			
 			if(decontructing) {
+				decontructing.rebuildable = false;
 				var grid = instance_nearest(x,y,o_grid);
 				var w = x / grid_size;
 				var h = y / grid_size;
@@ -28,6 +29,8 @@ if(tick_timer <= 0) {
 			
 			instance_destroy();
 		}
+		
+		if(hp < 0) hp = 0;
 		
 		//update spark image index
 		spark_image_index++;

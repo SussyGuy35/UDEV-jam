@@ -11,11 +11,12 @@ function scr_place_env_creativemode(building){
 		}
 	} else {
 		var col_grid = collision_point(mouse_x,mouse_y,o_entity_env_void,false,true);
-		if (col_grid) {
+		if (instance_exists(col_grid)) {
 			with(instance_create_layer(col_grid.x,col_grid.y,"Structures",o_entity_env_contruction_side)) {
-			contructing = building;
+				contructing = building;
+				instance_destroy(col_grid);
 			}
-			instance_destroy(col_grid);
+			
 		}
 		
 	}

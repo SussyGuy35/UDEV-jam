@@ -168,6 +168,7 @@
     {"id":{"name":"spr_crack","path":"sprites/spr_crack/spr_crack.yy",},"order":11,},
     {"id":{"name":"scr_language_load_default","path":"scripts/scr_language_load_default/scr_language_load_default.yy",},"order":2,},
     {"id":{"name":"scr_death_animation_bigexplosion_create","path":"scripts/scr_death_animation_bigexplosion_create/scr_death_animation_bigexplosion_create.yy",},"order":8,},
+    {"id":{"name":"scr_place_env_rebuild","path":"scripts/scr_place_env_rebuild/scr_place_env_rebuild.yy",},"order":4,},
     {"id":{"name":"spr_UI_pop","path":"sprites/spr_UI_pop/spr_UI_pop.yy",},"order":13,},
     {"id":{"name":"o_entity_env_grass2","path":"objects/o_entity_env_grass2/o_entity_env_grass2.yy",},"order":9,},
     {"id":{"name":"spr_button_mute","path":"sprites/spr_button_mute/spr_button_mute.yy",},"order":2,},

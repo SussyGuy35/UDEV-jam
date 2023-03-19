@@ -20,3 +20,4 @@ instruction_direction = INSTRUCTION_DIRECTION.NONE;
 
 spark_image_index = 0;
 spark_image_number = 3;
+rebuildable = true;

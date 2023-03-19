@@ -1,4 +1,4 @@
-if(mouse_check_button_pressed(mb_right) and mouse_y < room_height - grid_size * 4) {
+if(mouse_check_button(mb_right) and mouse_y < room_height - grid_size * 4) {
 	switch (button_selected) {
 		case 0:
 			scr_place_env_creativemode_sign(o_entity_env_sign_direction,INSTRUCTION_DIRECTION.UPWARD);
@@ -37,7 +37,8 @@ if(mouse_check_button_pressed(mb_right) and mouse_y < room_height - grid_size * 
 			
 			break;
 		case 9:
-			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_player_soldier);
+			if(mouse_check_button_pressed(mb_right))
+				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_player_soldier);
 			
 			break;
 		case 10:
@@ -50,28 +51,35 @@ if(mouse_check_button_pressed(mb_right) and mouse_y < room_height - grid_size * 
 			
 			break;
 		case 13:
-			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_spider_smart);
+			if(mouse_check_button_pressed(mb_right))
+				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_spider_smart);
 			break;
 		case 14:
-			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_launcher);
+			if(mouse_check_button_pressed(mb_right))
+				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_launcher);
 			break;
 		case 15:
 			
 			break;
 		case 16:
-			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_beacon);
+			if(mouse_check_button_pressed(mb_right))
+				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_beacon);
 			break
 		case 17:
-			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_meteor);
+			if(mouse_check_button_pressed(mb_right))
+				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_meteor);
 			break;
 		case 18:
-			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_ship_meteor);
+			if(mouse_check_button_pressed(mb_right))
+				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_ship_meteor);
 			break;
 		case 19:
-			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_env_prop_tree_pine);
+			if(mouse_check_button_pressed(mb_right))
+				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_env_prop_tree_pine);
 			break;
 		case 20:
-			instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_env_prop_vine);
+			if(mouse_check_button_pressed(mb_right))
+				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_env_prop_vine);
 			break;
 		default:
 			

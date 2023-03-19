@@ -72,6 +72,9 @@ if(mouse_check_button_pressed(mb_right) and !side_placed) {
 		if(instance_exists(build_UI)) {
 			//if(build_UI.building_side == self) 
 			build_UI.building_side = noone;
+			build_UI.building_side = instance_create_layer(mouse_x,mouse_y,"Bullets",o_entity_env_construction_side_building);
+			build_UI.building_side.side_to_build = side_to_build;
+			build_UI.building_side.side_update = true;
 		}
 		sprite_index = side_to_build_sprite;
 		x = x1 + side_xoffset;

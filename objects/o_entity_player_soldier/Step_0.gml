@@ -96,10 +96,12 @@ if(tick_timer <= 0) {
 			
 			//check if contruction side is occupied
 			//if not, occupy the contruction side and work on it, end the loop
-			if(!instance_exists(con_side.contructor)) {
-				con_side.contructor = self;
-				target_contruction = con_side;
-				i = size;
+			if(instance_exists(con_side)) {
+				if(!instance_exists(con_side.contructor)) {
+					con_side.contructor = self;
+					target_contruction = con_side;
+					i = size;
+				}
 			}
 		}
 		

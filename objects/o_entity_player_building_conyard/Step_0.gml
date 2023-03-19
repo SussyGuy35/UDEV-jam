@@ -60,12 +60,10 @@ if(tick_timer <= 0) {
 		case ENTITY_STATE.CONSTRUCTING:
 				image_index = ani_con_start + construction_timer;
 				
-				if(image_index == image_number - 1) {
-					if(instance_exists(construction_target)) {
+				
+				if(instance_exists(construction_target)) {
+					if(!instance_exists(construction_target.contructor))
 						construction_target.contructor = self;
-					}
-				} else if(instance_exists(construction_target)) {
-					construction_target.contructor = noone;
 				}
 			break;
 		case ENTITY_STATE.IDLE:
