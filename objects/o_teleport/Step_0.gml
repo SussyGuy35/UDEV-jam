@@ -38,6 +38,7 @@ if(tick_timer <= 0) {
 		if(image_index == 0) {
 			with(instance_create_layer(x,y,"Instances",obj)) {
 				hp = other.obj_hp;
+				if(object_index == o_entity_player_soldier) soldier_count--;
 			}
 			instance_destroy();
 		}

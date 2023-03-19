@@ -20,15 +20,15 @@ health_bar_display_timer = 0;
 must_grounded = false;
 
 //spawn data
-spawn_interval = [30,15,300,1000,300];
+spawn_interval = [100,100,500,1000,500];
 spawn_timer = 0;
 spawn_list = [o_entity_enemy_spider_smart,
 				o_entity_enemy_launcher,
 				o_entity_enemy_beacon,
 				o_entity_enemy_building_gate,
 				o_entity_enemy_ship_meteor];
-spawn_weight = [100,100,5,1,10];
-spawn_weight_total = 216;
+spawn_weight = [200,200,5,1,5];
+spawn_weight_total = 411;
 spawn_next = o_entity_enemy_spider_smart;
 
 //clear area that destroy block for spawn
