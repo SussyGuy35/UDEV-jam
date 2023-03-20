@@ -148,13 +148,20 @@ if(tick_timer <= 0) {
 					var enemy = instance_nearest(x,y,o_entity_enemy);
 					if(instance_exists(enemy)) {
 						var flight_dir = point_direction(x,y,enemy.x,enemy.y);
+						var angle_dif = angle_difference(flight_dir,jetpack_dir);
+						if(abs(angle_dif) < jetpack_turning) {
+							jetpack_dir = angle_dif;
+						} else {
+							jetpack_dir += sign(angle_dif) * jetpack_turning;	
+						}
 						if(point_distance(x,y,enemy.x,enemy.y) < jetpack_standoff_range) {
-							hsp -= lengthdir_x(movespeed,flight_dir);
-							vsp -= lengthdir_y(movespeed,flight_dir);
+							jetpack_dir = flight_dir - 90;
+							hsp -= lengthdir_x(movespeed,jetpack_dir);
+							vsp -= lengthdir_y(movespeed,jetpack_dir);
 							vsp--;
 						} else if(point_distance(x,y,enemy.x,enemy.y) >= jetpack_standoff_range) {
-							hsp += lengthdir_x(movespeed,flight_dir);
-							vsp += lengthdir_y(movespeed,flight_dir);
+							hsp += lengthdir_x(movespeed,jetpack_dir);
+							vsp += lengthdir_y(movespeed,jetpack_dir);
 							vsp--;
 						}
 					}
@@ -189,13 +196,20 @@ if(tick_timer <= 0) {
 				var enemy = instance_nearest(x,y,o_entity_enemy);
 				if(instance_exists(enemy)) {
 					var flight_dir = point_direction(x,y,enemy.x,enemy.y);
+					var angle_dif = angle_difference(flight_dir,jetpack_dir);
+					if(abs(angle_dif) < jetpack_turning) {
+						jetpack_dir = angle_dif;
+					} else {
+						jetpack_dir += sign(angle_dif) * jetpack_turning;	
+					}
 					if(point_distance(x,y,enemy.x,enemy.y) < jetpack_standoff_range) {
-						hsp -= lengthdir_x(movespeed,flight_dir);
-						vsp -= lengthdir_y(movespeed,flight_dir);
+						jetpack_dir = flight_dir - 90;
+						hsp -= lengthdir_x(movespeed,jetpack_dir);
+						vsp -= lengthdir_y(movespeed,jetpack_dir);
 						vsp--;
 					} else if(point_distance(x,y,enemy.x,enemy.y) >= jetpack_standoff_range) {
-						hsp += lengthdir_x(movespeed,flight_dir);
-						vsp += lengthdir_y(movespeed,flight_dir);
+						hsp += lengthdir_x(movespeed,jetpack_dir);
+						vsp += lengthdir_y(movespeed,jetpack_dir);
 						vsp--;
 					}
 				}
