@@ -146,16 +146,17 @@ if(tick_timer <= 0) {
 					vsp = -4;
 				} else {
 					var enemy = instance_nearest(x,y,o_entity_enemy);
-					
-					var flight_dir = point_direction(x,y,enemy.x,enemy.y);
-					if(point_distance(x,y,enemy.x,enemy.y) < jetpack_standoff_range) {
-						hsp -= lengthdir_x(movespeed,flight_dir);
-						vsp -= lengthdir_y(movespeed,flight_dir);
-						vsp--;
-					} else if(point_distance(x,y,enemy.x,enemy.y) >= jetpack_standoff_range) {
-						hsp += lengthdir_x(movespeed,flight_dir);
-						vsp += lengthdir_y(movespeed,flight_dir);
-						vsp--;
+					if(instance_exists(enemy)) {
+						var flight_dir = point_direction(x,y,enemy.x,enemy.y);
+						if(point_distance(x,y,enemy.x,enemy.y) < jetpack_standoff_range) {
+							hsp -= lengthdir_x(movespeed,flight_dir);
+							vsp -= lengthdir_y(movespeed,flight_dir);
+							vsp--;
+						} else if(point_distance(x,y,enemy.x,enemy.y) >= jetpack_standoff_range) {
+							hsp += lengthdir_x(movespeed,flight_dir);
+							vsp += lengthdir_y(movespeed,flight_dir);
+							vsp--;
+						}
 					}
 				}
 				jetpack_fuel--;
@@ -186,15 +187,17 @@ if(tick_timer <= 0) {
 						
 			if(instruction_direction == INSTRUCTION_DIRECTION.JETPACK and !recalling) {
 				var enemy = instance_nearest(x,y,o_entity_enemy);
-				var flight_dir = point_direction(x,y,enemy.x,enemy.y);
-				if(point_distance(x,y,enemy.x,enemy.y) < jetpack_standoff_range) {
-					hsp -= lengthdir_x(movespeed,flight_dir);
-					vsp -= lengthdir_y(movespeed,flight_dir);
-					vsp--;
-				} else if(point_distance(x,y,enemy.x,enemy.y) >= jetpack_standoff_range) {
-					hsp += lengthdir_x(movespeed,flight_dir);
-					vsp += lengthdir_y(movespeed,flight_dir);
-					vsp--;
+				if(instance_exists(enemy)) {
+					var flight_dir = point_direction(x,y,enemy.x,enemy.y);
+					if(point_distance(x,y,enemy.x,enemy.y) < jetpack_standoff_range) {
+						hsp -= lengthdir_x(movespeed,flight_dir);
+						vsp -= lengthdir_y(movespeed,flight_dir);
+						vsp--;
+					} else if(point_distance(x,y,enemy.x,enemy.y) >= jetpack_standoff_range) {
+						hsp += lengthdir_x(movespeed,flight_dir);
+						vsp += lengthdir_y(movespeed,flight_dir);
+						vsp--;
+					}
 				}
 				
 				jetpack_fuel--;
