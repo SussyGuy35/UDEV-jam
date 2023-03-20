@@ -24,6 +24,7 @@ supporting_building = false;
 grid_x = -1;
 grid_y = -1;
 
+instruction_direction = INSTRUCTION_DIRECTION.NONE;
 rebuildable = false;
 
 image_speed = 0;

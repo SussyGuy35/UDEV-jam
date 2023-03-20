@@ -37,3 +37,9 @@ spotted_sign = noone;
 
 //recall
 recalling = false;
+
+//jetpack
+jetpack_fuel = 180;
+jetpack_standoff_range = range / 2;
+jetpack_flying_interval = 150;
+jetpack_spark_timer = 0

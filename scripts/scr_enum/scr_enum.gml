@@ -57,6 +57,7 @@ function enum_instruction_direction() {
 		UPWARD,
 		DOWNWARD,
 		LEFTWARD,
-		RIGHTWARD
+		RIGHTWARD,
+		JETPACK
 	}
 }

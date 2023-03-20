@@ -8,6 +8,8 @@ if(tick_timer <= 0) {
     //reset tick timer
     tick_timer = tick_interval;
 	
+	jetpack_spark_timer++;
+	
 	if(recalling) {
 		var tent = instance_nearest(x,y,o_entity_player_building_tent);
 		if(instance_exists(tent) and recall_allow) {
@@ -113,6 +115,10 @@ if(tick_timer <= 0) {
 		}
     }
 	
+	if(instruction_direction == INSTRUCTION_DIRECTION.JETPACK) {
+		state = ENTITY_STATE.MOVING;	
+	}
+	
 	
 	if(target_enemy) {
 		state = ENTITY_STATE.ATTACKING;
@@ -134,10 +140,31 @@ if(tick_timer <= 0) {
             break;
             
         case ENTITY_STATE.MOVING:
-            if(image_index == 2) image_index = 3; else image_index = 2;
-            
-			if(x >= room_width or x <= 0) dir = -dir;
-            hsp = dir*movespeed;
+			if(instruction_direction == INSTRUCTION_DIRECTION.JETPACK and !recalling) {
+				image_index = 3;
+				if(jetpack_fuel > jetpack_flying_interval) {
+					vsp = -4;
+				} else {
+					var enemy = instance_nearest(x,y,o_entity_enemy);
+					
+					var flight_dir = point_direction(x,y,enemy.x,enemy.y);
+					if(point_distance(x,y,enemy.x,enemy.y) < jetpack_standoff_range) {
+						hsp -= lengthdir_x(movespeed,flight_dir);
+						vsp -= lengthdir_y(movespeed,flight_dir);
+						vsp--;
+					} else if(point_distance(x,y,enemy.x,enemy.y) >= jetpack_standoff_range) {
+						hsp += lengthdir_x(movespeed,flight_dir);
+						vsp += lengthdir_y(movespeed,flight_dir);
+						vsp--;
+					}
+				}
+				jetpack_fuel--;
+				if(jetpack_fuel <= 0) recalling = true;
+			} else {	
+				if(image_index == 2) image_index = 3; else image_index = 2;
+				if(x >= room_width or x <= 0) dir = -dir;
+				hsp = dir*movespeed;
+			}
             break;
 		
 		case ENTITY_STATE.DEAD:
@@ -156,7 +183,24 @@ if(tick_timer <= 0) {
 			break;
 		case ENTITY_STATE.ATTACKING:
 			scr_soldier_attacking();
-			
+						
+			if(instruction_direction == INSTRUCTION_DIRECTION.JETPACK and !recalling) {
+				var enemy = instance_nearest(x,y,o_entity_enemy);
+				var flight_dir = point_direction(x,y,enemy.x,enemy.y);
+				if(point_distance(x,y,enemy.x,enemy.y) < jetpack_standoff_range) {
+					hsp -= lengthdir_x(movespeed,flight_dir);
+					vsp -= lengthdir_y(movespeed,flight_dir);
+					vsp--;
+				} else if(point_distance(x,y,enemy.x,enemy.y) >= jetpack_standoff_range) {
+					hsp += lengthdir_x(movespeed,flight_dir);
+					vsp += lengthdir_y(movespeed,flight_dir);
+					vsp--;
+				}
+				
+				jetpack_fuel--;
+				if(jetpack_fuel <= 0) recalling = true;
+			}
+	
 			break;
 			
 		case ENTITY_STATE.CONSTRUCTING:

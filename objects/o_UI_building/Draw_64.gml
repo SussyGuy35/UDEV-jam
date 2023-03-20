@@ -33,6 +33,9 @@ if(mouse_hovering and !loading) {
 			break;
 		case 4:
 		
+		scr_language_draw_UI_text_box_description(
+			ds_map_find_value(global.language_map,"STR_GO_JETPACK"),
+			ds_map_find_value(global.language_map,"STR_GO_JETPACK_DESC"));
 		
 			break;
 		case 5:

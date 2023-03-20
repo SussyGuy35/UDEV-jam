@@ -17,7 +17,7 @@ if(mouse_check_button(mb_right) and mouse_y < room_height - grid_size * 4) {
 		
 			break;
 		case 4:
-		
+			scr_place_env_creativemode_sign(o_entity_env_sign_direction,INSTRUCTION_DIRECTION.JETPACK);
 		
 			break;
 		case 5:

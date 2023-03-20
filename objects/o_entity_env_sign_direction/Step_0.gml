@@ -42,6 +42,13 @@ if(tick_timer <= 0) {
 		if(_image_index >= image_max_index) _image_index = 0;
 		image_index = image_max_index * 3 + _image_index;
 		
+	} else if(instruction_direction = INSTRUCTION_DIRECTION.JETPACK) {
+		image_blend = col;
+		
+		_image_index++;
+		if(_image_index >= image_max_index) _image_index = 0;
+		image_index = image_max_index * 4 + _image_index;
+		
 	} else {
 		col = c_yellow;
 		image_blend = col;
