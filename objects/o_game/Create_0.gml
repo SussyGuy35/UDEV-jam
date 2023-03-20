@@ -50,6 +50,9 @@ recall_allow = false;
 //grid
 grid_obj = instance_nearest(x,y,o_grid);
 
+globalvar loading;
+loading = false;
+
 //set up language
 scr_language_char();
 scr_language_load_default();

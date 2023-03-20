@@ -9,3 +9,5 @@ if(hp < 0 and !supporting_building) {
 	} else scr_place_env_rebuild();
 	instance_destroy();
 }
+
+image_blend = merge_color(c_grey,c_white,hp/hp_max);

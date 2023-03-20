@@ -37,8 +37,9 @@ if(tick_timer <= 0) {
 		}
 	}
 	
-	vine_plant_timer--;
-	if(vine_plant_timer <= 0) {
+	//vine grow disable because of poor optimization
+	//vine_plant_timer--;
+	if(vine_plant_timer == 0) {
 		vine_plant_timer = vine_plant_interval;
 		
 		var soil_number = instance_number(o_entity_env_soil);

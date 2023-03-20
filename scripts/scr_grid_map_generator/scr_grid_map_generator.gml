@@ -51,7 +51,7 @@ function scr_grid_map_generator(seed){
 						grid_x = block.grid_x;
 						grid_y = block.grid_y;
 					}
-					instance_destroy(block);
+					instance_destroy(block,false);
 				}
 				ds_grid_add(dsgrid,w,h,new_block);
 			}
@@ -70,7 +70,7 @@ function scr_grid_map_generator(seed){
 					grid_x = block.grid_x;
 					grid_y = block.grid_y;	
 				}
-				instance_destroy(block);
+				instance_destroy(block,false);
 				ds_grid_add(dsgrid,_x,_y,new_block);
 				
 				if(instance_exists(new_block) and random_range(0,1) < mapgen_tree_desity) {
@@ -107,7 +107,7 @@ function scr_grid_map_generator(seed){
 					grid_x = block.grid_x;
 					grid_y = block.grid_y;	
 				}
-				instance_destroy(block);
+				instance_destroy(block,false);
 				ds_grid_add(dsgrid,_x,i,new_block);
 			}
 		}
@@ -180,7 +180,7 @@ function scr_grid_map_generator(seed){
 						grid_x = block.grid_x;
 						grid_y = block.grid_y;	
 					}
-					instance_destroy(block);
+					instance_destroy(block,false);
 					ds_grid_add(dsgrid,new_block.grid_x,new_block.grid_y,new_block);
 				}
 			}
@@ -206,7 +206,7 @@ function scr_grid_map_generator(seed){
 						grid_x = block.grid_x;
 						grid_y = block.grid_y;	
 					}
-					instance_destroy(block);
+					instance_destroy(block,false);
 					ds_grid_add(dsgrid,new_block.grid_x,new_block.grid_y,new_block);
 				}
 			}

@@ -7,8 +7,9 @@ tick_timer = tick_interval;
 alpha_decay_speed = 0.05;
 
 damage = 1;
-hit_chance = 0.05;
+hit_chance = 0.1;
 blast_radius = 8;
+repelled = false;
 
 var beacon = instance_nearest(x,y,o_entity_enemy_beacon);
 if(instance_exists(beacon)) {
@@ -26,18 +27,4 @@ if(instance_exists(beacon)) {
 	if(beacon.flak_deflecting_color_brightness > 1) beacon.flak_deflecting_color_brightness = 1;
 }
 
-//damage enemy
-target_list = ds_list_create();
-collision_circle_list(x,y,blast_radius,o_entity_enemy,false,true,target_list,false);
-
-for (var i = 0; i < ds_list_size(target_list); i++) {
-	var dice_hit = random_range(0,100);
-					
-	//hit animation if success
-	if(dice_hit >= hit_chance * 100) {
-		var _target = ds_list_find_value(target_list,i);
-		with(_target) {
-			hp -= other.damage;
-		}
-	}
-}
+repelled = true;

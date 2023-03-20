@@ -3,6 +3,7 @@ tick_timer = tick_interval;
 
 decay = irandom_range(40,60);
 
-image_speed = 3 / decay;
+imagespeed = 3 / decay;
+image_speed = 0;
 
 vsp = 1;

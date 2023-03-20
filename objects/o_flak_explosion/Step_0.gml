@@ -7,6 +7,7 @@ if(global.global_tick_timer == 0) {
 if(tick_timer <= 0) {
 
 	if(image_index == image_number - 1) {
+		repelled = false;
 		image_alpha -= alpha_decay_speed;
 	} else image_index++;
 	if(image_alpha <= 0) instance_destroy();

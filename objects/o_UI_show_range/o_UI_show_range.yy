@@ -32,7 +32,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "system",
-    "path": "folders/Objects/system.yy",
+    "name": "User Interface",
+    "path": "folders/Objects/system/User Interface.yy",
   },
 }

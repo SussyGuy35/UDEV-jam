@@ -13,8 +13,8 @@
 tree_plant_interval = 5;
 tree_plant_timer = 0;
 
-vine_plant_timer = 10;
-vine_plant_interval = 2;
+vine_plant_timer = -1;
+vine_plant_interval = -1;
 
 tick_interval = 1; //tốc độ thay đổi trong game (càng cao càng chậm)
 tick_timer = 0; //hẹn giờ thay đổi. 

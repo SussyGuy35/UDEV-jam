@@ -1,71 +1,136 @@
-//mouse_position
-var mx = mouse_x;
-var my = mouse_y;
-
-mouse_hovering = false;
-button_hovering = -1;
-//draw button
-for(var i = 0; i < sprite_get_number(spr_button_icon); i++) {
-	var button_x1 = button_origin_x + button_origin_x * i + button_spacing_x * i;
-	var button_x2 = button_x1 + button_size;
-	var button_y2 = button_origin_y + button_size;
-	
-	//set default draw color
-	var col = c_gray;
-	
-	//check if mouse hover on button
-	if(mx >= button_x1 and mx < button_x2 and my >= button_origin_y and my < button_y2) {
-		mouse_hovering = true;
-		button_hovering = i;
-		col = c_white;
+if(mouse_hovering and !loading) {
+	switch (button_hovering) {
+		case 0:
+		scr_language_draw_UI_text_box_description(
+			ds_map_find_value(global.language_map,"STR_GO_UP"),
+			ds_map_find_value(global.language_map,"STR_GO_UP_DESC"));
+			//scr_place_env_creativemode_sign(o_entity_env_sign_direction,INSTRUCTION_DIRECTION.UPWARD);
 		
-		if(mouse_check_button_pressed(mb_left)) {
-			button_selected = i;
-			playsound_button_pressed = true;
+			break;
+		case 1:
 			
-			//create contruction side with select contruction side
-			if(i == 10) {
-				scr_UI_building_switch_toBuild(o_entity_player_building_tent);
-			} else if (i == 11) {
-				scr_UI_building_switch_toBuild(o_entity_player_building_turret_flak);
-			} else if (i == 12) {
-				scr_UI_building_switch_toBuild(o_entity_player_building_conyard);
-			} else if (i == 15) {
-				scr_UI_building_switch_toBuild(o_entity_enemy_building_gate);	
-			}
-		}
-	} else {
-		if (button_selected == i) col = c_yellow;
+		scr_language_draw_UI_text_box_description(
+			ds_map_find_value(global.language_map,"STR_GO_DOWN"),
+			ds_map_find_value(global.language_map,"STR_GO_DOWN_DESC"));
+			//scr_place_env_creativemode_sign(o_entity_env_sign_direction,INSTRUCTION_DIRECTION.DOWNWARD);
+		
+			break;
+		case 2:
+		
+		scr_language_draw_UI_text_box_description(
+			ds_map_find_value(global.language_map,"STR_GO_LEFT"),
+			ds_map_find_value(global.language_map,"STR_GO_LEFT_DESC"));
+			//scr_place_env_creativemode_sign(o_entity_env_sign_direction,INSTRUCTION_DIRECTION.LEFTWARD);
+		
+			break;
+		case 3:
+		
+		scr_language_draw_UI_text_box_description(
+			ds_map_find_value(global.language_map,"STR_GO_RIGHT"),
+			ds_map_find_value(global.language_map,"STR_GO_RIGHT_DESC"));
+			//scr_place_env_creativemode_sign(o_entity_env_sign_direction,INSTRUCTION_DIRECTION.RIGHTWARD);
+		
+			break;
+		case 4:
+		
+		
+			break;
+		case 5:
+			
+		scr_language_draw_UI_text_box_description(
+			ds_map_find_value(global.language_map,"STR_LADDER"),
+			ds_map_find_value(global.language_map,"STR_LADDER_DESC"));
+			//scr_place_env_creativemode(o_entity_env_ladder);
+		
+			break;
+		case 6:
+			scr_language_draw_UI_text_box_description(
+				ds_map_find_value(global.language_map,"STR_WALL"),
+				ds_map_find_value(global.language_map,"STR_WALL_DESC"));
+			//scr_place_env_creativemode(o_entity_env_block);
+		
+			break;
+		case 7:
+			scr_language_draw_UI_text_box_description(
+				ds_map_find_value(global.language_map,"STR_FENCE"),
+				ds_map_find_value(global.language_map,"STR_FENCE_DESC"));
+			//scr_place_env_creativemode(o_entity_env_obstacle_fence);
+			
+			break;
+		case 8:
+			scr_language_draw_UI_text_box_description(
+				ds_map_find_value(global.language_map,"STR_DECON"),
+				ds_map_find_value(global.language_map,"STR_DECON_DESC"));
+			//scr_place_env_creativemode_decon();
+			
+			break;
+		case 9:
+			scr_language_draw_UI_text_box_description(
+				ds_map_find_value(global.language_map,"STR_SOLDIER"),
+				ds_map_find_value(global.language_map,"STR_SOLDIER_DESC"));
+		
+			//instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_player_soldier);
+			
+			break;
+		case 10:
+			scr_language_draw_UI_text_box_description(
+				ds_map_find_value(global.language_map,"STR_BARRACK"),
+				ds_map_find_value(global.language_map,"STR_BARRACK_DESC"));
+			
+			break;
+		case 11:
+			scr_language_draw_UI_text_box_description(
+				ds_map_find_value(global.language_map,"STR_FLAK_TURRET"),
+				ds_map_find_value(global.language_map,"STR_FLAK_TURRET_DESC"));
+			
+			break;
+		case 12:
+			scr_language_draw_UI_text_box_description(
+				ds_map_find_value(global.language_map,"STR_CONYARD"),
+				ds_map_find_value(global.language_map,"STR_CONYARD_DESC"));
+			
+			break;
+		case 13:
+			scr_language_draw_UI_text_box_description(
+				ds_map_find_value(global.language_map,"STR_SPIDER_BOT"),
+				ds_map_find_value(global.language_map,"STR_SPIDER_BOT_DESC"));
+			//instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_spider_smart);
+			break;
+		case 14:
+		
+			scr_language_draw_UI_text_box_description(
+				ds_map_find_value(global.language_map,"STR_MISSILE_BOT"),
+				ds_map_find_value(global.language_map,"STR_MISSILE_BOT_DESC"));
+			//instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_launcher);
+			break;
+		case 15:
+			scr_language_draw_UI_text_box_description(
+				ds_map_find_value(global.language_map,"STR_GATE"),
+				ds_map_find_value(global.language_map,"STR_GATE_DESC"));
+			
+			break;
+		case 16:		
+			scr_language_draw_UI_text_box_description(
+				ds_map_find_value(global.language_map,"STR_BEACON"),
+				ds_map_find_value(global.language_map,"STR_BEACON_DESC"));
+			//instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_beacon_meteor);
+			break
+		case 17:			
+			scr_language_draw_UI_text_box_description(
+				ds_map_find_value(global.language_map,"STR_METEOR"),
+				ds_map_find_value(global.language_map,"STR_METEOR_DESC"));
+			//instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_meteor);
+			break;
+		case 18:
+			scr_language_draw_UI_text_box_description(
+				ds_map_find_value(global.language_map,"STR_DESTROYER"),
+				ds_map_find_value(global.language_map,"STR_DESTROYER_DESC"));
+			break;
+		case 19:
+			
+			break;
+		default:
+			
+			break;
 	}
-	
-	draw_sprite_ext(spr_button_frame,0,button_x1,button_origin_y,1,1,0,col,1);
-	draw_sprite(spr_button_icon,i,button_x1+1,button_origin_y+1);
 }
-
-//play button hovering sound if needed
-if(mouse_hovering != mouse_hovering_prev and mouse_hovering) {
-	playsound_button_hover = true;
-}
-mouse_hovering_prev = mouse_hovering;
-
-/* 
-//for testing fonts
-var text_size = 15
-var text = "éèẻẽẹêếềểễệúùủũụưứừửữựíìỉĩịóòỏõọôốồổỗộơớờởỡợ"
-var text2 = "áàảãạâầẩẫậăằẳẵặđyýỳỷỹỵ"
-var text3 = "ÉÈẺẼẸẾỀỂỄỆÚÙỦŨỤƯỨỪỬỮỰÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘ"
-var text4 = "ƠỚỜỞỠỢÁÀẢÃẠÂẤẦẨẪẬĂẮẰẲẴẶĐYÝỲỶỸỴ"
-draw_set_font(Font1);
-draw_text_ext(0,0,text,1,text_size)
-draw_text_ext(0,20,text2,1,text_size)
-draw_text_ext(0,40,text3,1,text_size)
-draw_text_ext(0,60,text4,1,text_size);
-
-draw_set_alpha(1);
-draw_set_color(0);
-var init_y = 80;
-for(var i = 0; i < sprite_get_number(font0); i++) {
-	var _y = floor(i/20) * sprite_get_height(font0)
-	draw_sprite(font0, i, (sprite_get_width(font0)+1) * i - floor(i/20) * (sprite_get_width(font0)+1) * 20,init_y +_y)
-}
-*/

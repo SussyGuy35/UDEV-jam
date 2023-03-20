@@ -23,4 +23,5 @@ path_request_timeout = path_request_interval * global.global_tick_interval;
 
 //generate map
 scr_grid_map_generator(randomize());
+loading = false;
 
