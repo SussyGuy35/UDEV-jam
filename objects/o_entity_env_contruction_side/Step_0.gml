@@ -31,11 +31,10 @@ if(tick_timer <= 0) {
 		}
 		
 		if(hp < 0) hp = 0;
-		/*
 		//update spark image index
 		spark_image_index++;
 		if (spark_image_index == spark_image_number) spark_image_index = 0;
-		
+		/*
 		var sx = irandom_range(bbox_left,bbox_right);
 		var sy = irandom_range(bbox_top,bbox_bottom);
 		

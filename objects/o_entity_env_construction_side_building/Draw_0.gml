@@ -15,6 +15,29 @@ if(!side_placed) {
 	draw_set_alpha(0.5);
 	draw_rectangle(x1,y1,x2,y2,true);
 	
+	var sprite_w = sprite_get_width(side_to_build_sprite);
+	var sprite_h = sprite_get_height(side_to_build_sprite);
+	
+	var blocked = false;
+	for (var xx = 0; xx < ceil(sprite_w); xx += grid_size) {
+		for (var yy = 0; yy < ceil(sprite_h); yy += grid_size) {
+			var xx1 = x1 + xx;
+			var yy1 = y1 + yy;
+			var building = collision_rectangle(xx1,yy1,xx1+ grid_size,yy1 + grid_size,o_entity_player_building,false,true);
+			var site = collision_rectangle(xx1,yy1,xx1+ grid_size,yy1 + grid_size,o_entity_env_construction_side_building,false,true);
+			if(instance_exists(building) or instance_exists(site)){
+				draw_set_color(c_red);
+				draw_set_alpha(0.5);
+				draw_rectangle(xx1,yy1,xx1+grid_size,yy1+grid_size,false);
+				blocked = true;
+			} else {
+				draw_set_color(c_green);
+				draw_set_alpha(0.5);
+				draw_rectangle(xx1,yy1,xx1+grid_size,yy1+grid_size,false);
+			}
+		}
+	}
+	
 	//draw to build's sprite
 	draw_sprite_ext(side_to_build_sprite,0,x1 + side_xoffset,y1+ side_yoffset + 1,1,1,0,c_white,0.5);
 
@@ -58,7 +81,7 @@ if(!side_placed) {
 }
 
 //press mouse right to place the building if possible
-if(mouse_check_button_pressed(mb_right) and !side_placed) {
+if(mouse_check_button_pressed(mb_right) and !side_placed and !blocked) {
 	//check if the building can be placed
 	var can_be_placed = true;
 	if(side_must_be_grounded and !is_grounded) {
