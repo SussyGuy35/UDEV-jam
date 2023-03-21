@@ -83,6 +83,7 @@
     {"id":{"name":"o_gfx_spark_drop","path":"objects/o_gfx_spark_drop/o_gfx_spark_drop.yy",},"order":1,},
     {"id":{"name":"scr_language_draw_UI_text_box_description","path":"scripts/scr_language_draw_UI_text_box_description/scr_language_draw_UI_text_box_description.yy",},"order":3,},
     {"id":{"name":"scr_language_char","path":"scripts/scr_language_char/scr_language_char.yy",},"order":0,},
+    {"id":{"name":"o_UI_tutorial","path":"objects/o_UI_tutorial/o_UI_tutorial.yy",},"order":11,},
     {"id":{"name":"o_UI_main_menu","path":"objects/o_UI_main_menu/o_UI_main_menu.yy",},"order":4,},
     {"id":{"name":"spr_tileset_grass2","path":"sprites/spr_tileset_grass2/spr_tileset_grass2.yy",},"order":7,},
     {"id":{"name":"spr_tileset_grass1","path":"sprites/spr_tileset_grass1/spr_tileset_grass1.yy",},"order":3,},
@@ -155,7 +156,7 @@
     {"id":{"name":"spr_ship0","path":"sprites/spr_ship0/spr_ship0.yy",},"order":5,},
     {"id":{"name":"spr_env_ladder","path":"sprites/spr_env_ladder/spr_env_ladder.yy",},"order":4,},
     {"id":{"name":"o_entity_env_ladder","path":"objects/o_entity_env_ladder/o_entity_env_ladder.yy",},"order":5,},
-    {"id":{"name":"o_teleport","path":"objects/o_teleport/o_teleport.yy",},"order":10,},
+    {"id":{"name":"o_teleport","path":"objects/o_teleport/o_teleport.yy",},"order":9,},
     {"id":{"name":"o_entity_player_building_tunnel","path":"objects/o_entity_player_building_tunnel/o_entity_player_building_tunnel.yy",},"order":7,},
     {"id":{"name":"o_entity_player_knight","path":"objects/o_entity_player_knight/o_entity_player_knight.yy",},"order":11,},
     {"id":{"name":"spr_block","path":"sprites/spr_block/spr_block.yy",},"order":1,},
@@ -171,6 +172,7 @@
     {"id":{"name":"o_entity_env_soil","path":"objects/o_entity_env_soil/o_entity_env_soil.yy",},"order":8,},
     {"id":{"name":"spr_contruction_spark","path":"sprites/spr_contruction_spark/spr_contruction_spark.yy",},"order":1,},
     {"id":{"name":"o_UI_confirm","path":"objects/o_UI_confirm/o_UI_confirm.yy",},"order":1,},
+    {"id":{"name":"r_tutorial","path":"rooms/r_tutorial/r_tutorial.yy",},"order":3,},
     {"id":{"name":"spr_UI_switch_button","path":"sprites/spr_UI_switch_button/spr_UI_switch_button.yy",},"order":11,},
     {"id":{"name":"scr_autotiling","path":"scripts/scr_autotiling/scr_autotiling.yy",},"order":0,},
     {"id":{"name":"spr_bot_spider","path":"sprites/spr_bot_spider/spr_bot_spider.yy",},"order":2,},
@@ -209,6 +211,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"r_menu","path":"rooms/r_menu/r_menu.yy",},},
     {"roomId":{"name":"r_sandbox","path":"rooms/r_sandbox/r_sandbox.yy",},},
+    {"roomId":{"name":"r_tutorial","path":"rooms/r_tutorial/r_tutorial.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},

@@ -12,13 +12,14 @@ if(tick_timer <= 0) {
 	
 	if(recalling) {
 		var tent = instance_nearest(x,y,o_entity_player_building_tent);
+		if(!instance_exists(tent)) tent = instance_nearest(x,y,o_entity_player_building_fort);
 		if(instance_exists(tent) and recall_allow) {
 			var rx = tent.x;
 			var ry = tent.y;
 			with(instance_create_layer(x,y,"Instances",o_teleport)) {
 				des_x = rx;
 				des_y = ry;
-				obj = other.object_index;
+				obj = asset_get_index(object_get_name(other.object_index));
 				obj_hp = other.hp;
 			}
 			playsound_ship_weapon0 = true;

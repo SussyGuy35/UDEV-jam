@@ -6,8 +6,6 @@ button_newgame_str = ds_map_find_value(global.language_map, "STR_NEWGAME");
 
 button_setting_str = ds_map_find_value(global.language_map, "STR_SETTING");
 
-button_credit_str = ds_map_find_value(global.language_map, "STR_CREDIT");
-
 button_exit_str = ds_map_find_value(global.language_map, "STR_EXIT");
 
 
@@ -20,8 +18,7 @@ button_w = sprite_get_width(spr_UI_main_button);
 
 button_newgame_x2 = room_width + button_w;
 button_setting_x2 = room_width + button_w * 2;
-button_credit_x2 = room_width + button_w * 3;
-button_exit_x2 = room_width + button_w * 4;
+button_exit_x2 = room_width + button_w * 3;
 
 button_slide_speed = button_exit_x2  / (button_w * 0.5);
 button_slideout_speed = 20;

@@ -95,10 +95,10 @@ if(mouse_check_button(mb_right) and mouse_y < room_height - grid_size * 4) {
 	}
 }
 
-if(button_selected != 10 
-	and button_selected != 11 
+if(button_selected != 11 
 	and button_selected != 12 
 	and button_selected != 13 
+	and button_selected != 14 
 	and button_selected != 17) 
 {
 	if(instance_exists(building_side)) instance_destroy(building_side);

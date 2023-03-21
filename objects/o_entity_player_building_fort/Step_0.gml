@@ -37,7 +37,7 @@ if(tick_timer <= 0) {
 			}
 			
 			if(instance_number(o_entity_player_soldier) < soldier_pop)
-				instance_create_layer(x, y,"Instances",o_entity_player_soldier);
+				instance_create_layer(x, y,"Instances",o_entity_player_knight);
 		}
 	} else instance_destroy();
 }

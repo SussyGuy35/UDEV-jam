@@ -36,13 +36,17 @@ if(tick_timer <= 0) {
 		image_alpha = 1;
 		image_index--;
 		if(image_index == 0) {
-			with(instance_create_layer(x,y,"Instances",obj)) {
-				hp = other.obj_hp;
-				if(object_index == o_entity_player_soldier) soldier_count--;
+			var spawn = instance_create_layer(x,y,"Instances",obj);
+			if(instance_exists(spawn)) {
+				with(spawn) {
+					hp = other.obj_hp;
+					if(object_index == o_entity_player_soldier 
+						or object_index == o_entity_player_knight) soldier_count--;
+				}
 			}
 			instance_destroy();
 		}
 	}
 	
-	if(!instance_exists(obj)) instance_destroy();
+	if(!object_exists(obj)) instance_destroy();
 }
