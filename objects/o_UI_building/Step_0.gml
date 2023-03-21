@@ -42,42 +42,50 @@ if(mouse_check_button(mb_right) and mouse_y < room_height - grid_size * 4) {
 			
 			break;
 		case 10:
+			if(mouse_check_button_pressed(mb_right))
+				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_player_knight);
 			
 			break;
 		case 11:
 			
 			break;
 		case 12:
-			
+		
 			break;
 		case 13:
+		
+			break;
+		case 14:
+			
+			break;
+		case 15:
 			if(mouse_check_button_pressed(mb_right))
 				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_spider_smart);
 			break;
-		case 14:
+		case 16:
 			if(mouse_check_button_pressed(mb_right))
 				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_launcher);
 			break;
-		case 15:
-			
-			break;
-		case 16:
-			if(mouse_check_button_pressed(mb_right))
-				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_beacon);
-			break
 		case 17:
-			if(mouse_check_button_pressed(mb_right))
-				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_meteor);
+			
 			break;
 		case 18:
 			if(mouse_check_button_pressed(mb_right))
+				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_beacon);
+			break
+		case 19:
+			if(mouse_check_button_pressed(mb_right))
+				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_meteor);
+			break;
+		case 20:
+			if(mouse_check_button_pressed(mb_right))
 				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_ship_meteor);
 			break;
-		case 19:
+		case 21:
 			if(mouse_check_button_pressed(mb_right))
 				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_env_prop_tree_pine);
 			break;
-		case 20:
+		case 22:
 			if(mouse_check_button_pressed(mb_right))
 				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_env_prop_vine);
 			break;
@@ -87,7 +95,12 @@ if(mouse_check_button(mb_right) and mouse_y < room_height - grid_size * 4) {
 	}
 }
 
-if(button_selected != 10 and button_selected != 11 and button_selected != 12 and button_selected != 15) {
+if(button_selected != 10 
+	and button_selected != 11 
+	and button_selected != 12 
+	and button_selected != 13 
+	and button_selected != 17) 
+{
 	if(instance_exists(building_side)) instance_destroy(building_side);
 	building_side = noone;
 }

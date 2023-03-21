@@ -112,7 +112,12 @@ if(tick_timer <= 0) {
 		path_following = false;
 		path_end();
 		path_clear_points(path);
-	} 
+	}
+	
+	if(stun_timer > 0) {
+		stun_timer--;
+		state = ENTITY_STATE.IDLE;
+	}
 	
 	if(hp <= 0) {
 		state = ENTITY_STATE.DEAD;
@@ -131,8 +136,8 @@ if(tick_timer <= 0) {
     //thực hiện hành vi dựa vào trạng thái
     switch (state) {
         case ENTITY_STATE.IDLE:
-            image_index = 0;
-            image_speed = 0;
+			path_speed = 0;
+			
             break;
             
         case ENTITY_STATE.MOVING:
@@ -218,7 +223,20 @@ if(tick_timer <= 0) {
 				hsp += lengthdir_x(attack_movespeed,attack_dir);
 				var distance = point_distance(x,y - 2,target_enemy.x,target_enemy.y - 2);
 				if(distance <= attack_movespeed) {
-				target_enemy.hp -= damage;
+					if(asset_get_index(object_get_name(target_enemy.object_index)) 
+						== o_entity_player_knight) 
+					{
+						stun_timer = target_enemy.stun_power;
+						target_enemy.attack_timer = 0;
+						target_enemy.hp--;
+					} else if (asset_get_index(object_get_name(target_enemy.object_index)) 
+						== o_entity_player_building_fort) 
+					{
+						stun_timer = target_enemy.stun_power;
+						target_enemy.hp--;
+					} else {
+						target_enemy.hp -= damage;
+					}
 				if(target_enemy.hp <= 0) target_enemy = noone;
 			}
 			}
@@ -254,6 +272,16 @@ if(tick_timer <= 0) {
     //áp dụng trọng lực
     on_ground = false;
 	
+	hsp += knockback_x;
+	vsp += knockback_y;
+	
+	if(abs(knockback_x) < 1) {
+		knockback_x = 0;
+	} else knockback_x /= 2;
+	
+	if(abs(knockback_y) < 1) {
+		knockback_y = 0;
+	} else knockback_y /= 2; 
 	
 	if(!path_following) {
 		vsp++;

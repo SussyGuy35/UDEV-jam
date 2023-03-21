@@ -77,59 +77,74 @@ if(mouse_hovering and !loading) {
 			break;
 		case 10:
 			scr_language_draw_UI_text_box_description(
+				ds_map_find_value(global.language_map,"STR_KNIGHT"),
+				ds_map_find_value(global.language_map,"STR_KNIGHT_DESC"));
+		
+			//instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_player_soldier);
+			
+			break;
+		case 11:
+			scr_language_draw_UI_text_box_description(
 				ds_map_find_value(global.language_map,"STR_BARRACK"),
 				ds_map_find_value(global.language_map,"STR_BARRACK_DESC"));
 			
 			break;
-		case 11:
+			
+		case 12:
+			scr_language_draw_UI_text_box_description(
+				ds_map_find_value(global.language_map,"STR_FORT"),
+				ds_map_find_value(global.language_map,"STR_FORT_DESC"));
+			
+			break;
+		case 13:
 			scr_language_draw_UI_text_box_description(
 				ds_map_find_value(global.language_map,"STR_FLAK_TURRET"),
 				ds_map_find_value(global.language_map,"STR_FLAK_TURRET_DESC"));
 			
 			break;
-		case 12:
+		case 14:
 			scr_language_draw_UI_text_box_description(
 				ds_map_find_value(global.language_map,"STR_CONYARD"),
 				ds_map_find_value(global.language_map,"STR_CONYARD_DESC"));
 			
 			break;
-		case 13:
+		case 15:
 			scr_language_draw_UI_text_box_description(
 				ds_map_find_value(global.language_map,"STR_SPIDER_BOT"),
 				ds_map_find_value(global.language_map,"STR_SPIDER_BOT_DESC"));
 			//instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_spider_smart);
 			break;
-		case 14:
+		case 16:
 		
 			scr_language_draw_UI_text_box_description(
 				ds_map_find_value(global.language_map,"STR_MISSILE_BOT"),
 				ds_map_find_value(global.language_map,"STR_MISSILE_BOT_DESC"));
 			//instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_launcher);
 			break;
-		case 15:
+		case 17:
 			scr_language_draw_UI_text_box_description(
 				ds_map_find_value(global.language_map,"STR_GATE"),
 				ds_map_find_value(global.language_map,"STR_GATE_DESC"));
 			
 			break;
-		case 16:		
+		case 18:		
 			scr_language_draw_UI_text_box_description(
 				ds_map_find_value(global.language_map,"STR_BEACON"),
 				ds_map_find_value(global.language_map,"STR_BEACON_DESC"));
 			//instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_beacon_meteor);
 			break
-		case 17:			
+		case 19:			
 			scr_language_draw_UI_text_box_description(
 				ds_map_find_value(global.language_map,"STR_METEOR"),
 				ds_map_find_value(global.language_map,"STR_METEOR_DESC"));
 			//instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_enemy_meteor);
 			break;
-		case 18:
+		case 20:
 			scr_language_draw_UI_text_box_description(
 				ds_map_find_value(global.language_map,"STR_DESTROYER"),
 				ds_map_find_value(global.language_map,"STR_DESTROYER_DESC"));
 			break;
-		case 19:
+		case 21:
 			
 			break;
 		default:

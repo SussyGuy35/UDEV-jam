@@ -85,6 +85,10 @@ if(tick_timer <= 0) {
 		}
 	}
 	*/
+	if(stun_timer > 0) {
+		stun_timer--;
+		state = ENTITY_STATE.IDLE;
+	}
 	
 	if(hp <= 0) state = ENTITY_STATE.DEAD;
     

@@ -28,3 +28,10 @@ dead_despawn_timer = 24;
 // Collision timeout
 collision_timeout = 2
 collision_time = 0
+
+//knockback
+knockback_x = 0;
+knockback_y = 0;
+
+//stun
+stun_timer = 0;

@@ -43,6 +43,17 @@ function scr_construction_side_building_update(obj_index){
 			side_must_be_grounded = true;
 			must_grounded = true;
 			break;
+		case o_entity_player_building_fort:
+			side_update = false;
+			hp_max = 50;
+			side_to_build_sprite = spr_building_fort;
+			side_w = 20;
+			side_h = 20;
+			side_xoffset = 14;
+			side_yoffset = 20;
+			side_must_be_grounded = true;
+			must_grounded = true;
+			break;
 		case o_entity_player_building_conyard:
 			side_update = false;
 			hp_max = 500;

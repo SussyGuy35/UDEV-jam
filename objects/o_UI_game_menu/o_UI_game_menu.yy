@@ -34,6 +34,6 @@
   "overriddenProperties": [],
   "parent": {
     "name": "User Interface",
-    "path": "folders/Objects/system/User Interface.yy",
+    "path": "folders/Objects/User Interface.yy",
   },
 }

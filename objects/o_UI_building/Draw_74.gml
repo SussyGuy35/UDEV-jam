@@ -25,13 +25,15 @@ if(!loading) {
 				playsound_button_pressed = true;
 			
 				//create contruction side with select contruction side
-				if(i == 10) {
+				if(i == 11) {
 					scr_UI_building_switch_toBuild(o_entity_player_building_tent);
-				} else if (i == 11) {
-					scr_UI_building_switch_toBuild(o_entity_player_building_turret_flak);
 				} else if (i == 12) {
+					scr_UI_building_switch_toBuild(o_entity_player_building_fort);
+				} else if (i == 13) {
+					scr_UI_building_switch_toBuild(o_entity_player_building_turret_flak);
+				} else if (i == 14) {
 					scr_UI_building_switch_toBuild(o_entity_player_building_conyard);
-				} else if (i == 15) {
+				} else if (i == 17) {
 					scr_UI_building_switch_toBuild(o_entity_enemy_building_gate);	
 				}
 			}
