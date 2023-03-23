@@ -39,7 +39,8 @@ if(tick_timer <= 0) {
 			distance_traveled++;
 			if(distance_traveled >= distance_per_soldier_spawn) {
 				distance_traveled = 0;
-				with(instance_create_layer(x - image_xscale * sprite_width,y,"Instances",o_entity_player_soldier)) {
+				global.truck_supplied++;
+				with(instance_create_layer(x - image_xscale * sprite_width,y,"Instances",o_entity_player_knight)) {
 					dir = -1;
 				}
 			}

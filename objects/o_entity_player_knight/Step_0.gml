@@ -21,6 +21,7 @@ if(tick_timer <= 0) {
 				des_y = ry;
 				obj = asset_get_index(object_get_name(other.object_index));
 				obj_hp = other.hp;
+				global.soldier_recalled++;
 			}
 			playsound_ship_weapon0 = true;
 			soldier_count++;
@@ -43,9 +44,24 @@ if(tick_timer <= 0) {
 		if (!spotted_sign) spotted_sign = collision_rectangle(bbox_left,bbox_top,bbox_right,bbox_bottom-3,o_entity_env_sign_direction,false,true)
 		if(spotted_sign) {
 			if(spotted_sign.switch_on){ 
-				if(spotted_sign.instruction_direction == INSTRUCTION_DIRECTION.RIGHTWARD) dir = 1
-				else if(spotted_sign.instruction_direction == INSTRUCTION_DIRECTION.LEFTWARD) dir = -1
-				else instruction_direction = spotted_sign.instruction_direction;
+				if(spotted_sign.instruction_direction == INSTRUCTION_DIRECTION.RIGHTWARD) {
+					global.instructed_leftright = 1;
+					dir = 1;
+					with(instance_find(o_UI_achievement,0)) {
+						if(ach_use_sign_leftright == 0) {
+							ach_use_sign_leftright = 1;
+						}
+					}
+				}
+				else if(spotted_sign.instruction_direction == INSTRUCTION_DIRECTION.LEFTWARD) {
+					global.instructed_leftright = 1;
+					dir = -1;
+					with(instance_find(o_UI_achievement,0)) {
+						if(ach_use_sign_leftright == 0) {
+							ach_use_sign_leftright = 1;
+						}
+					}
+				} else instruction_direction = spotted_sign.instruction_direction;
 			}
 		}
 		
@@ -117,7 +133,7 @@ if(tick_timer <= 0) {
     }
 	
 	if(instruction_direction == INSTRUCTION_DIRECTION.JETPACK) {
-		state = ENTITY_STATE.MOVING;	
+		state = ENTITY_STATE.MOVING;
 	}
 	
 	
@@ -142,7 +158,7 @@ if(tick_timer <= 0) {
             
         case ENTITY_STATE.MOVING:
 			if(instruction_direction == INSTRUCTION_DIRECTION.JETPACK and !recalling) {
-				image_index = 3;
+				global.jetpack_activated = 1
 				if(jetpack_fuel > jetpack_flying_interval) {
 					vsp = -4;
 				} else {
@@ -233,6 +249,7 @@ if(tick_timer <= 0) {
 			
 			break;
 		case ENTITY_STATE.LADDER:
+			global.ladder_used = 1;
 			x = x - x mod 4 + 2;
 			if(image_index == 20) image_index = 21; else image_index = 20;
 

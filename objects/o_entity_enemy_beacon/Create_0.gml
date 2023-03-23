@@ -7,7 +7,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+global.shield_created++;
 hp = 200;
 hp_max = hp;
 hp_prev = hp;

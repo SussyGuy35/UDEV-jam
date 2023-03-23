@@ -1,30 +1,4 @@
-/*
-	Name: scr_soldier_shooting
-	input:
-		f_dir: 
-			the fire direction 
-			which is the correct frame of the sprite spr_soldier_muzzle_flash
-			corresponding to the gun pointing direction
-		image_i:
-			the image_index of the sprite 
-			that show the soldier pointing the gun 
-			at the correct angle
-		look_to_right: (bool variable)
-			if it's true: 
-				dir = 1, the object's sprite won't flip
-			else:
-				dir = -1, flip the object sprite
-	Purpose:
-		change image index of soldier to pointing gun at the target enemy
-		enable muzzle flash graphic effect
-		roll hit chance and apply damage on target enemy if success
-		create bullet hit graphic effect if damage apply
-		notify victim of who killed them
-		reset target enemy pointer if they died
-	
-*/
-
-function scr_soldier_shooting(f_dir, image_i, look_to_right){
+function scr_soldier_shooting(f_dir, image_i, look_to_right) {
 	if(look_to_right) dir = 1; else dir = -1;
 	
 	if(image_index = image_i) {
@@ -51,8 +25,18 @@ function scr_soldier_shooting(f_dir, image_i, look_to_right){
 				if(target_enemy.hp = 0) {
 					target_enemy.killed_by = self;
 					target_enemy = noone;
+					with(instance_find(o_UI_achievement,0)) {
+						if(other.instruction_direction == INSTRUCTION_DIRECTION.JETPACK) {
+							global.jetpack_kill++;
+						}
+					}
 				} else if(target_enemy.hp < 0) {
 					target_enemy = noone;
+					with(instance_find(o_UI_achievement,0)) {
+						if(other.instruction_direction == INSTRUCTION_DIRECTION.JETPACK) {
+							global.jetpack_kill++;
+						}
+					}
 				}
 			}
 	} else {

@@ -51,3 +51,5 @@ jetpack_flying_interval = 150;
 jetpack_spark_timer = 0;
 jetpack_dir = 90;
 jetpack_turning = 4;
+
+global.swordman_created++;

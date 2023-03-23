@@ -7,7 +7,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+global.destroyer_created++;
 hp = 1000;
 hp_max = hp;
 hp_prev = hp;

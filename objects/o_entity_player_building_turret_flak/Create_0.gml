@@ -7,7 +7,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+global.flak_cannon_created++;
 hp = 100;
 hp_max = hp;
 hp_prev = hp;

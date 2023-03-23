@@ -7,7 +7,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+global.missile_bot_created++;
 hp = 20;
 on_ground = false; //xác định xem thực thể đang đứng trên một mặt phẳng
 dir = 1;

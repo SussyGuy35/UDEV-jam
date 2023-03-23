@@ -7,7 +7,8 @@
 
 // Inherit the parent event
 event_inherited();
-
+global.gate_created++;
+if(global.starting_gate_counter > 0) global.starting_gate++;
 hp = 10000;
 hp_max = hp;
 hp_prev = hp;

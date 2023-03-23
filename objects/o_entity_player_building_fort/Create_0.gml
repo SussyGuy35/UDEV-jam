@@ -31,3 +31,4 @@ clear_area_size = 8;
 image_speed = 0;
 
 stun_power = 10;
+global.fort_created++;

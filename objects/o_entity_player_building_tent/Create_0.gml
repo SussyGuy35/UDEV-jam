@@ -29,3 +29,4 @@ clear_area_y = 8;
 clear_area_size = 8;
 
 image_speed = 0;
+global.barrack_created++;

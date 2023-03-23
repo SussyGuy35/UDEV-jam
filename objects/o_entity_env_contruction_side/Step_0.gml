@@ -34,6 +34,10 @@ if(tick_timer <= 0) {
 		//update spark image index
 		spark_image_index++;
 		if (spark_image_index == spark_image_number) spark_image_index = 0;
+		
+		if(instance_exists(contructor) and rebuildable) {
+			global.rebuild++;
+		}
 		/*
 		var sx = irandom_range(bbox_left,bbox_right);
 		var sy = irandom_range(bbox_top,bbox_bottom);

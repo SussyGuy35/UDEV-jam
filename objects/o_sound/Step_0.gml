@@ -73,6 +73,20 @@ if(playsound_teleport and !mute) {
 	audio_play_sound(sfx_teleport_out,0,0,volume * volume_sound,0,4/global.global_tick_interval);
 }
 
+if(playsound_bassDing and !mute) {
+	playsound_bassDing = false;
+	audio_play_sound(sfx_bassDing,0,0,volume * volume_sound,0,4/global.global_tick_interval);
+}
+
+if(playsound_echoDing and !mute) {
+	playsound_echoDing = false;
+	audio_play_sound(sfx_echoedDing,0,0,volume * volume_sound,0,4/global.global_tick_interval);
+}
+
+if(playsound_chal_lost and !mute) {
+	playsound_chal_lost = false;
+	audio_play_sound(sfx_lose_challenge,0,0,volume * volume_sound,0,4/global.global_tick_interval);
+}
 //music
 if(music == noone and !mute) {
 	music = audio_play_sound(music_doctor_dreamchip,0,true,volume * volume_music)

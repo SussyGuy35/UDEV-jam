@@ -1,4 +1,12 @@
-draw_self();
+if(global.show_overlap) {
+	draw_set_alpha(0.25);
+	draw_set_color(c_purple);
+	draw_rectangle(x,y,x+3,y+3,false);
+	draw_set_color(c_green);
+	draw_rectangle(x,y,x+3,y+3,true);
+	draw_set_alpha(1);
+	draw_set_color(c_white)
+} else draw_self();
 /*
 if(sprite_index != -1) { //if object have sprite
 	var damage_spot_count = 0;

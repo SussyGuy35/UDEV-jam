@@ -27,3 +27,7 @@ button_slideout = false;
 button_pressed = -1;
 button_hovering = -1;
 button_hovering_prev = -1;
+
+
+//achivement
+ach = instance_nearest(x,y,o_UI_achievement);

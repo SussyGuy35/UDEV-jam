@@ -30,3 +30,6 @@ button_hovering_prev = -1;
 //pause game
 global.global_tick_timer = -1;
 global.global_tick_interval = -1;
+
+//achivement
+ach = instance_nearest(x,y,o_UI_achievement);

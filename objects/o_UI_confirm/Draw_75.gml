@@ -69,7 +69,6 @@ if(mouse_check_button_released(mb_left)) {
 		instance_create_layer(hx,hy,"Instances",asset);
 		instance_destroy();
 	} else if (press_at == 1) {
-		loading = true;
 		var asset = asset_get_index(object_get_name(host.object_index));
 		var hx = host.x;
 		var hy = host.y;

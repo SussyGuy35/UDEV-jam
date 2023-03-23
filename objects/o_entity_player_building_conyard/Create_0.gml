@@ -1,6 +1,6 @@
 // Inherit the parent event
 event_inherited();
-
+global.conyard_created++;
 hp = 1000;
 hp_max = hp;
 hp_prev = hp;

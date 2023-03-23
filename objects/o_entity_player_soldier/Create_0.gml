@@ -1,4 +1,5 @@
 soldier_count++;
+global.rifleman_created++;
 // Inherit the parent event
 event_inherited();
 

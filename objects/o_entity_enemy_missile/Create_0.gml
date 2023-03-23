@@ -7,7 +7,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+global.robot_created--;
 hp = 5;
 
 damage = 21;

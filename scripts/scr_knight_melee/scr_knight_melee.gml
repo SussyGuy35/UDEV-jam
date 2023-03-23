@@ -54,9 +54,31 @@ function scr_knight_melee(f_dir, image_i, look_to_right){
 		target_enemy.knockback_y += lengthdir_y(knockback,knockback_dir);
 			
 		if(target_enemy.hp = 0) {
+			with(instance_find(o_UI_achievement,0)) {
+				var asset = asset_get_index(object_get_name(other.target_enemy.object_index));
+				if(asset = o_entity_enemy_spider_smart) {
+					global.melee_spider_kill++;
+				}	
+				
+				if(other.instruction_direction == INSTRUCTION_DIRECTION.JETPACK) {
+					global.jetpack_kill++;
+				}
+			}
 			target_enemy.killed_by = self;
 			target_enemy = noone;
 		} else if(target_enemy.hp < 0) {
+			with(instance_find(o_UI_achievement,0)) {
+				var asset = asset_get_index(object_get_name(other.target_enemy.object_index));
+				if(asset = o_entity_enemy_spider_smart) {
+					if(ach_kill_swordman_vs_spider == 0) {
+						global.melee_spider_kill++;
+					}	
+				}	
+				
+				if(other.instruction_direction == INSTRUCTION_DIRECTION.JETPACK) {
+					global.jetpack_kill++;
+				}
+			}
 			target_enemy = noone;
 		}
 	}

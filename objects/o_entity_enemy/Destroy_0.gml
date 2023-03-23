@@ -1,0 +1,1 @@
+global.robot_lost++;

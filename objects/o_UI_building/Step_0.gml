@@ -39,12 +39,13 @@ if(mouse_check_button(mb_right) and mouse_y < room_height - grid_size * 4) {
 		case 9:
 			if(mouse_check_button_pressed(mb_right))
 				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_player_soldier);
+				global.soldier_instant_spawned++;
 			
 			break;
 		case 10:
 			if(mouse_check_button_pressed(mb_right))
 				instance_create_layer(mouse_x,mouse_y,"Instances",o_entity_player_knight);
-			
+				global.soldier_instant_spawned++;
 			break;
 		case 11:
 			

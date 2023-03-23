@@ -1,7 +1,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+global.spider_created++;
 hp = 20;
 tick_interval = 1;
 dir = 1;

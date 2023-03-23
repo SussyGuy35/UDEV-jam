@@ -33,3 +33,12 @@ if(mouse_check_button(mb_right)) {
 		}
 	}
 }
+*/
+
+//cập nhật tick khi tick timer == 0
+if(global.global_tick_timer == 0) {
+    if(room == 1) {
+		global.starting_gate_counter--;	
+	}
+}
+	

@@ -5,7 +5,7 @@ button_spacing_x = 6;
 
 button_size = 8;
 
-button_selected = 6;
+button_selected = -1;
 button_hovering = -1;
 
 grid_obj = instance_nearest(x,y,o_grid);

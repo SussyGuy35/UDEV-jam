@@ -1,0 +1,1 @@
+global.building_lost++;

@@ -8,7 +8,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "o_victory_message",
+    "path": "objects/o_victory_message/o_victory_message.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

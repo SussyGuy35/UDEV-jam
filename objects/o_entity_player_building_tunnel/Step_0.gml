@@ -18,7 +18,8 @@ if(tick_timer <= 0) {
 		if(truck_respawn_timer <= 0) {
 			truck_respawn_timer = truck_respawn_interval;
 			instance_create_layer(0,y,"Instances",o_entity_player_truck);
-			instance_create_layer(1,y,"Instances",o_entity_player_soldier);
+			instance_create_layer(1,y,"Instances",o_entity_player_knight);
+			global.truck_supplied++;
 		} 
 	} else {
 		truck_respawn_timer = truck_respawn_interval;

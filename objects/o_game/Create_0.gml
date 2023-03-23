@@ -53,6 +53,7 @@ grid_obj = instance_nearest(x,y,o_grid);
 globalvar loading;
 loading = false;
 
+global.show_overlap = false;
 //set up language
 scr_language_char();
 scr_language_load_default();

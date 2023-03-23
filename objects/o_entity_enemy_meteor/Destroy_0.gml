@@ -1,3 +1,4 @@
+event_inherited();
 instance_create_layer(x,y,"Bullets",o_gfx_explosion_big);
 
 target_list = ds_list_create();

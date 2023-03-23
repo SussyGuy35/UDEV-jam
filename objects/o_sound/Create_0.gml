@@ -46,6 +46,14 @@ playsound_ship_weapon0 = false;
 globalvar playsound_teleport;
 playsound_teleport = false;
 
+globalvar playsound_bassDing;
+playsound_bassDing = false;
+
+globalvar playsound_echoDing;
+playsound_echoDing = false;
+
+globalvar playsound_chal_lost;
+playsound_chal_lost = false;
 //music
 globalvar music;
 music = noone;

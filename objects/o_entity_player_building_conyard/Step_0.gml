@@ -11,10 +11,6 @@ if(tick_timer <= 0) {
 	health_bar_display_timer--;
 	
 	//scan for construction side
-	var conside = instance_nearest(x,y,o_entity_env_decontruction_side);
-	if(instance_exists(conside) and distance_to_object(conside <= construction_range)) {
-		construction_target = conside;
-	}
 	var conside = instance_nearest(x,y,o_entity_env_contruction_side);
 	if(instance_exists(conside) and distance_to_object(conside <= construction_range)) {
 		construction_target = conside;
@@ -22,6 +18,10 @@ if(tick_timer <= 0) {
 	var conside = instance_nearest(x,y,o_entity_env_construction_side_building);
 	if(instance_exists(conside) and distance_to_object(conside <= construction_range)) {
 		if(conside.side_placed) construction_target = conside;
+	}
+	var conside = instance_nearest(x,y,o_entity_env_decontruction_side);
+	if(instance_exists(conside) and distance_to_object(conside <= construction_range)) {
+		construction_target = conside;
 	}
 	
 	if(instance_exists(construction_target)) {

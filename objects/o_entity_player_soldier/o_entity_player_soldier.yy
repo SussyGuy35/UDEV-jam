@@ -12,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "o_entity_player",
-    "path": "objects/o_entity_player/o_entity_player.yy",
+    "name": "o_entity_soldier",
+    "path": "objects/o_entity_soldier/o_entity_soldier.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
