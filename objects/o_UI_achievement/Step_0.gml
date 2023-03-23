@@ -12,7 +12,7 @@ if(ach_build_barrack == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_BUILD_BARRACK");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -23,7 +23,7 @@ if(ach_build_conyard == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_BUILD_CONYARD");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -34,7 +34,7 @@ if(ach_build_fence == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_BUILD_FENCE");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -45,7 +45,7 @@ if(ach_build_flak == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_BUILD_FLAK");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -57,7 +57,7 @@ if(ach_build_fort == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_BUILD_FORT");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -71,7 +71,7 @@ if(ach_build_icon_clicked == 0) {
 			str = ds_map_find_value(global.language_map, "STR_ACH_ICON_CLICKED");
 			scr_achievement_message(str_completed + str);
 			playsound_bassDing = true;
-		ach_reached++;
+		
 		}
 	}
 }
@@ -83,7 +83,7 @@ if(ach_build_ladder == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_BUILD_LADDER");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -99,7 +99,7 @@ if(ach_build_sign_jetpack == 0) {
 				str = ds_map_find_value(global.language_map, "STR_ACH_BUILD_SIGN_JETPACK");
 				scr_achievement_message(str_completed + str);
 				playsound_bassDing = true;	
-				ach_reached++;
+				
 			}
 		}
 	}
@@ -119,7 +119,7 @@ if(ach_build_sign_leftright == 0) {
 				str = ds_map_find_value(global.language_map, "STR_ACH_BUILD_SIGN_LEFTRIGHT");
 				scr_achievement_message(str_completed + str);
 				playsound_bassDing = true;
-				ach_reached++;	
+					
 			}
 		}
 	}
@@ -139,7 +139,7 @@ if(ach_build_sign_updown == 0) {
 				str = ds_map_find_value(global.language_map, "STR_ACH_BUILD_SIGN_UPDOWN");
 				scr_achievement_message(str_completed + str);
 				playsound_bassDing = true;
-				ach_reached++;	
+					
 			}
 		}
 	}
@@ -152,7 +152,7 @@ if(ach_build_wall == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_BUILD_WALL");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -176,7 +176,7 @@ if(ach_conyard_underground == 0) {
 					str = ds_map_find_value(global.language_map, "STR_ACH_CONYARD_UNDERGROUND");
 					scr_achievement_message(str_completed + str);
 					playsound_bassDing = true;
-					ach_reached++;
+					
 				}
 			}
 		}
@@ -190,7 +190,7 @@ if(ach_fast_forward == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_FAST_FORWARD");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -206,7 +206,7 @@ if(ach_first_block_construction == 0) {
 				str = ds_map_find_value(global.language_map, "STR_ACH_FIRST_BLOCK_CONSTRUCTION");
 				scr_achievement_message(str_completed + str);
 				playsound_bassDing = true;
-				ach_reached++;
+				
 			}
 		}
 	}
@@ -224,7 +224,7 @@ if(ach_first_block_deconstruction == 0) {
 				str = ds_map_find_value(global.language_map, "STR_ACH_FIRST_BLOCK_DECONSTRUCTION");
 				scr_achievement_message(str_completed + str);
 				playsound_bassDing = true;
-				ach_reached++;
+				
 			}
 		}
 	}
@@ -237,7 +237,7 @@ if(ach_kill_shield_with_flak == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_KILL_SHIELD_WITH_FLAK");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -248,7 +248,7 @@ if(ach_kill_soldier_with_jetpack == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_KILL_SOLDIER_WITH_JETPACK");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -259,7 +259,7 @@ if(ach_kill_swordman_vs_spider == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_KILL_SWORDMAN_VS_SPIDER");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -270,7 +270,7 @@ if(ach_kill_with_flak == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_KILL_WITH_FLAK");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -281,7 +281,7 @@ if(ach_mute == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_MUTE");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -292,7 +292,7 @@ if(ach_pause_resume == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_PAUSE_RESUME");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -303,7 +303,7 @@ if(ach_recall_success == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_RECALL_SUCCESS");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -329,7 +329,7 @@ if(ach_shoot_throught_fence == 0) {
 					str = ds_map_find_value(global.language_map, "STR_ACH_SHOOT_THROUGHT_FENCE");
 					scr_achievement_message(str_completed + str);
 					playsound_bassDing = true;
-					ach_reached++;
+					
 				}
 			}
 		}
@@ -343,7 +343,7 @@ if(ach_slow_down == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_SLOW_DOWN");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -354,7 +354,7 @@ if(ach_spawn_rifleman == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_BUILD_RIFLEMAN");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -365,7 +365,7 @@ if(ach_spawn_swordman == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_BUILD_SWORDMAN");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -376,7 +376,7 @@ if(ach_use_sign_jetpack == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_USE_SIGN_JETPACK");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -386,7 +386,7 @@ if(ach_use_sign_leftright == 1) {
 	str = ds_map_find_value(global.language_map, "STR_ACH_USE_SIGN_LEFTRIGHT");
 	scr_achievement_message(str_completed + str);
 	playsound_bassDing = true;
-	ach_reached++;
+	
 }
 
 if(ach_use_sign_updownladder == 0) {
@@ -396,7 +396,7 @@ if(ach_use_sign_updownladder == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_USE_SIGN_UPDOWNLADDER");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 
@@ -407,7 +407,7 @@ if(ach_rebuild == 0) {
 		str = ds_map_find_value(global.language_map, "STR_ACH_REBUILD");
 		scr_achievement_message(str_completed + str);
 		playsound_bassDing = true;
-		ach_reached++;
+		
 	}
 }
 

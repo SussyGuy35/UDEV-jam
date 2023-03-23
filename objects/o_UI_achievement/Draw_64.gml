@@ -72,25 +72,27 @@ if(mouse_x >= mx1 and mouse_x <= mx2 and mouse_y >= my1 and mouse_y <= my2) {
 if(description) scr_language_draw_UI_text_box(str_achievements);
 
 //achievement board
-if(ach_display) {
+
 	var x1 = room_width/2 - ach_display_w/2 - ach_box_offset_w;
 	var x2 = room_width/2 +ach_display_w/2 + ach_box_offset_w;
-	draw_set_color(c_white);
-	draw_rectangle(x1, 4, x2, ach_display_h + 20,true);
+	if(ach_display) {
+		draw_set_color(c_white);
+		draw_rectangle(x1, 4, x2, ach_display_h + 20,true);
 	
-	draw_set_color(c_black);
-	draw_set_alpha(0.5);
-	draw_rectangle(x1, 4, x2, ach_display_h + 20,false);
+		draw_set_color(c_black);
+		draw_set_alpha(0.5);
+		draw_rectangle(x1, 4, x2, ach_display_h + 20,false);
 	
-	draw_set_font(global.Font_big);
-	draw_set_color(c_white);
-	draw_set_alpha(1);
-	draw_set_halign(fa_middle);
-	draw_text(room_width/2,4,str_achievements);
-	draw_line(x1,18,x2,18);
+		draw_set_font(global.Font_big);
+		draw_set_color(c_white);
+		draw_set_alpha(1);
+		draw_set_halign(fa_middle);
+		draw_text(room_width/2,4,str_achievements);
+		draw_line(x1,18,x2,18);
 	
-	draw_set_font(global.Font);
-	draw_set_halign(fa_left);
+		draw_set_font(global.Font);
+		draw_set_halign(fa_left);
+	}
 	
 	var surface = surface_create(ach_display_w,ach_display_h);
 	surface_set_target(surface);
@@ -313,13 +315,14 @@ if(ach_display) {
 	}
 	
 	surface_reset_target();
-	draw_surface(surface,room_width/2 - ach_display_w/2, 20);
-}
+	
+	if(ach_display) draw_surface(surface,room_width/2 - ach_display_w/2, 20);
+
 
 if(mouse_wheel_down()) {
 	
 	//if(ach_scroll_y < 0) ach_scroll_y = 0;
-	if(ach_scroll_y + list_h > ach_display_h + ach_scroll_y ) ach_scroll_y -= ach_scroll_speed;;
+	if(ach_scroll_y + list_h > ach_display_h + ach_scroll_y ) ach_scroll_y -= ach_scroll_speed;
 }
 
 if(mouse_wheel_up()) {
