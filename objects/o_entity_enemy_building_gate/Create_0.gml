@@ -28,7 +28,10 @@ spawn_list = [o_entity_enemy_spider_smart,
 				o_entity_enemy_beacon,
 				o_entity_enemy_building_gate,
 				o_entity_enemy_ship_meteor];
-spawn_weight = [200,200,5,1,5];
+spawn_weight = [200,200,
+	5 * (instance_number(o_entity_enemy_building_gate)),
+	1 * (instance_number(o_entity_enemy_building_gate)),
+	5 * (instance_number(o_entity_enemy_building_gate))];
 spawn_weight_total = 411;
 spawn_next = o_entity_enemy_spider_smart;
 
